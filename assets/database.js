@@ -1,19 +1,17 @@
 let horizontalBlinds = [
 
-
-
   
    {
     "name": "Марсесль <span class='red'> АКЦИЯ!!!</span>",
     "openType" : {
-      "copact" :[ 8.3  ,'+1'],
-      "mini" :[ 9.3 ,'+1' ],
-      "standard" :[ 11.0 ,'+1' ],
-      "maximus" : 17.0,
+      "copact" :[ 8.3  ,'+1', 'Compact и  фалш шторы'],
+      "mini" :[ 9.3 ,'+1' , 'MINI'],
+      "standard" :[ 11.0 ,'+1' , 'STANDART'],
+      "maximus" : [17.0,  '' , 'MAXIMUS'] 
     },
     "closedType" : {
-       "uniFlat" : [17.0 , '+2'] ,
-       "uniFullTurn" : [23.0 , '+3'],
+       "uniFlat" : [17.0 , '+2' , 'UNI  Плоскю Направл'] ,
+       "uniFullTurn" : [23.0 , '+3' , 'UNI  П-обрю Направл.'],
     }
   },
   {
