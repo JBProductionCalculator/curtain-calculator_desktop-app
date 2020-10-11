@@ -1,35 +1,86 @@
 let horizontalBlinds = [
-  {
-    "name": "Белые",
-    "standard" : {
-      "s25mm" : 5,
-      "s16mm" : 9.7,
+
+
+
+  
+   {
+    "name": "Марсесль <span class='red'> АКЦИЯ!!!</span>",
+    "openType" : {
+      "copact" :[ 8.3  ,'+1'],
+      "mini" :[ 9.3 ,'+1' ],
+      "standard" :[ 11.0 ,'+1' ],
+      "maximus" : 17.0,
     },
-    "venus" : {
-       "v25mm" : {
-        "standard" :  16,
-        "fullDimmer" : 17,
-       },
-       "v16mm" : 19.5,
+    "closedType" : {
+       "uniFlat" : [17.0 , '+2'] ,
+       "uniFullTurn" : [23.0 , '+3'],
     }
   },
   {
-    "name": "Цветные",
-    "standard" : {
-      "s25mm" : 7.2,
-      "s16mm" : 10.5,
+    "name": "LEN",
+    "openType" : {
+      "copact" : [9.3 , '+1' ],
+      "mini" : [10.3 , '+1' ],
+      "standard" :[ 12.0 , '+1' ],
+      "maximus" : 19.0,
     },
-    "venus" : {
-       "v25mm" : {
-        "standard" :  17.5,
-        "fullDimmer" : 18.5,
-       },
-       "v16mm" : 21,
+    "closedType" : {
+       "uniFlat" :[ 19.0 , '+2' ],
+       "uniFullTurn" : [25.0 , '+3'   ],
     }
+  },
 
-  }
+
+  // {
+  //   "name": "LEN",
+  //   "openType" : {
+  //     "copact" :  ,
+  //     "mini" : ,
+  //     "standard" : ,
+  //     "maximus" : ,
+  //   },
+  //   "closedType" : {
+  //      "uniFlat" : ,
+  //      "uniFullTurn" : ,
+  //   }
+  // },
+
+
+
 
 ]
+
+
+
+  // {
+  //   "name": "Марсесль <span class='red'> АКЦИЯ!!!</span>",
+  //   "standard" : {
+  //     "s25mm" : 5,
+  //     "s16mm" : 9.7,
+  //   },
+  //   "venus" : {
+  //      "v25mm" : {
+  //       "standard" :  16,
+  //       "fullDimmer" : 17,
+  //      },
+  //      "v16mm" : 19.5,
+  //   }
+  // },
+  // {
+  //   "name": "Цветные",
+  //   "standard" : {
+  //     "s25mm" : 7.2,
+  //     "s16mm" : 10.5,
+  //   },
+  //   "venus" : {
+  //      "v25mm" : {
+  //       "standard" :  17.5,
+  //       "fullDimmer" : 18.5,
+  //      },
+  //      "v16mm" : 21,
+  //   }
+
+  // }
 
 
 

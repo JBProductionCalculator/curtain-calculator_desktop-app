@@ -30,19 +30,69 @@ SOFTWARE. -->
     <link rel="stylesheet" href="assets/app.css">
   </head>
   <body>
-    <section id="horizontalBlinds">
-      <h1>Горизинтальные шторы</h1>
-      <div class="horizontalBlinds-libs">
-        <ul class="one-item">
-          <li>dfdfaf</li>
-          <li>1</li>
-          <li>34</li>
-          <li>5</li>
-          <li>5</li>
-          <li>6</li>
-        </ul>
+
+    <main>
+      <section id="roller_curtains" class="curtains">
+        <div class="curtain_prices">
+          <ul class="one-row">
+            <li>Система</li>
+            <li>Compact и <br> фалш шторы</li>
+            <li>MINI</li>
+            <li>STANDART</li>
+            <li>MAXIMUS</li>
+            <li>UNI <br> Плоскю Направл.</li>
+            <li>UNI <br> П-обрю Направл.</li>
+          </ul>
+          <ul class="one-row">
+            <li>Вал</li>
+            <li>19</li>
+            <li>19</li>
+            <li>25</li>
+            <li>35</li>
+            <li>19</li>
+            <li>19</li>
+          </ul>
+          <ul class="one-row" >
+            <li>Ткани цвет системы</li>
+            <li>Бел./Кор.</li>
+            <li>Бел./Кор.</li>
+            <li>Бел./Кор.</li>
+            <li>Бел.</li>
+            <li>Бел./Кор.</li>
+            <li>Бел./Кор.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <div class="priceСalculation">
+        <div>Ширинна, мм: <input type="text" id="width"></div>
+        <div>Высота, мм: <input type="text" id="height" ></div>
+        <div>Площадь, м&#178;: <input type="text"  id="area" readonly></div>
+       
+        <div class="productSelect">
+            <!-- в этот тег добавляются два тега select -->
+
+            <select id="productType">
+              <option>Compact и  фалш шторы</option>
+              <option>MINI</option>
+              <option>STANDART</option>
+              <option>MAXIMUS</option>
+              <option>UNI  Плоскю Направл.</option>
+              <option>UNI  П-обрю Направл.</option>           
+            </select>
+
+        </div>
+
+        <div>
+            <input type="submit" id="count" value="Посчитать">
+        </div>
+        
+        
       </div>
-    </section>
+
+    
+
 
 
 
@@ -51,8 +101,9 @@ SOFTWARE. -->
     <script src="assets/database.js"></script>
 
 
-    
 
+    <!-- подключение модулей -->
+    <script type="text/javascript" src="assets/modules/creatindGoodsTables.js"></script>
 
 
     <script src="assets/app.js"></script>

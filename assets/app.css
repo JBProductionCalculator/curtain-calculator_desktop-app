@@ -21,6 +21,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. */
 
+.red{
+	color: red;
+}
+
 ul{
 	margin: 0;
 	padding: 0;
@@ -32,16 +36,58 @@ li{
 	margin: 0;
 }
 
-ul.one-item{
+ul.one-row{
 	display: flex;
 }
 
-ul.one-item li{
-	padding: 10px 30px;
+ul.one-row li{
+	padding: 10px;
 	border: 2px solid red;
+	border-left: none;
+	border-bottom: none;
+	width: 80px;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
 }
 
-ul.one-item li:first-child{
+ul.one-row:last-child li{
+	border-bottom: 2px solid black;
+}
+
+ul.one-row li:first-child{
 	width: 100px;
+	border-right : 2px solid green;
+}
+ul.one-row li:nth-child(5){
+	border-right: 2px solid  green;
 }
 
+ul.create-row li{
+	border-color: black;
+}
+
+
+.priceСalculation {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.priceСalculation > div{
+	margin: 10px 10px;
+}
+
+.productSelect{
+	display: flex;
+}
+
+.productSelect > div{
+	margin: 0;
+	margin-right: 10px;
+	/*display: flex;*/
+}
+	
