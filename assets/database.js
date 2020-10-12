@@ -1,6 +1,4 @@
-let horizontalBlinds = [
-
-  
+let rollerBlinds = [
    {
     "name": "Марсесль АКЦИЯ!!!",
     "openType" : {
