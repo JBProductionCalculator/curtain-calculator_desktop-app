@@ -7,10 +7,20 @@
        
 
 
+        let allProducts = horizontalBlinds
 
 
-        let horizontalBlindsCommand ="['oneProduct.name', 'oneProduct.openType.copact', 'oneProduct.openType.mini', 'oneProduct.openType.standard', 'oneProduct.openType.maximus', 'oneProduct.closedType.uniFlat', 'oneProduct.closedType.uniFullTurn']" 
-        creatingGoodsTables(horizontalBlinds, 7, eval(horizontalBlindsCommand))
+        let rollerBlindsCommand ="['oneProduct.name', 'oneProduct.openType.copact', 'oneProduct.openType.mini', 'oneProduct.openType.standard', 'oneProduct.openType.maximus', 'oneProduct.closedType.uniFlat', 'oneProduct.closedType.uniFullTurn']" 
+        creatingGoodsTables(allProducts, 7, eval(rollerBlindsCommand))
+
+        oneSelect(allProducts, 'productName', 'product.name', false)
+        oneSelect(allProducts, 'productType', false, ['data[0].openType.copact[2]', 
+                                                      'data[0].openType.mini[2]', 
+                                                      'data[0].openType.standard[2]', 
+                                                      'data[0].openType.maximus[2]', 
+                                                      'data[0].closedType.uniFlat[2]',
+                                                      'data[0].closedType.uniFullTurn[2]', ] )
+
 
 
 
@@ -49,24 +59,12 @@
 
         // -------------------------------------------------------------------------
         // -------------------------------------------------------------------------
-            // создание тегов select с option и вывод в них информации из базы данных 
-            // а также функция возвращает данные о ценнах из БД которые будут учавствовать в подсчете стоимости
-            let allProducts = horizontalBlinds
-            oneSelect(allProducts, 'productName', 'product.name', false)
-            oneSelect(allProducts, 'productType', false, ['data[0].openType.copact[2]', 
-                                                          'data[0].openType.mini[2]', 
-                                                          'data[0].openType.standard[2]', 
-                                                          'data[0].openType.maximus[2]', 
-                                                          'data[0].closedType.uniFlat[2]',
-                                                          'data[0].closedType.uniFullTurn[2]', ] )
+           
 
 
                 
-
-
-
-
-
+            // создание тегов select с option и вывод в них информации из базы данных 
+            // а также функция возвращает данные о ценнах из БД которые будут учавствовать в подсчете стоимости
             function oneSelect(data, id, oneCommand, commandObject){
                 //созданный выпадающий список
                 let newSelect = createSelect(data, id, oneCommand, commandObject)
@@ -80,8 +78,8 @@
 
 
             // фальшивый клик по элементу option для первого запуска всех элементо
-            function fakeClick(data){
-                let fakeSelect = document.querySelector('#productName ')
+            function fakeClick(data, id){
+                let fakeSelect = document.querySelector(id)
                 fakeSelect.addEventListener('change', function(element){
                     priceSearch(element,this.value  ,data)
                 })
@@ -90,73 +88,7 @@
                 fakeSelect.dispatchEvent(event)
             }
             
-            
-
-
-            //функция которая выдает число(цену) при выборе одного из товаров и одной из категорий товаро
-            // параметры функции: 1. весь тег select, 2. текст который в нажатом теге option, 3. весь масив информации
-            //последний параметр передается чтобы сделать так чтобы функция сработала первый раз без события onchange
-            let oneGoods  
-            function priceSearch(select,nameOption,data) {
-
-                if (select.target.id === 'productName') {
-                    data.forEach(function(product){
-                        if (nameOption === product.name) {
-                            // console.log(product)
-                            oneGoods = product
-                            console.log(oneGoods)
-                        }                        
-                    })      
-                }
-
-                if(select.target.id === 'productType'){
-                    // console.log(oneGoods.openType.copact[2])
-                    console.log(oneGoods)
-                    console.log(nameOption)
-                    // console.log(oneGoods.closedType.uniFlat[2])
-
-                   
-                    if(nameOption == oneGoods.openType.copact[2]){
-                        console.log(oneGoods.openType.copact[0])
-                         productPrice = oneGoods.openType.copact[0]
-                    }
-
-                    if(nameOption == oneGoods.openType.mini[2]){
-                        console.log(oneGoods.openType.mini[0])
-                         productPrice = oneGoods.openType.mini[0]
-                    } 
-
-                    if(nameOption == oneGoods.openType.standard[2]){
-                        console.log(oneGoods.openType.standard[0])
-                         productPrice = oneGoods.openType.standard[0]
-                    }
-
-                    if(nameOption == oneGoods.openType.maximus[2]){
-                        console.log(oneGoods.openType.maximus[0])
-                         productPrice = oneGoods.openType.maximus[0]
-                    }
-
-                    if(nameOption == oneGoods.closedType.uniFlat[2]){
-                        console.log(oneGoods.closedType.uniFlat[0])
-                         productPrice = oneGoods.closedType.uniFlat[0]
-                    }
-
-                    if(nameOption == oneGoods.closedType.uniFullTurn[2]){
-                        console.log(oneGoods.closedType.uniFullTurn[0])
-                         productPrice = oneGoods.closedType.uniFullTurn[0]
-                    }
-                    
-                    // return productPrice
-
-
-                }      
-            }
-
-            fakeClick(allProducts)
-                
-            
-               
-            
+    
                
             //функция которая создает теги select добавляет в них деги option и все это добаляет в нужное местро в разметке
             // главное что нужно помнить так это что в функцию createOption() попадают уже готовые данные а не команды
@@ -192,6 +124,63 @@
                 return op
             }
             
+
+
+
+            //функция которая выдает число(цену) при выборе одного из товаров и одной из категорий товаро
+            // параметры функции: 1. весь тег select, 2. текст который в нажатом теге option, 3. весь масив информации
+            //последний параметр передается чтобы сделать так чтобы функция сработала первый раз без события onchange
+            let oneGoods  
+            function priceSearch(select,nameOption,data) {
+
+                if (select.target.id === 'productName') {
+                    data.forEach(function(product){
+                        if (nameOption === product.name) {
+                            oneGoods = product
+                            console.log(oneGoods)
+                            fakeClick(data, '#productType ')
+
+                        }                        
+                    })      
+                }
+
+                if(select.target.id === 'productType'){
+                    
+                   
+                    if(nameOption == oneGoods.openType.copact[2]){
+                         productPrice = oneGoods.openType.copact[0]
+                    }
+
+                    if(nameOption == oneGoods.openType.mini[2]){
+                        console.log(nameOption)
+                        productPrice = oneGoods.openType.mini[0]
+                    } 
+
+                    if(nameOption == oneGoods.openType.standard[2]){
+                         productPrice = oneGoods.openType.standard[0]
+                    }
+
+                    if(nameOption == oneGoods.openType.maximus[2]){
+                         productPrice = oneGoods.openType.maximus[0]
+                    }
+
+                    if(nameOption == oneGoods.closedType.uniFlat[2]){
+                         productPrice = oneGoods.closedType.uniFlat[0]
+                    }
+
+                    if(nameOption == oneGoods.closedType.uniFullTurn[2]){
+                         productPrice = oneGoods.closedType.uniFullTurn[0]
+                    }
+                    
+                    // return productPrice
+
+
+                }      
+            }
+
+            fakeClick(allProducts, '#productName ')
+            fakeClick(allProducts, '#productType ')
+                
         
 
 
