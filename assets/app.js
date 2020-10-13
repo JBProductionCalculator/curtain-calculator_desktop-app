@@ -9,22 +9,76 @@
 
         let allProducts =  rollerBlinds
 
-        let rollerBlindsCommand ="['oneProduct.name', 'oneProduct.openType.copact', 'oneProduct.openType.mini', 'oneProduct.openType.standard', 'oneProduct.openType.maximus', 'oneProduct.closedType.uniFlat', 'oneProduct.closedType.uniFullTurn']" 
-        creatingGoodsTables(allProducts, 7, eval(rollerBlindsCommand))
 
-        let commandCreate = [ 'data[0].openType.copact[2]', 'data[0].openType.mini[2]', 
-                              'data[0].openType.standard[2]', 'data[0].openType.maximus[2]', 
-                              'data[0].closedType.uniFlat[2]', 'data[0].closedType.uniFullTurn[2]', ]
 
-        let commandSearch = ['oneGoods.openType.copact',
+
+        let rollerBlindsCommandsTable ="['oneProduct.name', 'oneProduct.openType.copact', 'oneProduct.openType.mini', 'oneProduct.openType.standard', 'oneProduct.openType.maximus', 'oneProduct.closedType.uniFlat', 'oneProduct.closedType.uniFullTurn']" 
+
+       
+        // let 
+
+
+        let rollerBlindCreateSelect = [   'data[0].openType.copact[2]', 'data[0].openType.mini[2]','data[0].openType.standard[2]', 'data[0].openType.maximus[2]', 
+                                          'data[0].closedType.uniFlat[2]', 'data[0].closedType.uniFullTurn[2]', ]
+
+        let rollerBlindSearchPrice = ['oneGoods.openType.copact',
                              'oneGoods.openType.mini',
                              'oneGoods.openType.standard' ,
                              'oneGoods.openType.maximus',
                              'oneGoods.closedType.uniFlat',
                              'oneGoods.closedType.uniFullTurn',]
 
-        oneSelect(allProducts, 'productName', 'product.name', false)
-        oneSelect(allProducts, 'productType', false,  commandCreate, commandSearch)
+
+
+        // масив в котором храняться исключительно масивы с командами вывода.очень тупо но пришлось 
+        
+        mainFunctionCall(allProducts, rollerBlindsCommandsTable , rollerBlindCreateSelect, rollerBlindSearchPrice)
+
+
+
+        // функция в которой вызываются все основные функции 
+        function mainFunctionCall(data, tableCreationCommands, selectsCreateCommands, selectsSearchCommands){
+
+        //     let allProducts = data
+
+            creatingGoodsTables(allProducts, 7, eval(tableCreationCommands))
+
+            oneSelect(allProducts, 'productName', 'product.name', false)
+            oneSelect(allProducts, 'productType', false,  selectsCreateCommands, selectsSearchCommands)
+
+            setTimeout(function(){
+                 callFakeClicks(allProducts, selectsCreateCommands, selectsSearchCommands)
+
+
+
+             } , 0)
+
+
+
+        }
+
+
+        // let rollerBlindsCommand ="['oneProduct.name', 'oneProduct.openType.copact', 'oneProduct.openType.mini', 'oneProduct.openType.standard', 'oneProduct.openType.maximus', 'oneProduct.closedType.uniFlat', 'oneProduct.closedType.uniFullTurn']" 
+        // creatingGoodsTables(allProducts, 7, eval(rollerBlindsCommand))
+
+        // let commandCreate = [ 'data[0].openType.copact[2]', 'data[0].openType.mini[2]', 
+        //                       'data[0].openType.standard[2]', 'data[0].openType.maximus[2]', 
+        //                       'data[0].closedType.uniFlat[2]', 'data[0].closedType.uniFullTurn[2]', ]
+
+        // let commandSearch = ['oneGoods.openType.copact',
+        //                      'oneGoods.openType.mini',
+        //                      'oneGoods.openType.standard' ,
+        //                      'oneGoods.openType.maximus',
+        //                      'oneGoods.closedType.uniFlat',
+        //                      'oneGoods.closedType.uniFullTurn',]
+
+        // oneSelect(allProducts, 'productName', 'product.name', false)
+        // oneSelect(allProducts, 'productType', false,  commandCreate, commandSearch)
+
+
+        //  setTimeout(function(){
+        //          callFakeClicks(allProducts)
+        // } , 0)
 
 
 
@@ -136,58 +190,37 @@
         let oneGoods  
         function priceSearch(select,nameOption,data,commandSearchObject) {
 
-            if (select.target.id === 'productName') {
+                if (select.target.id === 'productName') {
                 data.forEach(function(product){
                     if (nameOption === product.name) {
                         oneGoods = product
-                        fakeClick(data, '#productType ', commandCreate, commandSearch)
+                        fakeClick(data, '#productType ', commandSearchObject , [] )
 
                     }                        
                 })      
             }
 
             if(select.target.id === 'productType'){
-
-                console.log(commandSearchObject);
                 commandSearchObject.forEach(function(comm){
                     if(nameOption == eval(comm)[2]){
                         productPrice = eval(comm)[0]
                     }
                 })
-                               
-                // if(nameOption == eval('oneGoods.openType.copact')[2]){
-                //      productPrice = eval('oneGoods.openType.copact')[0]
-                // }
-
-                // if(nameOption == eval('oneGoods.openType.mini')[2]){
-                //     console.log(nameOption)
-                //     productPrice = eval('oneGoods.openType.mini')[0]
-                // } 
-
-                // if(nameOption == oneGoods.openType.standard[2]){
-                //      productPrice = oneGoods.openType.standard[0]
-                // }
-
-                // if(nameOption == oneGoods.openType.maximus[2]){
-                //      productPrice = oneGoods.openType.maximus[0]
-                // }
-
-                // if(nameOption == oneGoods.closedType.uniFlat[2]){
-                //      productPrice = oneGoods.closedType.uniFlat[0]
-                // }
-
-                // if(nameOption == oneGoods.closedType.uniFullTurn[2]){
-                //      productPrice = oneGoods.closedType.uniFullTurn[0]
-                // }
-                
-                // return productPrice
+                            
+            }   
+            
 
 
-            }      
+
+
         }
 
-        fakeClick(allProducts, '#productName ' , commandCreate, commandSearch)
-        fakeClick(allProducts, '#productType ' , commandCreate, commandSearch)
+
+        function callFakeClicks(data, commandCreateObject, commandSearchObject){
+            fakeClick(data, '#productName ' , commandCreateObject, commandSearchObject)
+            fakeClick(data, '#productType ' , commandCreateObject, commandSearchObject)
+        }
+        
             
     
 
