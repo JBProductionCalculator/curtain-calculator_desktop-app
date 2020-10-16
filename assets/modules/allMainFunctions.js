@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, objectID, idCalculate, parentSelect){
  
         let width, height, area, productSelect, productPrice
@@ -17,25 +11,34 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
         // -------------------------------------------------------------------------
         // -------------------------------------------------------------------------
         //ФУНКЦИЯ ВЫЧИСЛЕНИЯ ЦЕНЫ
+
+        let cout =  document.querySelector(idCalculate+' input#count')
+        let addToBlank = document.querySelector(idCalculate+ ' input#add_to_blank')
         function priceСalculation(){
-            document.querySelector(idCalculate+' input#count').addEventListener('click', function (){
+ 
+
+          cout.addEventListener('click', function (){
                 let productArea = areaCalculation()
                 let price = productArea * productPrice
                 document.querySelector(idCalculate+' #price').innerHTML = price
+
+                addToBlank.style.visibility = 'visible'
+
+
             })
 
 
-            // document.querySelector(idCalculate+ ' input#add_to_blank').addEventListener('click', function(){
-            //     let parentBlock = this.parentNode.parentNode
-            //     let price = parentBlock.querySelector("#price").textContent
-            //     let productName = parentBlock.querySelector(objectID[0])
-            //     let productType = parentBlock.querySelector(objectID[1])
-            //            console.log( parentBlock)
-            //     console.log(productName)
-            //     console.log(productType
+            addToBlank.addEventListener('click', function(){
+                let parentBlock = this.parentNode.parentNode
+                let price = parentBlock.querySelector("#price").textContent
+                let productName = parentBlock.querySelector('#'+objectID[0])
+                let productType = parentBlock.querySelector('#'+objectID[1])
+            
+                addToBlankFun(price, productName, productType)
 
-            //     // addToBlank(price, productName, productType)
-            // })
+                this.style.visibility = 'hidden'
+
+            })
 
 
 
@@ -86,6 +89,7 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
             //нахождение цены при выборе товара и его типа
             newSelect.addEventListener('change', function(element){
                 priceSearch(element,this.value  ,data, commandSearchObject)
+                addToBlank.style.visibility = 'hidden'
             })
         }
 
