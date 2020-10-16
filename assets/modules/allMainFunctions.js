@@ -25,6 +25,19 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
             })
 
 
+            // document.querySelector(idCalculate+ ' input#add_to_blank').addEventListener('click', function(){
+            //     let parentBlock = this.parentNode.parentNode
+            //     let price = parentBlock.querySelector("#price").textContent
+            //     let productName = parentBlock.querySelector(objectID[0])
+            //     let productType = parentBlock.querySelector(objectID[1])
+            //            console.log( parentBlock)
+            //     console.log(productName)
+            //     console.log(productType
+
+            //     // addToBlank(price, productName, productType)
+            // })
+
+
 
             // функция которая вычесляет площадь
             function areaCalculation(){

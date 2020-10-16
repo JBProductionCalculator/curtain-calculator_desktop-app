@@ -57,10 +57,37 @@ let allGoods = {
       }
     },
   ],
+
+  // горизонтальные жалюзи
+
+  horizontalHouverVenus : [
+  {
+    "name" : "Белые",
+    "standard25mm" : [16.0  ,"", "25мм Стандарт"],
+    "fullDimmer25mm" : [ 17.0 ,"", "25мм Полн. Затемн."],
+    "standard16mm" :  [ 19.5,"",  "16мм Стандарт"],
+  },
+  {
+    "name" : "Разноцветные",
+    "standard25mm" : [17.5 ,"", "25мм Стандарт"],
+    "fullDimmer25mm" : [18.5 ,"", "25мм Полн. Затемн."],
+    "standard16mm" :  [21.0 ,"", "16мм Стандарт"],
+  }
+],
+
+//вертикальные жалюзи
+
+  verticalHouver127mm : [
+  {
+    "name" : "Gamma 1100",
+    "colorСode" : ["" , "1100" , "" ],
+    "price" : [5.9 , "", ""]
+  },
+   {
+    "name" : "LINE",
+    "colorСode" : ["" , "8001, 8002, 8003, 8004" , "" ],
+    "price" : [6.4 , "", ""]
+  },
+]
+
 }
-
-
-
-let xJson = JSON.stringify(allGoods) 
-
-

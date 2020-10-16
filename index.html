@@ -83,6 +83,7 @@ SOFTWARE. -->
             </div>
             <div>
                 <input type='submit' id='count' value='Посчитать'>
+                <input type="submit" id="add_to_blank" value="Добавить в бланк">
             </div>
 
             <div id='price' style='font-size: 25px;' ></div>     
@@ -136,8 +137,71 @@ SOFTWARE. -->
             <div id='price' style='font-size: 25px;' ></div>     
         </div>
       </section>
-    </main>  
 
+      <h2>Горизонтальные жалюзи</h2>
+
+
+     <section id='' class=''>
+        <div class='horizontal_louver_venus'>
+          <ul class='one-row'>
+            <li>Жалюзи горизонтальные "Венус"</li>
+            <li>25мм</li>
+            <li>25мм</li>
+            <li>16мм</li>
+          </ul>
+          <ul class='one-row'>
+            <li>-----</li>
+            <li>Стандарт</li>
+            <li>Полн.Затемн.</li>
+            <li>Стандарт</li>
+          </ul>
+
+        </div>
+
+        <div id='priceСalculationHorizontalLouverVenus'>
+            <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
+            <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
+            <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+            <div id='productSelectHorizontalLouverVenus'>
+                <!-- в этот тег добавляются два тега select -->
+            </div>
+            <div>
+                <input type='submit' id='count' value='Посчитать'>
+            </div>
+
+            <div id='price' style='font-size: 25px;' ></div>     
+        </div>
+      </section>
+
+
+        <h2>ВЕРТИКАЛЬНЫЕ Жалюзи</h2>
+        <section id='' class=''>
+          <h4>ВЕРТИКАЛЬНЫЕ жалюзи 127</h4>
+          <div class='horizontal_vertical_127mm'>
+            <ul class='one-row'>
+              <li>Название ткани</li>
+              <li>Код цвета</li>
+              <li>цена м.кв</li>
+            </ul>
+          </div>
+
+          <div id='priceСalculationVerticalHouver127mm'>
+              <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
+              <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
+              <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+              <div id='productSelectVerticalHouver127mm'>
+                  <!-- в этот тег добавляются два тега select-->
+              </div>
+              <div>
+                  <input type='submit' id='count' value='Посчитать'>
+              </div>
+
+              <div id='price' style='font-size: 25px;' ></div>     
+          </div>
+        </section> 
+
+
+    </main>  
 
 
     <script src='neutralino.js'></script>
@@ -148,6 +212,8 @@ SOFTWARE. -->
     <script src='assets/modules/creatindGoodsTables.js'></script>
     <script src='assets/modules/allMainFunctions.js'></script>
     <script src='assets/modules/callingMainFunctions.js'></script>
+
+    <script src="assets/modules/addToBlank.js"></script>
 
 
     <script src='assets/app.js'></script>
