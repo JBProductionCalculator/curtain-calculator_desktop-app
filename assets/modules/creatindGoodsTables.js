@@ -2,16 +2,16 @@
 
 
   // ФУНКЦИЯ КОТОРАЯ ПОЛУЧЕТ ДАННЫЕ И КОМАНДЫ , И ПОСЛЕ СОЗДАЕТ ТАБЛИЦУ ПРАЙСА ТОВАРОВ
-    function creatingGoodsTables(data,amountElements, parameters){
+    function creatingGoodsTables(data,amountElements, parameters, tableClass){
         let allProducts =  data
         
         allProducts.forEach(function(oneProduct){
-            creatLibs(oneProduct, amountElements, parameters)   
+            creatLibs(oneProduct, amountElements, parameters, tableClass)   
         })
     }
 
     // создание ряда с ценами ОДНОГО ТОВАРАааа
-    function creatLibs(oneProduct, amountElements, parr){
+    function creatLibs(oneProduct, amountElements, parr, tblClass){
         let ul = document.createElement('ul')
         ul.classList.add('one-row')
         ul.classList.add('create-row')
@@ -21,7 +21,7 @@
             ul.append(elem)
          })
 
-        document.querySelector('.curtain_prices').append(ul)
+        document.querySelector(tblClass).append(ul)
     }
 
     // создание каждой отдельной колонки с ценой в ряду с ценами

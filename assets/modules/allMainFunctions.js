@@ -1,17 +1,27 @@
 
 
+
+
+
+
+
+
+function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, objectID, idCalculate, parentSelect){
+ 
+        let width, height, area, productSelect, productPrice
+        width = document.querySelector( idCalculate +' input#width')
+        height = document.querySelector(idCalculate + ' input#height')
+        area = document.querySelector( idCalculate + ' input#area')
+        productSelect = document.querySelector(parentSelect)
+
         // -------------------------------------------------------------------------
         // -------------------------------------------------------------------------
         //ФУНКЦИЯ ВЫЧИСЛЕНИЯ ЦЕНЫ
         function priceСalculation(){
-
-            document.querySelector('.priceСalculation input#count').addEventListener('click', function (){
+            document.querySelector(idCalculate+' input#count').addEventListener('click', function (){
                 let productArea = areaCalculation()
                 let price = productArea * productPrice
-                document.querySelector('#price').innerHTML = price
-
-
-
+                document.querySelector(idCalculate+' #price').innerHTML = price
             })
 
 
@@ -32,12 +42,27 @@
 
 
 
-        // -------------------------------------------------------------------------
-        // -------------------------------------------------------------------------
-           
+
+            oneSelect(data, objectID[0], 'product.name', false, false )
+            oneSelect(data, objectID[1], false,  selectsCreateCommands, selectsSearchCommands)
+
+            // console.log(objectID)
 
 
-                
+            setTimeout(function(){
+                 callFakeClicks(data, selectsCreateCommands, selectsSearchCommands)
+             } , 0)
+        // }
+
+
+
+
+        // -------------------------------------------------------------------------
+        // -------------------------------------------------------------------------
+        
+
+    // function allMainFunction(){
+
         // создание тегов select с option и вывод в них информации из базы данных 
         // а также функция возвращает данные о ценнах из БД которые будут учавствовать в подсчете стоимости
         function oneSelect(data, id, oneCommand, commandCreateObject, commandSearchObject){
@@ -107,17 +132,17 @@
         let oneGoods  
         function priceSearch(select,nameOption,data,commandSearchObject) {
 
-                if (select.target.id === 'productName') {
+                if (select.target.id === objectID[0]) {
                 data.forEach(function(product){
                     if (nameOption === product.name) {
                         oneGoods = product
-                        fakeClick(data, '#productType ', commandSearchObject , [] )
+                        fakeClick(data, '#'+objectID[1], commandSearchObject , [] )
 
                     }                        
                 })      
             }
 
-            if(select.target.id === 'productType'){
+            if(select.target.id === objectID[1]){
                 commandSearchObject.forEach(function(comm){
                     if(nameOption == eval(comm)[2]){
                         productPrice = eval(comm)[0]
@@ -134,9 +159,12 @@
 
 
         function callFakeClicks(data, commandCreateObject, commandSearchObject){
-            fakeClick(data, '#productName ' , commandCreateObject, commandSearchObject)
-            fakeClick(data, '#productType ' , commandCreateObject, commandSearchObject)
+            fakeClick(data, '#'+objectID[0] , commandCreateObject, commandSearchObject)
+            fakeClick(data, '#'+objectID[1] , commandCreateObject, commandSearchObject)
         }
+
+
+}
         
             
     

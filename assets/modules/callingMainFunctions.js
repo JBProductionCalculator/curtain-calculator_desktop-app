@@ -1,16 +1,14 @@
+
+
+
     // функция в которой вызываются все основные функции 
-    function callingMainFunctions(data, tableCreationCommands, selectsCreateCommands, selectsSearchCommands){
+    function callingMainFunctions(data, tableCreationCommands,tableClass, selectsCreateCommands, selectsSearchCommands, objectID, idCalculate, parentSelect){
 
-        creatingGoodsTables(allProducts, 7, eval(tableCreationCommands))
+        creatingGoodsTables(data, 7, eval(tableCreationCommands), tableClass)
 
-        oneSelect(allProducts, 'productName', 'product.name', false)
-        oneSelect(allProducts, 'productType', false,  selectsCreateCommands, selectsSearchCommands)
+        allMainFunction(data,selectsCreateCommands, selectsSearchCommands, objectID, idCalculate,parentSelect)
 
-        setTimeout(function(){
-             callFakeClicks(allProducts, selectsCreateCommands, selectsSearchCommands)
-
-
-
-         } , 0)
 
     }
+
+

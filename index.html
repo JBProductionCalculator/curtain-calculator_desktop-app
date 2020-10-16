@@ -5,7 +5,7 @@ MIT License
 Copyright (c) 2018 Neutralinojs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
+of this software and associated documentation files (the 'Software'), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
@@ -14,7 +14,7 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -25,16 +25,27 @@ SOFTWARE. -->
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>Web version</title>
-    <link rel="stylesheet" href="assets/app.css">
+    <link rel='stylesheet' href='assets/app.css'>
   </head>
   <body>
-
+<!-- 
     <main>
-      <section id="roller_curtains" class="curtains">
-        <div class="curtain_prices">
-          <ul class="one-row">
+
+      <iframe src="tables/rollerBlinds.html" style="width: 100%; height: 500px; border: none;"></iframe>
+
+      <hr>
+
+      <iframe src="tables/rollerBlindsDayNight.html" style="width: 100%; height: 500px; border: none;"></iframe>
+
+    </main>
+ -->
+  
+      <main>
+      <section id='roller_curtains' class=''>
+        <div class='curtain_prices'>
+          <ul class='one-row'>
             <li>Система</li>
             <li>Compact и <br> фалш шторы</li>
             <li>MINI</li>
@@ -43,7 +54,7 @@ SOFTWARE. -->
             <li>UNI <br> Плоскю Направл.</li>
             <li>UNI <br> П-обрю Направл.</li>
           </ul>
-          <ul class="one-row">
+          <ul class='one-row'>
             <li>Вал</li>
             <li>19</li>
             <li>19</li>
@@ -52,7 +63,7 @@ SOFTWARE. -->
             <li>19</li>
             <li>19</li>
           </ul>
-          <ul class="one-row" >
+          <ul class='one-row' >
             <li>Ткани цвет системы</li>
             <li>Бел./Кор.</li>
             <li>Бел./Кор.</li>
@@ -62,44 +73,84 @@ SOFTWARE. -->
             <li>Бел./Кор.</li>
           </ul>
         </div>
+
+        <div id='priceСalculation'>
+            <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
+            <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
+            <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+            <div id='productSelect'>
+                <!-- в этот тег добавляются два тега select -->
+            </div>
+            <div>
+                <input type='submit' id='count' value='Посчитать'>
+            </div>
+
+            <div id='price' style='font-size: 25px;' ></div>     
+        </div>
       </section>
-    </main>
 
-    <div class="priceСalculation">
-        <div>Ширинна, мм: <input type="text" id="width" value="1000"></div>
-        <div>Высота, мм: <input type="text" id="height"  value="1000"></div>
-        <div>Площадь, м&#178;: <input type="text"  id="area" readonly></div>
-       
-        <div class="productSelect">
-            <!-- в этот тег добавляются два тега select -->
+<hr>
+
+      <section id='' class=''>
+        <div class='roller_curtains_day_night'>
+          <ul class='one-row'>
+            <li>Система</li>
+            <li>Compact и <br> фалш шторы</li>
+            <li>MINI</li>
+            <li>STANDART</li>
+            <li>MAXIMUS</li>
+            <li>UNI <br> Плоскю Направл.</li>
+            <li>UNI <br> П-обрю Направл.</li>
+          </ul>
+          <ul class='one-row'>
+            <li>Вал</li>
+            <li>19</li>
+            <li>19</li>
+            <li>25</li>
+            <li>35</li>
+            <li>19</li>
+            <li>19</li>
+          </ul>
+          <ul class='one-row' >
+            <li>Ткани цвет системы</li>
+            <li>Бел./Кор.</li>
+            <li>Бел./Кор.</li>
+            <li>Бел./Кор.</li>
+            <li>Бел.</li>
+            <li>Бел./Кор.</li>
+            <li>Бел./Кор.</li>
+          </ul>
         </div>
 
-        <div>
-            <input type="submit" id="count" value="Посчитать">
+        <div id='priceСalculationDayNight'>
+            <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
+            <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
+            <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+            <div id='productSelectDayNight'>
+                <!-- в этот тег добавляются два тега select -->
+            </div>
+            <div>
+                <input type='submit' id='count' value='Посчитать'>
+            </div>
+
+            <div id='price' style='font-size: 25px;' ></div>     
         </div>
-
-        <div id="price" style="font-size: 25px;" ></div>
-        
-        
-      </div>
-
-    
+      </section>
+    </main>  
 
 
 
-
-
-    <script src="neutralino.js"></script>
-    <script src="assets/database.js"></script>
-
+    <script src='neutralino.js'></script>
+    <script src='assets/database.js'></script>
 
 
     <!-- подключение модулей -->
-    <script src="assets/modules/creatindGoodsTables.js"></script>
-    <script src="assets/modules/allMainFunctions.js"></script>
-    <script src="assets/modules/callingMainFunctions.js"></script>
+    <script src='assets/modules/creatindGoodsTables.js'></script>
+    <script src='assets/modules/allMainFunctions.js'></script>
+    <script src='assets/modules/callingMainFunctions.js'></script>
 
-    <script src="assets/app.js"></script>
+
+    <script src='assets/app.js'></script>
 
 
   </body>
