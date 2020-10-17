@@ -27,14 +27,10 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
 
             })
 
-
             addToBlank.addEventListener('click', function(){
                 let parentBlock = this.parentNode.parentNode
-                let price = parentBlock.querySelector("#price").textContent
-                let productName = parentBlock.querySelector('#'+objectID[0])
-                let productType = parentBlock.querySelector('#'+objectID[1])
-            
-                addToBlankFun(price, productName, productType)
+
+                addToBlankFun(parentBlock, objectID[0], objectID[1])
 
                 this.style.visibility = 'hidden'
 
