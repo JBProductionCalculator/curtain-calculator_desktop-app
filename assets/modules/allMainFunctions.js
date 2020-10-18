@@ -41,7 +41,7 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
             // функция которая вычесляет площадь
             function areaCalculation(){
                 let x = (width.value / 1000) * (height.value / 1000)
-                let y = Math.round((x) * 100) / 100 
+                let y = Math.round((x) * 100) / 100
 
                 area.value = y
                 return y
@@ -158,7 +158,7 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
             if(select.target.id === objectID[1]){
                 commandSearchObject.forEach(function(comm){
                     if(nameOption == eval(comm)[2]){
-                        productPrice = eval(comm)[0]
+                        productPrice = eval(comm)[0]                        
                     }
                 })
                             
