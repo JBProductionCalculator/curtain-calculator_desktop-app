@@ -14,20 +14,21 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
 
 
 
- 	console.log(idParent);
-    console.log(productSystem)
- 	console.log(productColor)
- 	console.log(addToBlankForEach(color))
- 	console.log(widht)
- 	console.log(height)
-    console.log(addToBlankForEach(controlType))
- 	console.log(addToBlankForEach(fixationSystem))
+ 	// console.log(idParent);
+  //   console.log(productSystem)
+ 	// console.log(productColor)
+ 	// console.log(addToBlankForEach(color))
+ 	// console.log(widht)
+ 	// console.log(height)
+  //   console.log(addToBlankForEach(controlType))
+ 	// console.log(addToBlankForEach(fixationSystem))
 
 
 
  	let oneItem = {
  		"idParent" : idParent,
  		"systemAndColor" : `${productSystem} ${productColor} ${addToBlankForEach(color)}`,
+ 		"color" : productColor,
  		"width" : widht,
  		"height" : height,
  		"controlType" :  addToBlankForEach(controlType),
