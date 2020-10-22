@@ -1,5 +1,8 @@
 let orderBlank = []
 
+
+
+
 function creatingOrgerBlank(oneRow) {
 
 	orderBlank.push(oneRow)
@@ -12,14 +15,15 @@ function creatingOrgerBlank(oneRow) {
 	let horizontalStandardBlank = []
 	let mosquitoNetBlank = []
 
-	console.log(curtainsBlank)
 
-
-
-
-
-	
 	creationOneBlank(orderBlank)
+	addToHTMLBlankInform(curtainsBlank, "#curtainsBlank")
+	addToHTMLBlankInform(verticalBlank, "#verticalBlank")
+	addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank")
+	addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank")
+	addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank")
+
+	// addToHTMLBlankInform(verticalBlank, "#blank-vertical")
 
 
 
@@ -36,7 +40,7 @@ function creatingOrgerBlank(oneRow) {
 					curtainsBlank.push(oneProduct)
 
 					// curtainsBlank[oneProduct.idParent] = oneProduct
-					recurringProducts(curtainsBlank)
+					// recurringProducts(curtainsBlank)
 			}
 
 			if(oneProduct.idParent === "priceСalculationVerticalHouver89mm" || oneProduct.idParent === "priceСalculationVerticalHouver127mm"){
@@ -92,40 +96,85 @@ function creatingOrgerBlank(oneRow) {
 					}
 				}
 			}
-
-		}
-
-
-			
+		}		
+	}		
+}
 
 
 
-		// function removeIdenticalElements(){
-		// 	let ooo = []
-		// 	for(let h = 0; h < data.length; h++){
-		// 		// data[h].arrayElementClass
-		// 		for(let z = 0; z < data.length; z++){
-		// 			if (h == z) {
-		// 			}else{
-		// 				if (data[h].arrayElementClass == data[z].arrayElementClass ) {
-		// 					ooo.push(data[h].arrayElementClass)
-		// 					console.log(data[h].arrayElementClass)
-		// 				}
-		// 			}
 
-
-		// 		}
-		// 		// for(let key in data[h]){
-		// 		// 	console.log(key)
-		// 		// }
-		// 	}
-
-		// 	console.log(ooo)
-
-
-		// }
-		
-
+function addToHTMLBlankInform(data,id){
+	let blank = document.querySelector(id+" #all-product tbody")
+	let allCells = {
+		'count_blank':  ['count_blank',20 , 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
+		'system_and_color':  ['system_and_color',188 , 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
+        'width' : ['width',60 , 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
+        'height' : ['height',60, 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
+        'control_type' : ['control_type',50 , 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
+        'amount' : ['amount',50 , 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
+        'fixation_system': ['fixation_system',60, 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
+        'notes' : ['notes',100 , 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
 	}
 
+	
+ 
+	blank.querySelectorAll('tr').forEach(function(tr,index){
+		if (index == 0 	) {
+		
+		}else{
+			tr.remove()
+		}
+	})
+    
+
+
+	data.forEach(function(product,index){
+		let tr = document.createElement('tr')
+		
+		for(let key in allCells){
+			let td = document.createElement('td')
+			td.id = allCells[key][0]
+			td.width = allCells[key][1]
+			td.style.cssText =  allCells[key][2]
+			tr.append(td)					
+		}
+
+		tr.querySelector('#count_blank').textContent = index+1
+		tr.querySelector('#system_and_color').textContent = product.systemAndColor
+		tr.querySelector('#width').textContent = product.width
+		tr.querySelector('#height').textContent = product.height
+		tr.querySelector('#control_type').textContent = product.controlType
+		tr.querySelector('#amount').textContent = index
+		tr.querySelector('#fixation_system').textContent = product.fixationSystem
+		tr.querySelector('#notes').innerHTML = '&#160;'
+
+
+		blank.append(tr)
+	})
+
+	
+
 }
+
+
+
+function exportHTML(id){
+	console.log(id)
+
+   const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+        "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+        "xmlns='http://www.w3.org/TR/REC-html40'>"+
+        "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+   const footer = "</body></html>";
+   const sourceHTML = header+document.getElementById(id).innerHTML+footer;
+   
+   const source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+   const fileDownload = document.createElement("a");
+   document.body.appendChild(fileDownload);
+   fileDownload.href = source;
+   fileDownload.download = 'document.doc';
+   fileDownload.click();
+   document.body.removeChild(fileDownload);
+}
+
+

@@ -138,3 +138,6 @@ function mosquitoNet(){
     callingMainFunctions(data, 5 ,commandsTable , '.mosquito_net', createSelect, searchPrice, objectID, idCalculate, parentSelect)
 }
 
+
+
+

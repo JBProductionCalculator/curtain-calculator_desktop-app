@@ -14,7 +14,7 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
 
         let cout =  document.querySelector(idCalculate+' input#count')
         let addToBlank = document.querySelector(idCalculate+ ' input#add_to_blank')
-        function priceСalculation(){
+        function priceСalculation(){ 
  
 
           cout.addEventListener('click', function (){

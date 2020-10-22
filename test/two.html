@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>второй</title>
+
+</head>
+<body>
+
+
+
+<div id="source-html">
+
+ <!-- style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;" -->
+ <table style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;width: 185%; border-collapse: collapse;border-spacing: 0px;">
+    <tr>
+        <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="185"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+    </tr>
+    <tr>
+       <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">1</td>
+        <td width="185"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+    </tr>
+    <tr>
+        <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;">2</td>
+        <td width="185"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 13px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+    </tr>
+</table>
+	
+</div>
+<div class="content-footer">
+    <button id="btn-export" onclick="exportHTML();">Сохранить в Word</button>
+</div>
+
+
+<script>
+    function exportHTML(){
+       const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+            "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+            "xmlns='http://www.w3.org/TR/REC-html40'>"+
+            "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+       const footer = "</body></html>";
+       const sourceHTML = header+document.getElementById("source-html").innerHTML+footer;
+       
+       const source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+       const fileDownload = document.createElement("a");
+       document.body.appendChild(fileDownload);
+       fileDownload.href = source;
+       fileDownload.download = 'document.doc';
+       fileDownload.click();
+       document.body.removeChild(fileDownload);
+    }
+</script> 
+
+</body>
+</html>

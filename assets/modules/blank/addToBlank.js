@@ -13,18 +13,6 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
  	let height = parentBlock.querySelector("#height").value
 
 
-
- 	// console.log(idParent);
-  //   console.log(productSystem)
- 	// console.log(productColor)
- 	// console.log(addToBlankForEach(color))
- 	// console.log(widht)
- 	// console.log(height)
-  //   console.log(addToBlankForEach(controlType))
- 	// console.log(addToBlankForEach(fixationSystem))
-
-
-
  	let oneItem = {
  		"idParent" : idParent,
  		"systemAndColor" : `${productSystem} ${productColor} ${addToBlankForEach(color)}`,

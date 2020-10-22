@@ -1,27 +1,4 @@
 
-<!-- 
-MIT License
-
-Copyright (c) 2018 Neutralinojs
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the 'Software'), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE. -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -32,7 +9,7 @@ SOFTWARE. -->
   <body>
 
   
-      <main>
+  <main>
       <section id='roller_curtains' class=''>
         <div class='roller_curtains'>
           <ul class='one-row'>
@@ -376,7 +353,363 @@ SOFTWARE. -->
         </section> 
 
 
-    </main>  
+  </main>  
+
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+
+
+
+
+
+
+<script type="text/html" id="blank-html">
+   <!-- РАЗМЕТКА БЛАНКА ЗАКАЗА -->
+<div>
+
+    <table style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
+      <tr >
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; " >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Клиент:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160; </td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Моб. получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >ФИО получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Город:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td  width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Отделение Новой Почты:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+  </table>
+  
+  <div style="height: 30px;">&#160;</div>
+
+   <table id="all-product" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
+    <tr>
+        <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="188"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+    </tr>
+    <tr>
+       <td width="20" id="countBlank"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">1</td>
+        <td width="188" id="system_and_color" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="60" id="width"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="60" id="height"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="50" id="control_type" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"> </td>
+        <td width="50" id="amount"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="60" id="fixation_system" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="100" id="notes" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+    </tr>
+  </table>
+</div>
+</script>
+
+
+<!-- <div id="blank-curtains"></div>
+
+<div class="content-footer">
+    <button id="btn-export" onclick="exportHTML('blank-curtains');">Сохранить в Word</button>
+</div>
+
+<div id="blank-vertical"></div>
+<div class="content-footer">
+    <button id="btn-export" onclick="exportHTML('blank-vertical');">Сохранить в Word</button>
+</div>
+   -->
+
+
+
+<div id="curtainsBlank">
+
+    <table style=" padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
+      <tr >
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; " >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Клиент:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160; </td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Моб. получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >ФИО получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Город:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td  width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Отделение Новой Почты:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+  </table>
+  
+  <div style="height: 30px;">&#160;</div>
+
+   <table id="all-product" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
+    <tr>
+        <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="188"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="content-footer">
+    <button id="btn-export" onclick="exportHTML('curtainsBlank');">Рулонные шторы</button>
+</div>
+
+<!-- -------------------------------- -->
+
+
+<div id="verticalBlank">
+
+    <table style=" padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
+      <tr >
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; " >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Клиент:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160; </td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Моб. получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >ФИО получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Город:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td  width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Отделение Новой Почты:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+  </table>
+  
+  <div style="height: 30px;">&#160;</div>
+
+  <table id="all-product" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
+    <tr>
+        <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="188"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="content-footer">
+    <button id="btn-export" onclick="exportHTML('verticalBlank');">Вертикальные жалюзи</button>
+</div>
+
+<!-- -------------------------------- -->
+
+
+
+<div id="horizontalVenusBlank">
+
+    <table style=" padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
+      <tr >
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; " >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Клиент:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160; </td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Моб. получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >ФИО получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Город:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td  width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Отделение Новой Почты:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+  </table>
+  
+  <div style="height: 30px;">&#160;</div>
+
+  <table id="all-product" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
+    <tr>
+        <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="188"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="content-footer">
+    <button id="btn-export" onclick="exportHTML('horizontalVenusBlank');">Горизонтальные жалюзи Венус</button>
+</div>
+
+<!-- -------------------------------- -->
+
+<div id="horizontalStandardBlank">
+
+    <table style=" padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
+      <tr >
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; " >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Клиент:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160; </td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Моб. получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >ФИО получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Город:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td  width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Отделение Новой Почты:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+  </table>
+  
+  <div style="height: 30px;">&#160;</div>
+
+  <table id="all-product" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
+    <tr>
+        <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="188"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="content-footer">
+    <button id="btn-export" onclick="exportHTML('horizontalStandardBlank');">Горизонтальные жалюзи Стандарт</button>
+</div>
+
+<!-- -------------------------------- -->
+
+
+<div id="mosquitoNetBlank">
+    <table style=" padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
+      <tr >
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; " >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Клиент:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160; </td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Моб. получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >ФИО получателя:</td>
+          <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Город:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+      <tr>
+          <td  width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+          <td  width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Отделение Новой Почты:</td>
+          <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+      </tr>
+  </table>
+  
+  <div style="height: 30px;">&#160;</div>
+
+  <table id="all-product" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
+    <tr>
+        <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+        <td width="188"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+        <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+        <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+        <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="content-footer">
+    <button id="btn-export" onclick="exportHTML('mosquitoNetBlank');">Москитные</button>
+</div>
+
+
+
 
 
     <!-- <script src='neutralino.js'></script> -->
@@ -390,33 +723,17 @@ SOFTWARE. -->
 
     <script src='assets/modules/callingMainFunctions.js'></script>
 
+    <script src="assets/libs/jquery-3.5.1.min.js"></script>
+    <script src="assets/libs/jquery.loadTemplate.js"></script>
+
     <script src="assets/modules/blank/creatingOrgerBlank.js"></script>
     <script src="assets/modules/blank/addToBlank.js"></script>
 
+    <script src="assets/modules/switchTabs.js"></script>
+
 
     <script src='assets/app.js'></script>
-
-
-
-
-<!-- <hr>
-  <a download="9dksk239xwd.doc" id="test" href="#">test</a>
-    <script type="application/javascript">
-      var type = 'data:application/octet-stream;base64, ';
-      var text = '<hjxowsjsivneic';
-      var base = btoa(text);
-      var res = type + base;
-      document.getElementById('test').href = res;
-    </script>
- -->
-
-<script src="assets/html-docx-js/dist/html-docx.js"></script>
-
-<script >
-  var content = "<div>Ширинна, мм: <input type='text' id='width' value='1000'> "
-  var converted = htmlDocx.asBlob(content);
-  saveAs(converted, 'test.docx');
-</script>
+ 
 
   </body>
 </html>
