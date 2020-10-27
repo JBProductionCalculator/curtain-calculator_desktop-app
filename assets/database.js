@@ -1,4 +1,3 @@
-
 let allGoods = {
   rollerBlinds :  [
      {
@@ -12,8 +11,7 @@ let allGoods = {
       "closedType" : {
          "uniFlat" : [17.0 , "+2" , "UNI Плоскю Направл"] ,
          "uniFullTurn" : [23.0 , "+3" , "UNI П-обрю Направл."],
-      },
-      "count" : 1,
+      }
     },
     {
       "name": "LEN",

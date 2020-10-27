@@ -17,11 +17,12 @@ function creatingOrgerBlank(oneRow) {
 
 
 	creationOneBlank(orderBlank)
-	addToHTMLBlankInform(curtainsBlank, "#curtainsBlank")
-	addToHTMLBlankInform(verticalBlank, "#verticalBlank")
-	addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank")
-	addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank")
-	addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank")
+	addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
+	addToHTMLBlankInform(verticalBlank, "#verticalBlank", "#verticalBlank_download")
+	addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
+	addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank", "#horizontalStandardBlank_download")
+	addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank", "#mosquitoNetBlank_download")
+
 
 	// addToHTMLBlankInform(verticalBlank, "#blank-vertical")
 
@@ -103,7 +104,11 @@ function creatingOrgerBlank(oneRow) {
 
 
 
-function addToHTMLBlankInform(data,id){
+function addToHTMLBlankInform(data,id,idButton){
+
+
+	addButtonAmoutProduct(data, idButton)
+
 	let blank = document.querySelector(id+" #all-product tbody")
 	let allCells = {
 		'count_blank':  ['count_blank',20 , 'padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;'],
@@ -151,13 +156,19 @@ function addToHTMLBlankInform(data,id){
 
 		blank.append(tr)
 	})
-
-	
-
 }
 
+function addButtonAmoutProduct(data,idButton){
+	data.forEach(function(one,index){
+		console.log(document.querySelector(idButton+' .amount_goods'))
+		console.log(index)
+		document.querySelector(idButton+' .amount_goods').textContent = index+1
+		// console.log(one)
+	})
+	// console.log(idButton)	
+}
 
-
+// экспорт html в doc
 function exportHTML(id){
 	console.log(id)
 

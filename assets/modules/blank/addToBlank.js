@@ -13,26 +13,47 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
  	let height = parentBlock.querySelector("#height").value
 
 
- 	let oneItem = {
- 		"idParent" : idParent,
- 		"systemAndColor" : `${productSystem} ${productColor} ${addToBlankForEach(color)}`,
- 		"color" : productColor,
- 		"width" : widht,
- 		"height" : height,
- 		"controlType" :  addToBlankForEach(controlType),
- 		"fixationSystem" : addToBlankForEach(fixationSystem),
+ 	console.log(productSystem);
+ 	let oneItem
+ 	if (productSystem == "MAXIMUS") {
+ 		oneItem = {
+	 		"idParent" : idParent,
+	 		"systemAndColor" : `${productSystem} ${productColor} Бел.`,
+	 		"color" : productColor,
+	 		"width" : widht,
+	 		"height" : height,
+	 		"controlType" :  addToBlankForEach(controlType),
+	 		"fixationSystem" : addToBlankForEach(fixationSystem),
+ 		}
+ 	}else{
+ 		oneItem = {
+	 		"idParent" : idParent,
+	 		"systemAndColor" : `${productSystem} ${productColor} ${addToBlankForEach(color)}`,
+	 		"color" : productColor,
+	 		"width" : widht,
+	 		"height" : height,
+	 		"controlType" :  addToBlankForEach(controlType),
+	 		"fixationSystem" : addToBlankForEach(fixationSystem),
+ 		}
+
  	}
+
+
+
 
  	creatingOrgerBlank(oneItem)
 
 
  	function addToBlankForEach(data){
+
 		let text
 		data.forEach(function(oneRadio){
 			if (oneRadio.checked == true) {
 				text = oneRadio.value
 			}  	
 		})
+ 		
+
 		return text
 
 	}

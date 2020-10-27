@@ -1,0 +1,122 @@
+<!DOCTYpE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Админ панель</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/adminPanel/apmin-panel.css">
+</head>
+<body>
+
+<header id="menu">
+	<ul>
+		<li>Рулонные шторы</li>
+		<li>День ночь</li>
+		<li>Готовые рулонные шторы</li>
+		<li>Горизонтальные жалюзи Венус</li>
+		<li>Горизонтальные жалюзи Стандарт</li>
+		<li>Вертикальные жалюзи 89</li>
+		<li>Вертикальные жалюзи 127</li>
+		<li>Москитные сетки</li>
+	</ul>
+</header>
+    
+
+<main id="adding_goods">
+	<section id="rolle_blinds" >
+	    <h3>Руллоные шторы</h3>
+
+	    <div class="product_list">
+	    	<ul class="product">
+	    		<li class="product_color">Цвет</li>
+	    		<li class="product_type">Тип</li>
+	    		<li class="product_price">Цена</li>
+	    	</ul>
+	    	<ul class="product">
+	    		<li class="product_color">
+	    			<input type="text" placeholder="Изменить цвет" class="none">
+	    			<p>Марсель</p>
+	    		</li>
+	    		<li class="product_type">
+	    			<select class="none">
+		    			<option>Compact и фалш шторы</option>
+		    			<option>MINI</option>
+		    			<option>STANDART</option>
+		    			<option >MAXIMUS</option>
+		    			<option >UNI Плоскю Направл</option>
+		    			<option >UNI П-обрю Направл.</option>
+		    		</select>
+	    			<p>maximus</p>	    			
+	    		</li>
+	    		<li class="product_price">
+	    			<input type="text" placeholder="Изменить Цену" class="none">
+	    			<p>12</p>
+	    		</li>
+	    		<li class="element_actions">
+	    			<button class="change">Изменить</button>
+	    			<button class="save">Сохранить</button>
+	    			<button class="delete">Удалить</button>
+	    		</li>
+	    	</ul>
+	    </div>
+
+		<div  class="add_block">
+	    	<div class="add_color">Цвет <input type="text" value="1"><p class="none">Поле не заполнено</p></div>
+	    	<div class="add_type">Тип
+	    		<select>
+	    			<option>Compact и фалш шторы</option>
+	    			<option>MINI</option>
+	    			<option>STANDART</option>
+	    			<option >MAXIMUS</option>
+	    			<option >UNI Плоскю Направл</option>
+	    			<option >UNI П-обрю Направл.</option>
+	    		</select>
+	    		<!-- <p>Тип не выбран</p> -->
+	    	</div>
+	    	<div class="add_price">Цена
+	    		<input type="text" value="1">
+	    		<p class="none">Поле не заполнено</p>
+	    	</div>
+	    	<div>
+	    		<input type="submit" id="create_button"  value="Добавить" >
+	    	</div>
+		</div>
+ 	</section>
+
+	 <section>
+	 	<h3>День ночь 	</h3>
+	 </section>
+
+	 <section>
+	        <h3>Размеры готовых рулонных штор и тканевых роллет</h3>
+	 </section>
+
+	 <section>
+	        <h3>Горизонтальные жалюзи Венус</h3>
+	 	
+	 </section>
+
+	 <section>
+		<h3>Горизонтальные жалюзи Стандарт</h3> 	
+	 </section>
+
+	 <section>
+	 	<h3>Вертикальные 89</h3>
+	 </section>
+
+	 <section>
+	 	<h3>Вертикальные 127</h3>
+	 	
+	 </section>
+
+	 <section>
+	 	<h3>Москитные сетки</h3>
+	 </section>
+</main>
+ 
+
+<script src="assets/adminPanel/adminActions.js"></script>
+<script src="assets/adminPanel/adminPanel.js"></script>
+</body>
+</html>
