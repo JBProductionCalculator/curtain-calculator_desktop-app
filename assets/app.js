@@ -80,27 +80,28 @@ function horizontalHouverStandard(){
     let parentSelect = '#productSelectHorizontalLouverStandard'
 
 
-    callingMainFunctions(data, 4 ,commandsTable , '.horizontal_louver_standard', createSelect, searchPrice, objectID, idCalculate, parentSelect)
+    callingMainFunctions(data, 3 ,commandsTable , '.horizontal_louver_standard', createSelect, searchPrice, objectID, idCalculate, parentSelect)
 }
 
 
 
 
-verticalHouver127mm()
-function verticalHouver127mm(){
-    let data =  allGoods.verticalHouver127mm
-    let commandsTable ="['oneProduct.name', 'oneProduct.colorСode', 'oneProduct.price']" 
-    let createSelect = ['data[0].colorСode[2]', 'data[0].price[2]' ]
-    let searchPrice = ['oneGoods.colorСode',  'oneGoods.price' ]
+// verticalHouver89mm()
+// function verticalHouver89mm(){
+//     let data =  allGoods.verticalHouver89mm
+//     let commandsTable ="['oneProduct.name', 'oneProduct.colorСode'" 
+//     let createSelect = ['data[0].colorСode[2]', 'data[0].price[2]' ]
+//     let searchPrice = ['oneGoods.colorСode',  'oneGoods.price' ]
 
-    let objectID = ['productNameVerticalHouver127mm', 'productTypeVerticalHouver127mm']
-    let idCalculate = '#priceСalculationVerticalHouver127mm'
-    let parentSelect = '#productSelectVerticalHouver127mm'
+//     let objectID = ['productNameVerticalHouver89mm', 'productTypeVerticalHouver89mm']
+//     let idCalculate = '#priceСalculationVerticalHouver89mm'
+//     let parentSelect = '#productSelectVerticalHouver89mm'
 
 
-    callingMainFunctions(data, 3 ,commandsTable , '.horizontal_vertical_127mm', createSelect, searchPrice, objectID, idCalculate, parentSelect)
+//     callingMainFunctions(data, 3 ,commandsTable , '.horizontal_vertical_89mm', createSelect, searchPrice, objectID, idCalculate, parentSelect)
 
-}
+// }
+
 
 
 
@@ -120,6 +121,23 @@ function verticalHouver89mm(){
 
 }
 
+
+
+verticalHouver127mm()
+function verticalHouver127mm(){
+    let data =  allGoods.verticalHouver127mm
+    let commandsTable ="['oneProduct.name', 'oneProduct.colorСode', 'oneProduct.price']" 
+    let createSelect = ['data[0].colorСode[2]', 'data[0].price[2]' ]
+    let searchPrice = ['oneGoods.colorСode',  'oneGoods.price' ]
+
+    let objectID = ['productNameVerticalHouver127mm', 'productTypeVerticalHouver127mm']
+    let idCalculate = '#priceСalculationVerticalHouver127mm'
+    let parentSelect = '#productSelectVerticalHouver127mm'
+
+
+    callingMainFunctions(data, 3 ,commandsTable , '.horizontal_vertical_127mm', createSelect, searchPrice, objectID, idCalculate, parentSelect)
+
+}
 
 
 mosquitoNet()

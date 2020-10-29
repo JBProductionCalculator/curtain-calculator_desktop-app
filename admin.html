@@ -33,7 +33,7 @@
 	    		<li class="product_type">Тип</li>
 	    		<li class="product_price">Цена</li>
 	    	</ul>
-	    	<ul class="product">
+	    	<!-- <ul class="product">
 	    		<li class="product_color">
 	    			<input type="text" placeholder="Изменить цвет" class="none">
 	    			<p>Марсель</p>
@@ -58,25 +58,30 @@
 	    			<button class="save">Сохранить</button>
 	    			<button class="delete">Удалить</button>
 	    		</li>
-	    	</ul>
+	    	</ul> -->
 	    </div>
 
 		<div  class="add_block">
-	    	<div class="add_color">Цвет <input type="text" value="1"><p class="none">Поле не заполнено</p></div>
+	    	<div class="add_color">Цвет <input type="text" value="Зеленый"><p class="none">Поле не заполнено</p></div>
 	    	<div class="add_type">Тип
 	    		<select>
-	    			<option>Compact и фалш шторы</option>
-	    			<option>MINI</option>
-	    			<option>STANDART</option>
-	    			<option >MAXIMUS</option>
-	    			<option >UNI Плоскю Направл</option>
-	    			<option >UNI П-обрю Направл.</option>
+	    			<option data-type="copact">Compact и фалш шторы</option>
+	    			<option data-type="mini">MINI</option>
+	    			<option data-type="standard">STANDART</option>
+	    			<option data-type="maximus" >MAXIMUS</option>
+	    			<option data-type="uniFlat" >UNI Плоскю Направл</option>
+	    			<option data-type="uniFullTurn" >UNI П-обрю Направл.</option>
 	    		</select>
 	    		<!-- <p>Тип не выбран</p> -->
 	    	</div>
 	    	<div class="add_price">Цена
-	    		<input type="text" value="1">
+	    		<input type="text" value="12">
 	    		<p class="none">Поле не заполнено</p>
+	    	</div>
+	    	<div class="add_plus">Дополнительно
+	    		<input type="text" value="+1">
+	    		<p class="none">Поле не заполнено</p>
+
 	    	</div>
 	    	<div>
 	    		<input type="submit" id="create_button"  value="Добавить" >
@@ -115,8 +120,9 @@
 	 </section>
 </main>
  
-
+<script src="assets/adminPanel/test-database.js"></script>
 <script src="assets/adminPanel/adminActions.js"></script>
+<script src="assets/adminPanel/adminSave.js"></script>
 <script src="assets/adminPanel/adminPanel.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 function addToBlankFun(parentBlock, selectOne, selectTwo ) {
 
-	console.log(parentBlock);
+	// console.log(parentBlock);
 
 	// let price = parentBlock.querySelector("#price").textContent
 	let idParent = parentBlock.id
@@ -13,7 +13,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
  	let height = parentBlock.querySelector("#height").value
 
 
- 	console.log(productSystem);
+ 	// console.log(productSystem);
  	let oneItem
  	if (productSystem == "MAXIMUS") {
  		oneItem = {
@@ -40,7 +40,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
 
 
 
-
+ 	// console.log(oneItem);
  	creatingOrgerBlank(oneItem)
 
 

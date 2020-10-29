@@ -10,7 +10,7 @@ allTabs.forEach(function(tab, index) {
 					one.style.display = 'none'
 				})
 
-				window.style.display = 'block'
+				window.style.display = 'flex'
 			}
 
 		})

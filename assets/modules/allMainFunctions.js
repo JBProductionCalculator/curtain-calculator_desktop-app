@@ -32,6 +32,8 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
 
                 addToBlankFun(parentBlock, objectID[0], objectID[1])
 
+                // showBlank()
+
                 this.style.visibility = 'hidden'
 
             })

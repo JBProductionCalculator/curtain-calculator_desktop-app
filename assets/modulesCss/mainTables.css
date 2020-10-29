@@ -1,0 +1,111 @@
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*стили главной таблицы*/
+
+main{
+	background: #3c4143;
+}
+
+section.one_window{
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 50px 50px;
+	box-sizing: border-box;
+	background:rgba(255,255,255, .4);
+	overflow: hidden;
+	max-width: 100vw;
+}
+
+.main_table {
+	color: rgba(255,255,255, .5);
+	background: #3c4143;
+	padding: 0 50px;
+	border-radius: 20px;
+}
+
+ul.one-row{
+	display: flex;
+}
+
+.main_table ul:first-child li{
+	background: #4c5154;
+	/*background: #38588c;*/
+}
+
+.main_table ul:nth-child(2) li{
+	background: #4c5154;
+	/*background: #38588c;*/
+}
+
+.main_table ul:nth-child(3) li{
+	background: #4c5154;
+	/*background: #38588c;*/
+}
+
+
+ul.one-row li{
+	padding:20px 0;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	width: 150px;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #3c4143;
+
+}
+
+ul.one-row li:first-child{
+	background: #4c5154;
+}
+
+
+
+
+/*Точечное изминение таблиц*/
+.horizontal_louver_venus  ul:nth-child(3) li {
+	background: #3c4143;
+}
+.horizontal_louver_venus  ul:nth-child(3) li:first-child{
+	background: #4c5154;
+}
+
+
+.horizontal_louver_standard  ul:nth-child(2) li, .horizontal_louver_standard  ul:nth-child(3) li {
+	background: #3c4143;
+}
+
+.horizontal_louver_standard ul li:first-child {
+	background: #4c5154;
+}
+
+
+.horizontal_vertical_89mm ul:nth-child(2) li, .horizontal_vertical_127mm ul:nth-child(2) li,
+.horizontal_vertical_89mm ul:nth-child(3) li, .horizontal_vertical_127mm ul:nth-child(3) li{
+	background: #3c4143;
+} 
+
+.horizontal_vertical_89mm ul li:first-child, .horizontal_vertical_127mm ul li:first-child{
+	background: #4c5154;
+}
+
+
+ .mosquito_net ul:nth-child(3) li {
+	background: #3c4143;
+
+} 
+
+.mosquito_net ul li:first-child{
+	background: #4c5154;
+
+}
+
+
+.roller_curtains_ready ul.one-row li{
+	width: 50px;
+}
+
+.roller_curtains_ready ul.one-row li:first-child{
+	width: 70px;
+}

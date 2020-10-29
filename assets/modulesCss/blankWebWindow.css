@@ -1,0 +1,23 @@
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*Бланк для добавления заказов который на экране*/
+.screen_blank ul{
+	display: flex;
+}
+
+.screen_blank li{
+	padding: 5px 10px;
+	border: 1px solid black;
+	min-width: 10%;
+	max-width: 10%;
+
+}
+.screen_blank li.number_of_blanks{
+	width: 2%;
+	display: flex;
+	justify-content: center;
+}
+.screen_blank li.system_and_color{
+	min-width: 25%;
+	max-width: 25%;
+}

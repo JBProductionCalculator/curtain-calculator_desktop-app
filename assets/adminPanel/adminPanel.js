@@ -22,6 +22,6 @@ function navigation(argument) {
 
 
 
-adminActions("#rolle_blinds")
+adminActions("#rolle_blinds", true)
 
 

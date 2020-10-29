@@ -1,0 +1,29 @@
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*Преключение окон*/
+main{
+	display: flex;
+}
+
+main .one_window{
+	min-width: 100vw;
+	display: none;
+}
+
+main .one_window:first-child{
+	display: flex;
+}
+
+
+#switch_tabs ul{
+	display: flex;
+}
+
+
+#switch_tabs li{
+    padding: 20px;
+    border: 1px solid black;
+    margin: 5px;
+    cursor: pointer;
+}
+

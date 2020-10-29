@@ -1,4 +1,8 @@
 
+.none{
+	display: none;
+}
+
 
 /*функциональные классы*/
 #add_to_blank{
@@ -12,18 +16,22 @@
 	color: red;
 }
 
-ul{
+ul, body, li{
 	margin: 0;
 	padding: 0;
 }
 
 li{
 	list-style: none;
-	padding: 0;
-	margin: 0;
+
 }
 
-ul.one-row{
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*стили главной таблицы*/
+
+/*ul.one-row{
 	display: flex;
 }
 
@@ -57,8 +65,12 @@ ul.create-row li{
 	border-color: black;
 }
 
-
-.priceСalculation {
+*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/* стили калькулятора .стили функциональных кнопок и инпутов калькулятора*/
+ 
+/*.priceСalculation {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 20px;
@@ -75,15 +87,15 @@ ul.create-row li{
 .productSelect > div{
 	margin: 0;
 	margin-right: 10px;
-	/*display: flex;*/
 }
 	
 
+*/
 
-
-
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
 /*Преключение окон*/
-main{
+/*main{
 	display: flex;
 }
 
@@ -111,9 +123,34 @@ main .one_window:first-child{
 
 
 /*Бланки для документа*/
-#all-blank{
+/*#all-blank{
 	position: absolute;
 	width: 50vw;	
 	overflow: hidden;
 	left: -100vw;
+}*/
+
+
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*Бланк для добавления заказов который на экране*/
+/*.screen_blank ul{
+	display: flex;
 }
+
+.screen_blank li{
+	padding: 5px 10px;
+	border: 1px solid black;
+	min-width: 10%;
+	max-width: 10%;
+
+}
+.screen_blank li.number_of_blanks{
+	width: 2%;
+	display: flex;
+	justify-content: center;
+}
+.screen_blank li.system_and_color{
+	min-width: 25%;
+	max-width: 25%;
+}*/
