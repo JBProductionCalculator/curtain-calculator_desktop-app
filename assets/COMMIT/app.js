@@ -84,6 +84,27 @@ function horizontalHouverStandard(){
 }
 
 
+
+
+// verticalHouver89mm()
+// function verticalHouver89mm(){
+//     let data =  allGoods.verticalHouver89mm
+//     let commandsTable ="['oneProduct.name', 'oneProduct.colorСode'" 
+//     let createSelect = ['data[0].colorСode[2]', 'data[0].price[2]' ]
+//     let searchPrice = ['oneGoods.colorСode',  'oneGoods.price' ]
+
+//     let objectID = ['productNameVerticalHouver89mm', 'productTypeVerticalHouver89mm']
+//     let idCalculate = '#priceСalculationVerticalHouver89mm'
+//     let parentSelect = '#productSelectVerticalHouver89mm'
+
+
+//     callingMainFunctions(data, 3 ,commandsTable , '.horizontal_vertical_89mm', createSelect, searchPrice, objectID, idCalculate, parentSelect)
+
+// }
+
+
+
+
 verticalHouver89mm()
 function verticalHouver89mm(){
     let data =  allGoods.verticalHouver89mm
@@ -99,6 +120,7 @@ function verticalHouver89mm(){
     callingMainFunctions(data, 3 ,commandsTable , '.horizontal_vertical_89mm', createSelect, searchPrice, objectID, idCalculate, parentSelect)
 
 }
+
 
 
 verticalHouver127mm()

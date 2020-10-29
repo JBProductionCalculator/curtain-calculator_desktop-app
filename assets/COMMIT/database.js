@@ -229,6 +229,8 @@ let allGoods = {
 ],
 
 //вертикальные жалюзи
+
+
 verticalHouver89mm : [
  
    {

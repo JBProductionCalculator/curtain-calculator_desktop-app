@@ -57,6 +57,9 @@ form p{
 
 .priceСalculation  input[type="submit"] 	{
     padding: 10px 50px;
+/*    background: #3c4143;
+	color: rgba(255,255,255, .5);*/
+    
 }
 
 .priceСalculation  input[type="submit"]:first-child{
@@ -65,6 +68,6 @@ form p{
 
 .priceСalculation  .priceProd{
 	font-size: 20px;
-	
+
 }
 

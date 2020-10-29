@@ -1,23 +1,46 @@
 /*----------------------------------------------------------------*/
 /*----------------------------------------------------------------*/
 /*Бланк для добавления заказов который на экране*/
+
+.screen_blank{
+	margin-top: 70px;
+}
+
 .screen_blank ul{
 	display: flex;
 }
 
+
+
 .screen_blank li{
 	padding: 5px 10px;
-	border: 1px solid black;
-	min-width: 10%;
-	max-width: 10%;
-
+	/*border: 1px solid black;*/
+	margin: 3px;
+	background: #f2f2f2;
+	display: flex;
+	align-items: center;
 }
+
+.screen_blank ul:first-child li{
+	background: #3c4143;
+	color: rgba(255,255,255, .5);
+}
+
 .screen_blank li.number_of_blanks{
 	width: 2%;
 	display: flex;
 	justify-content: center;
 }
 .screen_blank li.system_and_color{
-	min-width: 25%;
-	max-width: 25%;
+	width: 300px;
 }
+
+.screen_blank .width, .screen_blank .height,
+ .screen_blank .control, .screen_blank .quantity{
+ 	width: 100px;
+ }
+
+.screen_blank .fastening{
+	width: 170px;
+}
+

@@ -101,11 +101,16 @@ ul.one-row li:first-child{
 
 }
 
+.roller_curtains_ready ul:nth-child(2) li, .roller_curtains_ready ul:nth-child(3) li{
+	background: #3c4143;
 
+}
 .roller_curtains_ready ul.one-row li{
 	width: 50px;
 }
 
 .roller_curtains_ready ul.one-row li:first-child{
 	width: 70px;
+	background: #4c5154;
+	
 }
