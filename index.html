@@ -4,10 +4,14 @@
   <head>
     <meta charset='UTF-8'>
     <title>Web version</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css">
+
     <link rel='stylesheet' href='assets/app.css'>
     <link rel="stylesheet" type="text/css" href="assets/modulesCss/mainTables.css">
     <link rel="stylesheet" type="text/css" href="assets/modulesCss/calculation.css">
     <link rel="stylesheet" type="text/css" href="assets/modulesCss/switchTabs.css">
+    <link rel="stylesheet" type="text/css" href="assets/modulesCss/buttonsDownloadBlank.css">
     <link rel="stylesheet" type="text/css" href="assets/modulesCss/blankDoc.css">
     <link rel="stylesheet" type="text/css" href="assets/modulesCss/blankWebWindow.css">
   </head>
@@ -15,14 +19,14 @@
 
       <div id="switch_tabs">
         <ul>
-          <li class="click_tab">Рулонные шторы</li>
-          <li>День-Ночь</li>
-          <li>Готовые рулонные шторы</li>
-          <li>Горизонтальные жалюзи "Венус"</li>
-          <li>Горизонтальные жалюзи "Стандарт"</li>
-          <li>Вертикальные жалюзи 89 мм.</li>
-          <li>Вертикальные жалюзи 127 мм.</li>
-          <li>Рулонные москитные сетки</li>
+          <li class="click_tab" data-click='curtains' >Рулонные шторы</li>
+          <li data-click='curtains' >День-Ночь</li>
+          <li data-click='curtains' >Готовые рулонные шторы</li>
+          <li data-click='horizontal_venus' >Горизонтальные жалюзи "Венус"</li>
+          <li data-click='horizontal_standard' >Горизонтальные жалюзи "Стандарт"</li>
+          <li data-click='vertical' >Вертикальные жалюзи 89 мм.</li>
+          <li data-click='vertical' >Вертикальные жалюзи 127 мм.</li>
+          <li data-click='mosquito' >Рулонные москитные сетки</li>
         </ul>
       </div>
 
@@ -116,6 +120,10 @@
                 <li class="price"></li>
               </ul>
           </div>
+
+
+
+
       </section>
 
 
@@ -588,7 +596,7 @@
 
 
 
-<div id="screen_blanks">
+<!-- <div id="screen_blanks">
   <div id="screen_blanks_roller_curtains" class="screen_blank none" >
       <ul>
         <li class="number_of_blanks">_</li>
@@ -616,7 +624,7 @@
 
 
 
-
+ -->
 
 
 
@@ -630,28 +638,31 @@
 <div id="blank-vertical"></div>
 <div class="download_blank">
     <button id="btn-export" onclick="exportHTML('blank-vertical');">Сохранить в Word</button>
-</div>
+</div>  
    -->
 
+<div class="buttons_download_blank">
+     <div id="curtainsBlank_download" class="download_blank " data-view='curtains'>
+          <button  onclick="exportHTML('curtainsBlank');"><span>Скачать блак Рулонные шторы</span>  <span class="amount_goods"></span></button>
+      </div>
 
-    <div id="curtainsBlank_download" class="download_blank">
-        <button  onclick="exportHTML('curtainsBlank');">Рулонные шторы</button> <span class="amount_goods"></span>
-    </div>
+      <div id="horizontalVenusBlank_download" class="download_blank " data-view='horizontal_venus'>
+          <button   onclick="exportHTML('horizontalVenusBlank');"><span>Скачать блак Горизонтальные жалюзи Венус</span> <span class="amount_goods"></span>  </button>
+      </div>
 
-    <div id="horizontalVenusBlank_download" class="download_blank">
-        <button   onclick="exportHTML('horizontalVenusBlank');">Горизонтальные жалюзи Венус</button><span class="amount_goods"></span>  
-    </div>
+      <div id="horizontalStandardBlank_download" class="download_blank " data-view='horizontal_standard'>
+          <button   onclick="exportHTML('horizontalStandardBlank');"><span>Скачать блак Горизонтальные жалюзи Стандарт</span><span class="amount_goods"></span> </button> 
+      </div>
+      <div id="verticalBlank_download" class="download_blank " data-view='vertical'>
+          <button  onclick="exportHTML('verticalBlank');"> <span>Скачать блак Вертикальные жалюзи</span><span class="amount_goods"></span></button>  
+      </div>
 
-    <div id="horizontalStandardBlank_download" class="download_blank">
-        <button   onclick="exportHTML('horizontalStandardBlank');">Горизонтальные жалюзи Стандарт</button><span class="amount_goods"></span>  
-    </div>
-    <div id="verticalBlank_download" class="download_blank">
-        <button  onclick="exportHTML('verticalBlank');">Вертикальные жалюзи</button><span class="amount_goods"></span>  
-    </div>
+      <div id="mosquitoNetBlank_download" class="download_blank " data-view='mosquito'>
+          <button  onclick="exportHTML('mosquitoNetBlank');"><span>Скачать блак Москитные сетки </span><span class="amount_goods"></span></button> 
+      </div>
+</div>
 
-    <div id="mosquitoNetBlank_download" class="download_blank">
-        <button  onclick="exportHTML('mosquitoNetBlank');">Москитные</button><span class="amount_goods"></span> 
-    </div>
+   
 
 
 

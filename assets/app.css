@@ -1,20 +1,12 @@
 
-.none{
-	display: none;
+
+
+
+
+body{
+	font-family: "Regular", sans-serif;
 }
 
-
-/*функциональные классы*/
-#add_to_blank{
-	border: 2px solid blue;
-	visibility: hidden;
-}
-
-
-
-.red{
-	color: red;
-}
 
 ul, body, li{
 	margin: 0;
@@ -25,6 +17,20 @@ li{
 	list-style: none;
 
 }
+
+
+
+
+/*функциональные классы*/
+#add_to_blank{
+	border: 2px solid blue;
+	visibility: hidden;
+}
+
+.none{
+	display: none;
+}
+
 
 
 /*----------------------------------------------------------------*/

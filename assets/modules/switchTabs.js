@@ -1,33 +1,55 @@
-let allWindow = document.querySelectorAll('.one_window')
-let allTabs = document.querySelectorAll('#switch_tabs ul li')
+
+switchWindowsAndDeleteButtons()
+function switchWindowsAndDeleteButtons(){
+	let allWindow = document.querySelectorAll('.one_window')
+	let allTabs = document.querySelectorAll('#switch_tabs ul li')
+	let allDownloadButton = document.querySelectorAll('.download_blank')
 
 
-allTabs.forEach(function(tab, index) {
-	// tab.classList.remove('click_tab')
-	// console.log(tab)
+
+	// функция отвечающая за переключни окон но под функцию так же подвязаны кнопки скачивния бланка
+	allTabs.forEach(function(tab, index) {
+
+		allWindow.forEach(function(window,ind){
+			tab.addEventListener('click',function(){
+				// viewButton(this)
+
+				this.classList.add('click_tab')
+
+				if (index === ind) {
+					allWindow.forEach(function(one){
+						one.style.display = 'none'
+				})
 
 
-	allWindow.forEach(function(window,ind){
-		tab.addEventListener('click',function(){
-			this.classList.add('click_tab')
+				allTabs.forEach(function(tb){
+					tb.classList.remove('click_tab')
+				})
 
-			if (index === ind) {
-				allWindow.forEach(function(one){
-					one.style.display = 'none'
-			})
-
-
-			allTabs.forEach(function(tb){
-				tb.classList.remove('click_tab')
-			})
-
-			this.classList.add('click_tab')
+				this.classList.add('click_tab')
 
 
 				window.style.display = 'flex'
-			}
+				}
+
+			})
 
 		})
+	})	
 
-	})
-})
+	// allDownloadButton.forEach(function(butt, index){
+	// 	if(index !=0){
+	// 		butt.classList.add('none')
+	// 	}
+	// })
+
+	// function viewButton(clickTab){
+	// 	allDownloadButton.forEach(function(button){
+	// 		button.classList.add('none')
+	// 		if (clickTab.dataset.click == button.dataset.view) {
+	// 			button.classList.remove('none')
+	// 		}
+	// 	})
+	// }
+}
+

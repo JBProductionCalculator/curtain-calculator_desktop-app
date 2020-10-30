@@ -18,8 +18,9 @@ main .one_window:first-child{
 }
 
 #switch_tabs{
-
 	background: #3c4143;
+	/*background: #1c1c1c;*/
+
 }
 
 
@@ -37,8 +38,10 @@ main .one_window:first-child{
     margin: 5px;
     cursor: pointer;
     background: #3c4143;
-	color: rgba(255,255,255, .5);
-	border-radius: 4px;
+    /*background: #04cdb8;*/
+    color: rgba(255,255,255, .5);
+	/*color: #fff;*/
+	border-radius: 2px;
 	/*text-transform: uppercase;*/
 }
 

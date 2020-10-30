@@ -1,0 +1,28 @@
+.buttons_download_blank{
+	position: fixed;
+	right: 0;
+	top: 50%;
+	text-align: right;
+}
+
+.download_blank{
+	display: flex;
+}
+
+.download_blank button{
+	margin-bottom: 10px;
+	border-radius: 50px;
+	background: inherit;
+	padding: 10px;
+	border: 3px solid #fcbf14;
+	color: #fcbf14;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.download_blank .amount_goods{
+	margin-left: 10px;
+		
+}
+
