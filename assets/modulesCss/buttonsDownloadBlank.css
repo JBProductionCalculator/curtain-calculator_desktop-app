@@ -1,13 +1,13 @@
 .buttons_download_blank{
 	position: fixed;
 	right: 0;
-	top: 50%;
+	top: 100px;
 	text-align: right;
 }
 
-.download_blank{
+/*.download_blank{
 	display: flex;
-}
+}*/
 
 .download_blank button{
 	margin-bottom: 10px;

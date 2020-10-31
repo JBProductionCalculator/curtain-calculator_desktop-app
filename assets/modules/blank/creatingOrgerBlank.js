@@ -5,12 +5,16 @@ let orderBlank = []
 
 function creatingOrgerBlank(oneRow) {
 
+
 	orderBlank.push(oneRow)
 
 	// console.log(orderBlank);
 
 	let curtainsBlank = []
-	let verticalBlank = []
+	// let verticalBlank = []
+	let newVerticalBlank = []
+
+
 	let horizontalVenusBlank = []
 	let horizontalStandardBlank = []
 	let mosquitoNetBlank = []
@@ -29,9 +33,16 @@ function creatingOrgerBlank(oneRow) {
 	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_ready", "#screen_blanks_rolle_ready")
 
 
-	addToHTMLBlankInform(verticalBlank, "#verticalBlank", "#verticalBlank_download")
-	addToWindowBlankInForm(verticalBlank, "#horizontal_vertical_89mm", "#secreen_horizontal_vertical_89mm")
-	addToWindowBlankInForm(verticalBlank, "#horizontal_vertical_127mm", "#secreen_horizontal_vertical_127mm")
+	// addToHTMLBlankInform(verticalBlank, "#verticalBlank", "#verticalBlank_download")
+	// addToWindowBlankInForm(verticalBlank, "#horizontal_vertical_89mm", "#secreen_horizontal_vertical_89mm")
+	// addToWindowBlankInForm(verticalBlank, "#horizontal_vertical_127mm", "#secreen_horizontal_vertical_127mm")
+
+	// новые вертекальные бланки
+	addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
+	addToWindowBlankInForm(newVerticalBlank, "#new_vertical_89mm", "#secreen_new_vertical_89mm")
+	addToWindowBlankInForm(newVerticalBlank, "#new_vertical_127mm", "#secreen_new_vertical_127mm")
+
+
 
 
 	addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
@@ -64,9 +75,16 @@ function creatingOrgerBlank(oneRow) {
 					// curtainsBlank[oneProduct.idParent] = oneProduct
 			}
 
-			if(oneProduct.idParent === "priceСalculationVerticalHouver89mm" || oneProduct.idParent === "priceСalculationVerticalHouver127mm"){
-				verticalBlank.push(oneProduct)
+			// if(oneProduct.idParent === "priceСalculationVerticalHouver89mm" || oneProduct.idParent === "priceСalculationVerticalHouver127mm"){
+			// 	verticalBlank.push(oneProduct)
+			// }
+
+			if(oneProduct.idParent === "calculationNewVertical89mm" || oneProduct.idParent === "calculationNewVertical127mm" ){
+				newVerticalBlank.push(oneProduct)
 			}
+
+
+			// calculationNewVertical89mm
 
 			if (oneProduct.idParent === "priceСalculationHorizontalLouverVenus" ) {
 				horizontalVenusBlank.push(oneProduct)
@@ -206,12 +224,8 @@ function addToHTMLBlankInform(data,id,idButton){
 
 function addButtonAmoutProduct(data,idButton){
 	data.forEach(function(one,index){
-		// console.log(document.querySelector(idButton+' .amount_goods'))
-		// console.log(index)
 		document.querySelector(idButton+' .amount_goods').textContent = index+1
-		// console.log(one)
 	})
-	// console.log(idButton)	
 }
 
 // экспорт html в doc

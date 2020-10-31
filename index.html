@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset='UTF-8'>
-    <title>Web version</title>
+    <title>С вертикал калькурятором</title>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css">
 
@@ -98,7 +97,7 @@
         </div>
 
 
-          <div id="screen_blanks_roller_curtains" class="screen_blank none" >
+          <div id="screen_blanks_roller_curtains" class="screen_blank none" data-viewInBlan="curtains" >
               <ul>
                 <li class="number_of_blanks">_</li>
                 <li class="system_and_color">Система и Цвет</li>
@@ -120,10 +119,6 @@
                 <li class="price"></li>
               </ul>
           </div>
-
-
-
-
       </section>
 
 
@@ -188,7 +183,6 @@
           
         </div>
 
-
           <div id="screen_blanks_day_night" class="screen_blank none" >
               <ul>
                 <li class="number_of_blanks">_</li>
@@ -211,12 +205,9 @@
                 <!-- <li class="price"></li> -->
               </ul>
           </div>
-
-
       </section>
 
       <section id="roller_curtains_ready" class="one_window">
-        <h3>Размеры готовых рулонных штор и тканевых роллет</h3>
         <div class="roller_curtains_ready_scroll">
            <div class="roller_curtains_ready main_table"  >
               <ul class="one-row">
@@ -245,7 +236,6 @@
             </div>
         </div>
        
-
         <div id='priceСalculationReady' class="priceСalculation">
             <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
             <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
@@ -266,7 +256,6 @@
             <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>     
             
         </div>
-
 
           <div id="screen_blanks_rolle_ready" class="screen_blank none" >
               <ul>
@@ -296,7 +285,6 @@
 
 
       <section id='horizontal_louver_venus' class='one_window'>
-        <h2>Горизонтальные жалюзи</h2>
         <div class='horizontal_louver_venus main_table'  >
           <ul class='one-row'>
             <li>Жалюзи горизонтальные "Венус"</li>
@@ -355,7 +343,6 @@
       </section>
 
       <section id='horizontal_louver_standard' class='one_window'>
-        <h5>Стандарт</h5>
 
         <div class='horizontal_louver_standard main_table' >
           <ul class='one-row'>
@@ -407,188 +394,185 @@
       </section>
 
 
-        <section id='horizontal_vertical_89mm' class='one_window'>
-          <h2>ВЕРТИКАЛЬНЫЕ Жалюзи</h2>
+      <section id='new_vertical_89mm' class='one_window'>
 
-          <h4>ВЕРТИКАЛЬНЫЕ жалюзи 89</h4>
-          <div class='horizontal_vertical_89mm main_table'>
-            <ul class='one-row'>
-              <li>Название ткани</li>
-              <li>Код цвета</li>
-              <li>цена м.кв</li>
-            </ul>
-          </div>
+        <div class='new_vertical_89mm main_table'>
+          <ul class='one-row'>
+            <li>Название ткани</li>
+            <li>Код цвета</li>
+            <li>цена м.кв</li>
+          </ul>
+        </div>
 
-          <div id='priceСalculationVerticalHouver89mm' class="priceСalculation">
-              <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
-              <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
-              <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
-              <div id='productSelectVerticalHouver89mm'>
-                  <!-- в этот тег добавляются два тега select-->
-              </div>
-              <div>
-                <form style="display:flex;" >
-                    <p>Т1<input type="radio" name="controlType" value="Т1" checked></p>
-                    <p>Т2<input type="radio" name="controlType" value="Т2"></p>
-                    <p>Т3<input type="radio" name="controlType" value="Т3"></p>
-                    <p>Т4<input type="radio" name="controlType" value="Т4"></p>
-                </form>
-               
-              </div>
-              <div>
-                  <input type='submit' id='count' value='Посчитать'>
-                <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculationVerticalHouver89mm" value="Добавить в бланк">
-                  
-              </div>
-
-            <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>       
-          </div>
-
-           <div id="secreen_horizontal_vertical_89mm" class="screen_blank none" >
-              <ul>
-                <li class="number_of_blanks">_</li>
-                <li class="system_and_color">Система и Цвет</li>
-                <li class="width">Ширина см</li>
-                <li class="height">Высота см</li>
-                <li class="control">Упр L/R</li>
-                <li class="quantity">Количество</li>
-                <li class="fastening">Крепление</li>
-                <!-- <li class="price">Цена</li> -->
-              </ul>
-              <ul>
-                <li class="number_of_blanks">1</li>
-                <li class="system_and_color"></li>
-                <li class="width"></li>
-                <li class="height"></li>
-                <li class="control"></li>
-                <li class="quantity"></li>
-                <li class="fastening"></li>
-                <!-- <li class="price"></li> -->
-              </ul>
-          </div>
-        </section> 
-
-
-
-        <section id='horizontal_vertical_127mm' class='one_window'>
-          <h4>ВЕРТИКАЛЬНЫЕ жалюзи 127</h4>
-          <div class='horizontal_vertical_127mm main_table'>
-            <ul class='one-row'>
-              <li>Название ткани</li>
-              <li>Код цвета</li>
-              <li>цена м.кв</li>
-            </ul>
-          </div>
-
-          <div id='priceСalculationVerticalHouver127mm' class="priceСalculation">
-              <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
-              <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
-              <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
-              <div id='productSelectVerticalHouver127mm'>
-                  <!-- в этот тег добавляются два тега select-->
-              </div>
-              <div >
-                <form style="display:flex;">
+        <div id='calculationNewVertical89mm' class="priceСalculation">
+            <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
+            <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
+            <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+            <div id='productSelectNewVertical89mm'>
+                <!-- в этот тег добавляются два тега select-->
+            </div>
+            <div>
+              <form style="display:flex;" >
                   <p>Т1<input type="radio" name="controlType" value="Т1" checked></p>
                   <p>Т2<input type="radio" name="controlType" value="Т2"></p>
                   <p>Т3<input type="radio" name="controlType" value="Т3"></p>
                   <p>Т4<input type="radio" name="controlType" value="Т4"></p>
-                </form>
+              </form>
+             
+            </div>
+            <div>
+              <input type='submit' id='count' value='Посчитать'>
+              <input type="submit" id="add_to_blank" data-addToWindowBlank="calculationNewVertical89mm" value="Добавить в бланк">
                 
-              </div>
-              <div>
-                  <input type='submit' id='count' value='Посчитать'>
-                <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculationVerticalHouver127mm" value="Добавить в бланк">
-                  
-              </div>
-
-            <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>        
-          </div>
-
-          <div id="secreen_horizontal_vertical_127mm" class="screen_blank none" >
-                <ul>
-                  <li class="number_of_blanks">_</li>
-                  <li class="system_and_color">Система и Цвет</li>
-                  <li class="width">Ширина см</li>
-                  <li class="height">Высота см</li>
-                  <li class="control">Упр L/R</li>
-                  <li class="quantity">Количество</li>
-                  <li class="fastening">Крепление</li>
-                  <!-- <li class="price">Цена</li> -->
-                </ul>
-                <ul>
-                  <li class="number_of_blanks">1</li>
-                  <li class="system_and_color"></li>
-                  <li class="width"></li>
-                  <li class="height"></li>
-                  <li class="control"></li>
-                  <li class="quantity"></li>
-                  <li class="fastening"></li>
-                  <!-- <li class="price"></li> -->
-                </ul>
             </div>
-        </section> 
 
+          <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>       
+        </div>
 
-        <section id='mosquito_net' class='one_window'>
-          <h3>Москитные сетки</h3>
-
-          <div class='mosquito_net main_table'>
-            <ul class='one-row'>
-              <li>Рулонные Короб</li>
-              <li>37 Б / К</li>
-              <li>41 Б / К</li>
-              <li>37 Д / А</li>
-              <li>41 Д / А</li>
+         <div id="secreen_new_vertical_89mm" class="screen_blank none" >
+            <ul>
+              <li class="number_of_blanks">_</li>
+              <li class="system_and_color">Система и Цвет</li>
+              <li class="width">Ширина см</li>
+              <li class="height">Высота см</li>
+              <li class="control">Упр L/R</li>
+              <li class="quantity">Количество</li>
+              <li class="fastening">Крепление</li>
+              <!-- <li class="price">Цена</li> -->
             </ul>
-            <ul class="one-row">
-              <li>В коробе с направляющими</li>
-              <li>$ 1м.кв.</li>
-              <li>$ 1м.кв.</li>
-              <li>$ 1м.кв.</li>
-              <li>$ 1м.кв.</li>
+            <ul>
+              <li class="number_of_blanks">1</li>
+              <li class="system_and_color"></li>
+              <li class="width"></li>
+              <li class="height"></li>
+              <li class="control"></li>
+              <li class="quantity"></li>
+              <li class="fastening"></li>
+              <!-- <li class="price"></li> -->
             </ul>
-          </div>
+        </div>
+    </section> 
 
-          <div id='priceСalculationMosquitoNet' class="priceСalculation">
-              <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
-              <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
-              <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
-              <div id='productSelectMosquitoNet'>
-                  <!-- в этот тег добавляются два тега select-->
-              </div>
-              <div>
-                  <input type='submit' id='count' value='Посчитать'>
-                <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculationMosquitoNet" value="Добавить в бланк">
-                  
-              </div>
 
-            <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>       
-          </div>
+    <section id='new_vertical_127mm' class='one_window'>
 
-          <div id="secreen_mosquito_net" class="screen_blank none" >
-                <ul>
-                  <li class="number_of_blanks">_</li>
-                  <li class="system_and_color">Система и Цвет</li>
-                  <li class="width">Ширина см</li>
-                  <li class="height">Высота см</li>
-                  <li class="control">Упр L/R</li>
-                  <li class="quantity">Количество</li>
-                  <li class="fastening">Крепление</li>
-                  <!-- <li class="price">Цена</li> -->
-                </ul>
-                <ul>
-                  <li class="number_of_blanks">1</li>
-                  <li class="system_and_color"></li>
-                  <li class="width"></li>
-                  <li class="height"></li>
-                  <li class="control"></li>
-                  <li class="quantity"></li>
-                  <li class="fastening"></li>
-                  <!-- <li class="price"></li> -->
-                </ul>
+        <div class='new_vertical_127mm main_table'>
+          <ul class='one-row'>
+            <li>Название ткани</li>
+            <li>Код цвета</li>
+            <li>цена м.кв</li>
+          </ul>
+        </div>
+
+        <div id='calculationNewVertical127mm' class="priceСalculation">
+            <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
+            <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
+            <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+            <div id='productSelectNewVertical127mm'>
+                <!-- в этот тег добавляются два тега select-->
             </div>
-        </section> 
+            <div>
+              <form style="display:flex;" >
+                  <p>Т1<input type="radio" name="controlType" value="Т1" checked></p>
+                  <p>Т2<input type="radio" name="controlType" value="Т2"></p>
+                  <p>Т3<input type="radio" name="controlType" value="Т3"></p>
+                  <p>Т4<input type="radio" name="controlType" value="Т4"></p>
+              </form>
+             
+            </div>
+            <div>
+              <input type='submit' id='count' value='Посчитать'>
+              <input type="submit" id="add_to_blank" data-addToWindowBlank="calculationNewVertical127mm" value="Добавить в бланк">
+                
+            </div>
+
+          <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>       
+        </div>
+
+         <div id="secreen_new_vertical_127mm" class="screen_blank none" >
+            <ul>
+              <li class="number_of_blanks">_</li>
+              <li class="system_and_color">Система и Цвет</li>
+              <li class="width">Ширина см</li>
+              <li class="height">Высота см</li>
+              <li class="control">Упр L/R</li>
+              <li class="quantity">Количество</li>
+              <li class="fastening">Крепление</li>
+              <!-- <li class="price">Цена</li> -->
+            </ul>
+            <ul>
+              <li class="number_of_blanks">1</li>
+              <li class="system_and_color"></li>
+              <li class="width"></li>
+              <li class="height"></li>
+              <li class="control"></li>
+              <li class="quantity"></li>
+              <li class="fastening"></li>
+              <!-- <li class="price"></li> -->
+            </ul>
+        </div>
+    </section>
+
+
+
+    <section id='mosquito_net' class='one_window'>
+
+      <div class='mosquito_net main_table'>
+        <ul class='one-row'>
+          <li>Рулонные Короб</li>
+          <li>37 Б / К</li>
+          <li>41 Б / К</li>
+          <li>37 Д / А</li>
+          <li>41 Д / А</li>
+        </ul>
+        <ul class="one-row">
+          <li>В коробе с направляющими</li>
+          <li>$ 1м.кв.</li>
+          <li>$ 1м.кв.</li>
+          <li>$ 1м.кв.</li>
+          <li>$ 1м.кв.</li>
+        </ul>
+      </div>
+
+      <div id='priceСalculationMosquitoNet' class="priceСalculation">
+          <div>Ширинна, мм: <input type='text' id='width' value='1000'></div>
+          <div>Высота, мм: <input type='text' id='height'  value='1000'></div>
+          <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+          <div id='productSelectMosquitoNet'>
+              <!-- в этот тег добавляются два тега select-->
+          </div>
+          <div>
+              <input type='submit' id='count' value='Посчитать'>
+            <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculationMosquitoNet" value="Добавить в бланк">
+              
+          </div>
+
+        <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>       
+      </div>
+
+      <div id="secreen_mosquito_net" class="screen_blank none" >
+            <ul>
+              <li class="number_of_blanks">_</li>
+              <li class="system_and_color">Система и Цвет</li>
+              <li class="width">Ширина см</li>
+              <li class="height">Высота см</li>
+              <li class="control">Упр L/R</li>
+              <li class="quantity">Количество</li>
+              <li class="fastening">Крепление</li>
+              <!-- <li class="price">Цена</li> -->
+            </ul>
+            <ul>
+              <li class="number_of_blanks">1</li>
+              <li class="system_and_color"></li>
+              <li class="width"></li>
+              <li class="height"></li>
+              <li class="control"></li>
+              <li class="quantity"></li>
+              <li class="fastening"></li>
+              <!-- <li class="price"></li> -->
+            </ul>
+        </div>
+    </section> 
 
 
   </main>  
@@ -596,50 +580,6 @@
 
 
 
-<!-- <div id="screen_blanks">
-  <div id="screen_blanks_roller_curtains" class="screen_blank none" >
-      <ul>
-        <li class="number_of_blanks">_</li>
-        <li class="system_and_color">Система и Цвет</li>
-        <li class="width">Ширина см</li>
-        <li class="height">Высота см</li>
-        <li class="control">Упр L/R</li>
-        <li class="quantity">Количество</li>
-        <li class="fastening">Крепление</li>
-        <li class="price">Цена</li>
-      </ul>
-      <ul>
-        <li class="number_of_blanks">1</li>
-        <li class="system_and_color"></li>
-        <li class="width"></li>
-        <li class="height"></li>
-        <li class="control"></li>
-        <li class="quantity"></li>
-        <li class="fastening"></li>
-        <li class="price"></li>
-      </ul>
-  </div>
-</div>
-
-
-
-
- -->
-
-
-
-
-<!-- <div id="blank-curtains"></div>
-
-<div class="download_blank">
-    <button id="btn-export" onclick="exportHTML('blank-curtains');">Сохранить в Word</button>
-</div>
-
-<div id="blank-vertical"></div>
-<div class="download_blank">
-    <button id="btn-export" onclick="exportHTML('blank-vertical');">Сохранить в Word</button>
-</div>  
-   -->
 
 <div class="buttons_download_blank">
      <div id="curtainsBlank_download" class="download_blank " data-view='curtains'>
@@ -653,8 +593,11 @@
       <div id="horizontalStandardBlank_download" class="download_blank " data-view='horizontal_standard'>
           <button   onclick="exportHTML('horizontalStandardBlank');"><span>Скачать блак Горизонтальные жалюзи Стандарт</span><span class="amount_goods"></span> </button> 
       </div>
-      <div id="verticalBlank_download" class="download_blank " data-view='vertical'>
+     <!--  <div id="verticalBlank_download" class="download_blank " data-view='vertical'>
           <button  onclick="exportHTML('verticalBlank');"> <span>Скачать блак Вертикальные жалюзи</span><span class="amount_goods"></span></button>  
+      </div> -->
+       <div id="newVerticalBlank_download" class="download_blank " data-view='vertical'>
+          <button  onclick="exportHTML('nweVerticalBlank');"> <span> НОВЫЙ Скачать блак Вертикальные жалюзи</span><span class="amount_goods"></span></button>  
       </div>
 
       <div id="mosquitoNetBlank_download" class="download_blank " data-view='mosquito'>
@@ -819,52 +762,54 @@
 
     <!-- -------------------------------- -->
 
-    <div id="verticalBlank">
 
-        <table style=" padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
-          <tr >
-              <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; " >*</td>
-              <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Клиент:</td>
-              <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160; </td>
-          </tr>
-          <tr>
-              <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
-              <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Моб. получателя:</td>
-              <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
-          </tr>
-          <tr>
-              <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
-              <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >ФИО получателя:</td>
-              <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
-          </tr>
-          <tr>
-              <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
-              <td  width="190"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Город:</td>
-              <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;" >&#160;</td>
-          </tr>
-          <tr>
-              <td  width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
-              <td  width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Отделение Новой Почты:</td>
-              <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
-          </tr>
-      </table>
-      
-      <div style="height: 30px;">&#160;</div>
 
-      <table id="all-product" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
-        <tr>
-            <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
-            <td width="188"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
-            <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
-            <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
-            <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
-            <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
-            <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
-            <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
-        </tr>
-      </table>
-    </div>
+<!-- новый вертикальный бланк -->
+    <div id="nweVerticalBlank">
 
+          <table style=" padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
+            <tr >
+                <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; " >*</td>
+                <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Клиент:</td>
+                <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160; </td>
+            </tr>
+            <tr>
+                <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+                <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Моб. получателя:</td>
+                <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+            </tr>
+            <tr>
+                <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+                <td width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >ФИО получателя:</td>
+                <td width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+            </tr>
+            <tr>
+                <td width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+                <td  width="190"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Город:</td>
+                <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;" >&#160;</td>
+            </tr>
+            <tr>
+                <td  width="30" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >*</td>
+                <td  width="190" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >Отделение Новой Почты:</td>
+                <td  width="400" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;" >&#160;</td>
+            </tr>
+        </table>
+        
+        <div style="height: 30px;">&#160;</div>
+
+        <table id="all-product" style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
+          <tr>
+              <td width="20"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+              <td width="188"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+              <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+              <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+              <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+              <td width="50"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+              <td width="60"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+              <td width="100"  style="  padding: 5px 10px;boc-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+          </tr>
+        </table>
+      </div>
 
 
     <!-- -------------------------------- -->
@@ -920,6 +865,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
     <!-- <script src='neutralino.js'></script> -->
     <!-- <script src='assets/database.js'></script> -->
     <script src="assets/database.js"></script>
@@ -928,11 +882,11 @@
     <!-- подключение модулей -->
     <script src='assets/modules/creatindGoodsTables.js'></script>
     <script src='assets/modules/allMainFunctions.js'></script>
-
-
     <script src='assets/modules/callingMainFunctions.js'></script>
 
-
+    <!-- калькурятор для вертикальных таблиц -->
+    <script src="assets/verticalCalculate/verticalCreateTable.js"></script>
+    <script src="assets/verticalCalculate/verticalCalculation.js"></script>
 
     <script src="assets/modules/blank/creatingOrgerBlank.js"></script>
     <script src="assets/modules/blank/addToBlank.js"></script>

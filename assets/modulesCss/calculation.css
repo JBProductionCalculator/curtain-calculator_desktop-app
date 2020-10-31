@@ -5,7 +5,8 @@
 .priceСalculation {
 	/*display: flex;*/
 	flex-wrap: wrap;
-	margin-top: 20px;
+	margin-top: 50px;
+	color: rgba(255,255,255, .5);
 }
 
 .priceСalculation > div{

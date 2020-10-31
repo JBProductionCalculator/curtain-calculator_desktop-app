@@ -1,5 +1,8 @@
 function addToBlankFun(parentBlock, selectOne, selectTwo ) {
 
+
+	
+
 	// console.log(parentBlock);
 
 	// let price = parentBlock.querySelector("#price").textContent
@@ -11,6 +14,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
  	let controlType = parentBlock.querySelectorAll("input[name='controlType']")
  	let widht = parentBlock.querySelector("#width").value
  	let height = parentBlock.querySelector("#height").value
+
 
 
  	// console.log(productSystem);
@@ -28,7 +32,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
  	}else{
  		oneItem = {
 	 		"idParent" : idParent,
-	 		"systemAndColor" : `${productSystem} ${productColor} ${addToBlankForEach(color)}`,
+	 		"systemAndColor" : `${productSystem} ${productColor} ${  addToBlankForEach(color)}`,
 	 		"color" : productColor,
 	 		"width" : widht,
 	 		"height" : height,
@@ -40,21 +44,27 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
 
 
 
- 	// console.log(oneItem);
  	creatingOrgerBlank(oneItem)
 
 
  	function addToBlankForEach(data){
 
-		let text
-		data.forEach(function(oneRadio){
-			if (oneRadio.checked == true) {
-				text = oneRadio.value
-			}  	
-		})
- 		
+			let text
+			data.forEach(function(oneRadio){
+				if (oneRadio.checked == true ) {
+					text = oneRadio.value
+				}  	
+			})
 
-		return text
+
+
+
+	 		if(text == undefined){
+	 			return " "
+	 		}else{
+				return text
+
+	 		}
 
 	}
 

@@ -23,19 +23,17 @@ function allMainFunction(data, selectsCreateCommands, selectsSearchCommands, obj
                 document.querySelector(idCalculate+' #price').innerHTML = price
 
                 addToBlank.style.visibility = 'visible'
-
-
             })
 
             addToBlank.addEventListener('click', function(){
                 let parentBlock = this.parentNode.parentNode
 
+                // console.log(parentBlock, objectID[0], objectID[1])
                 addToBlankFun(parentBlock, objectID[0], objectID[1])
 
                 // showBlank()
 
                 this.style.visibility = 'hidden'
-
             })
 
 

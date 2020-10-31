@@ -74,6 +74,9 @@ function addToWindowBlankInForm(products, idTables, idAddBlank) {
 		ul.append(quantity)
 		ul.append(fixationSystem)
 
+
+
+
 		return ul	
 
 

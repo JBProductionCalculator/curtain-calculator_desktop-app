@@ -1,10 +1,7 @@
-
-
-
-
-
 body{
 	font-family: "Regular", sans-serif;
+	background: #3c4143;
+	
 }
 
 
@@ -15,7 +12,6 @@ ul, body, li{
 
 li{
 	list-style: none;
-
 }
 
 

@@ -22,8 +22,11 @@
 }
 
 .screen_blank ul:first-child li{
-	background: #3c4143;
+	/*background: #3c4143;*/
+	background: #4c5154;
+	
 	color: rgba(255,255,255, .5);
+	/*background: #1c1c1c;*/
 }
 
 .screen_blank li.number_of_blanks{
