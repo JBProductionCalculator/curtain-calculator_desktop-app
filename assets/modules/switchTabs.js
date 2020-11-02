@@ -5,66 +5,65 @@ function switchWindowsAndDeleteButtons(){
 	let allTabs = document.querySelectorAll('#switch_tabs ul li')
 	let allDownloadButton = document.querySelectorAll('.download_blank')
 
-	// let allBlank = document.querySelectorAll('.screen_blank')
-
+	let allBlank = document.querySelectorAll('.screen_blank')
 
 
 	// функция отвечающая за переключни окон но под функцию так же подвязаны кнопки скачивния бланка
 	allTabs.forEach(function(tab, index) {
 
-		allWindow.forEach(function(window,ind){
+		allWindow.forEach(function(oneWindow,ind){
 			tab.addEventListener('click',function(){
-				viewButton(this)
+				// viewButton(this)
 
-				this.classList.add('click_tab')
 
 				if (index === ind) {
 					allWindow.forEach(function(one){
 						one.style.display = 'none'
-				})
+					})
 
 
-				allTabs.forEach(function(tb){
-					tb.classList.remove('click_tab')
-				})
+					allTabs.forEach(function(tb){
+						tb.classList.remove('click_tab')
+					})
 
-				this.classList.add('click_tab')
+					this.classList.add('click_tab')
 
 
-				window.style.display = 'flex'
+					oneWindow.style.display = 'flex'
+				 	
+				 	viewButtonInBlank(this,oneWindow)
+
 				}
 
 			})
-
 		})
 	})	
 
 	allDownloadButton.forEach(function(butt, index){
-		if(index != 0){
-			butt.classList.add('none')
-		}
+		butt.classList.add('none')
 	})
+ 
+	viewButtonInBlank(allTabs[0], allWindow[0])
 
 
-	function viewButton(clickTab){
-		allDownloadButton.forEach(function(button){
-			button.classList.add('none')
+	// функция которая перекидывает кнопки скачивания в нужные бланки
+	function viewButtonInBlank(clickTab,windowView){
+ 		let viewBlank =  windowView.querySelector('.screen_blank')
+		if (clickTab.dataset.click == viewBlank.dataset.viewinblank) {
 
-			if (clickTab.dataset.click == button.dataset.view) {
-				button.classList.remove('none')
-			}
-		})
+			allDownloadButton.forEach(function(oneDownloadButt){
+				if (oneDownloadButt.dataset.view == viewBlank.dataset.viewinblank) {
 
-		// allBlank.forEach(function(blank){
-		// 	console.log(blank.dataset.viewInBlan)
-		// 		console.log(btn.dataset.view)
-		// 	if (blank.dataset.viewInBlan == btn.dataset.view ) {
-		// 		console.log(blank)
-		// 		console.log(btn)
-		// 	}
-		// })
+					oneDownloadButt.classList.remove('none')
 
-		
+					viewBlank.parentElement.append(oneDownloadButt)
+				}
+			})
+		}
 	}
 }
+
+
+
+//подставление кнопо в нужные бланк
 

@@ -1,7 +1,6 @@
 .buttons_download_blank{
 	position: fixed;
-	right: 0;
-	top: 100px;
+	left: - 400px;
 	text-align: right;
 }
 
@@ -11,6 +10,7 @@
 
 .download_blank button{
 	margin-bottom: 10px;
+	margin-top: 30px;
 	border-radius: 50px;
 	background: inherit;
 	padding: 10px;
@@ -19,6 +19,8 @@
 	display: flex;
 	align-items: center;
 	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 13px;
 }
 
 .download_blank .amount_goods{

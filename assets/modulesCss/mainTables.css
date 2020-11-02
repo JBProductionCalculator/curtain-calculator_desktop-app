@@ -20,7 +20,7 @@ section.one_window{
 .main_table {
 	color: rgba(255,255,255, .5);
 	background: #3c4143;
-	padding: 0 50px;
+	/*padding: 0 50px;*/	
 	border-radius: 20px;
 }
 

@@ -217,10 +217,13 @@ function addToHTMLBlankInform(data,id,idButton){
 		tr.querySelector('#fixation_system').textContent = product.fixationSystem
 		tr.querySelector('#notes').innerHTML = '&#160;'
 
+		
 
 		blank.append(tr)
 	})
 }
+
+
 
 function addButtonAmoutProduct(data,idButton){
 	data.forEach(function(one,index){
