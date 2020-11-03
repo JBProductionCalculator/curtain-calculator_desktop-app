@@ -47,3 +47,10 @@
 	width: 170px;
 }
 
+
+@media screen and (max-width: 1200px){
+	.screen_blank .width, .screen_blank .height, .screen_blank .control, .screen_blank .quantity {
+	    width: 70px;
+	}
+
+}

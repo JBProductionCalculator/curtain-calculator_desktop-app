@@ -28,3 +28,13 @@
 		
 }
 
+
+@media screen and (max-width: 1200px){
+	.download_blank button{
+		font-size: 11px;
+		padding: 13px;
+	}
+
+
+}
+

@@ -83,7 +83,7 @@ ul.one-row li:first-child{
 }
 
 .horizontal_louver_standard ul li, .horizontal_louver_venus ul li{
-	width: 300px;
+	width: 262.5px;
 }
 
 
@@ -97,7 +97,7 @@ ul.one-row li:first-child{
 }
 
 .new_vertical_89mm  li:nth-child(2), .new_vertical_127mm  li:nth-child(2){
-	width: 500px;
+	width: 600px;
 }
 
  .mosquito_net ul:nth-child(3) li {
@@ -107,7 +107,7 @@ ul.one-row li:first-child{
 
 .mosquito_net ul li:first-child{
 	background: #4c5154;
-	width: 200px;
+	width: 300px;
 }
 
 .roller_curtains_ready ul:nth-child(2) li, .roller_curtains_ready ul:nth-child(3) li{
@@ -119,8 +119,23 @@ ul.one-row li:first-child{
 }
 
 .roller_curtains_ready ul.one-row li:first-child{
-	width: 70px;
+	width: 100px;
 	background: #4c5154;
 	
 }
 
+@media screen and (max-width: 1200px){
+	.roller_curtains_ready ul.one-row li {
+	    width: 40px;
+	}
+
+	ul.one-row li{
+		width: 130px;
+	}
+
+	.horizontal_louver_venus ul li:first-child, .horizontal_louver_standard ul li:first-child {
+	    width: 300px;
+	}
+
+
+}

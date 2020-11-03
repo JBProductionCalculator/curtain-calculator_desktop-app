@@ -72,3 +72,18 @@ form p{
 
 }
 
+
+@media screen and (max-width: 1200px){
+
+	.priceСalculation > div input {
+	    width: 130px;
+	}
+
+	.priceСalculation input[type="submit"] {
+	     padding: 10px 0; 
+	}
+
+	.screen_blank .width, .screen_blank .height, .screen_blank .control, .screen_blank .quantity {
+	    width: 70px;
+	}
+}
