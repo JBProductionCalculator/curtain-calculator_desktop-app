@@ -1,4 +1,9 @@
+
+let countArrayElementOrderBlank = 0
+// let numberInArrayOrderBlank = 0
 function addToBlankFun(parentBlock, selectOne, selectTwo ) {
+
+	let arrayParameters = [parentBlock, selectOne, selectTwo ]
 
 
 	
@@ -28,6 +33,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
 	 		"height" : height,
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		"fixationSystem" : addToBlankForEach(fixationSystem),
+	 		"numberInArrayOrderBlank" : countArrayElementOrderBlank++ ,
  		}
  	}else{
  		oneItem = {
@@ -38,13 +44,14 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ) {
 	 		"height" : height,
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		"fixationSystem" : addToBlankForEach(fixationSystem),
+	 		"numberInArrayOrderBlank" : countArrayElementOrderBlank++ ,
  		}
 
  	}
 
 
 
- 	creatingOrgerBlank(oneItem)
+ 	creatingOrgerBlank(oneItem, arrayParameters)
 
 
  	function addToBlankForEach(data){

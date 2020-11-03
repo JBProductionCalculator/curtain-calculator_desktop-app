@@ -3,15 +3,19 @@ let orderBlank = []
 
 
 
-function creatingOrgerBlank(oneRow) {
+function creatingOrgerBlank(oneRow, arrayParam) {
+
 
 
 	orderBlank.push(oneRow)
 
+	// console.log();
+
 	// console.log(orderBlank);
 
+
+
 	let curtainsBlank = []
-	// let verticalBlank = []
 	let newVerticalBlank = []
 
 
@@ -23,19 +27,17 @@ function creatingOrgerBlank(oneRow) {
 	creationOneBlank(orderBlank)
 
 	recurringProducts(curtainsBlank)
+
 	deleteRepeatingElement(curtainsBlank)
 
 
 	//функци добавления информации в doc бланки и бланки которые на экране
 	addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
-	addToWindowBlankInForm(curtainsBlank,"#roller_curtains", "#screen_blanks_roller_curtains")
-	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_day_night", "#screen_blanks_day_night")
-	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_ready", "#screen_blanks_rolle_ready")
+	addToWindowBlankInForm(curtainsBlank,"#roller_curtains", "#screen_blanks_roller_curtains", arrayParam )
+	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_day_night", "#screen_blanks_day_night" ,arrayParam)
+	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_ready", "#screen_blanks_rolle_ready", arrayParam )
 
 
-	// addToHTMLBlankInform(verticalBlank, "#verticalBlank", "#verticalBlank_download")
-	// addToWindowBlankInForm(verticalBlank, "#horizontal_vertical_89mm", "#secreen_horizontal_vertical_89mm")
-	// addToWindowBlankInForm(verticalBlank, "#horizontal_vertical_127mm", "#secreen_horizontal_vertical_127mm")
 
 	// новые вертекальные бланки
 	addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
@@ -65,26 +67,17 @@ function creatingOrgerBlank(oneRow) {
 
 
 			data.forEach(function(oneProduct){
-			// console.log(oneProduct.idParent)
 			if(oneProduct.idParent === "priceСalculation" ||
 			 	oneProduct.idParent === "priceСalculationDayNight" || 
 			 	 oneProduct.idParent === "priceСalculationReady" ){
 					
 					curtainsBlank.push(oneProduct)
 
-					// curtainsBlank[oneProduct.idParent] = oneProduct
 			}
-
-			// if(oneProduct.idParent === "priceСalculationVerticalHouver89mm" || oneProduct.idParent === "priceСalculationVerticalHouver127mm"){
-			// 	verticalBlank.push(oneProduct)
-			// }
 
 			if(oneProduct.idParent === "calculationNewVertical89mm" || oneProduct.idParent === "calculationNewVertical127mm" ){
 				newVerticalBlank.push(oneProduct)
 			}
-
-
-			// calculationNewVertical89mm
 
 			if (oneProduct.idParent === "priceСalculationHorizontalLouverVenus" ) {
 				horizontalVenusBlank.push(oneProduct)
@@ -134,7 +127,6 @@ function creatingOrgerBlank(oneRow) {
 								
 								
 								// data.splice(x, x)
-
 									
 						}
 					}
@@ -213,7 +205,7 @@ function addToHTMLBlankInform(data,id,idButton){
 		tr.querySelector('#width').textContent = product.width
 		tr.querySelector('#height').textContent = product.height
 		tr.querySelector('#control_type').textContent = product.controlType
-		tr.querySelector('#amount').textContent = index
+		// tr.querySelector('#amount').textContent = index
 		tr.querySelector('#fixation_system').textContent = product.fixationSystem
 		tr.querySelector('#notes').innerHTML = '&#160;'
 
@@ -233,7 +225,7 @@ function addButtonAmoutProduct(data,idButton){
 
 // экспорт html в doc
 function exportHTML(id){
-	// console.log(id)
+	// addToBlankFun(arrayParam[0],arrayParam[1],arrayParam[2])
 
    const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
         "xmlns:w='urn:schemas-microsoft-com:office:word' "+

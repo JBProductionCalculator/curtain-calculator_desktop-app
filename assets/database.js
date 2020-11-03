@@ -39,6 +39,71 @@ let allGoods = {
          "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
       }
     },
+     {
+      "name": "WODA",
+      "openType" : {
+        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+        "mini" : [11.5 , "+1", "MINI"],
+        "standard" :[ 13.0 , "+1" , "STANDART" ],
+        "maximus" : [21.0, " ", "MAXIMUS"],
+      },
+      "closedType" : {
+         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+      }
+    },
+    {
+      "name": "LAZUR",
+      "openType" : {
+        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+        "mini" : [11.5 , "+1", "MINI"],
+        "standard" :[ 13.0 , "+1" , "STANDART" ],
+        "maximus" : [21.0, " ", "MAXIMUS"],
+      },
+      "closedType" : {
+         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+      }
+    },
+    {
+      "name": "NATURA",
+      "openType" : {
+        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+        "mini" : [11.5 , "+1", "MINI"],
+        "standard" :[ 13.0 , "+1" , "STANDART" ],
+        "maximus" : [21.0, " ", "MAXIMUS"],
+      },
+      "closedType" : {
+         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+      }
+    },
+    {
+      "name": "TOPAZ",
+      "openType" : {
+        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+        "mini" : [11.5 , "+1", "MINI"],
+        "standard" :[ 13.0 , "+1" , "STANDART" ],
+        "maximus" : [21.0, " ", "MAXIMUS"],
+      },
+      "closedType" : {
+         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+      }
+    },
+    {
+      "name": "AKANT",
+      "openType" : {
+        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+        "mini" : [11.5 , "+1", "MINI"],
+        "standard" :[ 13.0 , "+1" , "STANDART" ],
+        "maximus" : [21.0, " ", "MAXIMUS"],
+      },
+      "closedType" : {
+         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+      }
+    },
   ],
 
   rollerBlindsDayNight : [
@@ -55,32 +120,7 @@ let allGoods = {
          "uniFullTurn" : [6, "+3" , "UNI П-обрю Направл."],
       }
     },
-    {
-      "name": "LEN",
-      "openType" : {
-        "copact" : [10 , "+1", "Compact и фалш шторы" ],
-        "mini" : [20 , "+1", "MINI"],
-        "standard" :[ 30 , "+1" , "STANDART" ],
-        "maximus" : [40, " ", "MAXIMUS"],
-      },
-      "closedType" : {
-         "uniFlat" :[ 50 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [60 , "+3" , "UNI П-обрю Направл."],
-      }
-    },
-    {
-      "name": "LEN",
-      "openType" : {
-        "copact" : [10 , "+1", "Compact и фалш шторы" ],
-        "mini" : [20 , "+1", "MINI"],
-        "standard" :[ 30 , "+1" , "STANDART" ],
-        "maximus" : [40, " ", "MAXIMUS"],
-      },
-      "closedType" : {
-         "uniFlat" :[ 50 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [60 , "+3" , "UNI П-обрю Направл."],
-      }
-    },
+   
   ],
 
   rollerBlindsReady : [

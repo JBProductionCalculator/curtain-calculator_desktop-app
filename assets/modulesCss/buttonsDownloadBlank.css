@@ -4,16 +4,14 @@
 	text-align: right;
 }
 
-/*.download_blank{
-	display: flex;
-}*/
+
 
 .download_blank button{
 	margin-bottom: 10px;
 	margin-top: 30px;
 	border-radius: 50px;
 	background: inherit;
-	padding: 10px;
+	padding: 10px 10px;
 	border: 3px solid #fcbf14;
 	color: #fcbf14;
 	display: flex;
@@ -21,6 +19,7 @@
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 13px;
+	outline: none;
 }
 
 .download_blank .amount_goods{

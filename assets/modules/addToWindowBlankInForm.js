@@ -1,5 +1,7 @@
 //функция вызывается в файле creatingOrderBlank.js/ в ней прописан функционал для добавления новых товаров в бланк под каждой таблицей
-function addToWindowBlankInForm(products, idTables, idAddBlank) {
+function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
+
+
 	let buttonAddToBlank = document.querySelector(idTables+" #add_to_blank")
 	let screnBlank = document.querySelector(idAddBlank)
 	
@@ -15,7 +17,8 @@ function addToWindowBlankInForm(products, idTables, idAddBlank) {
 			prod.remove()
 		}
 	})
-	
+
+
 	products.forEach(function(prod,index){
 		if(prod.idParent == buttonAddToBlank.dataset.addtowindowblank){
 
@@ -45,18 +48,7 @@ function addToWindowBlankInForm(products, idTables, idAddBlank) {
 	function createWindowBlank(product, countProduct, repeatObject){
 		
 		let ul = document.createElement('ul')
-		// console.log(ul)
 
-		// console.log(repeatObject)
-		// console.log(product.arrayElementClass )
-		// console.log(numberRepeatingProduct)
-
-		// for(let key in repeatObject){
-		// 		// console.log(key)
-
-		// 	if (product.arrayElementClass  ==  key) {
-		// 		numberRepeatingProduct = repeatObject[key]
-		// 	}else{
 
 		let num = createWindowElement('li','number_of_blanks', countProduct+1)
 		let systemAndColor = createWindowElement('li', 'system_and_color', product.systemAndColor)
@@ -65,6 +57,7 @@ function addToWindowBlankInForm(products, idTables, idAddBlank) {
 		let quantity = createWindowElement('li', 'quantity')
 		let control = createWindowElement('li', 'control' ,product.controlType )
 		let fixationSystem = createWindowElement('li', 'fastening', product.fixationSystem)
+		let buttonDelete =  createWindowElement('div', 'delenteElement')
 
 		ul.append(num)
 		ul.append(systemAndColor)
@@ -73,21 +66,15 @@ function addToWindowBlankInForm(products, idTables, idAddBlank) {
 		ul.append(control)
 		ul.append(quantity)
 		ul.append(fixationSystem)
+		ul.append(buttonDelete)	
 
-
-
+		dleteWindowElement(ul,product, countProduct)
 
 		return ul	
-
 
 	}
 
 
-	// 	}
-
-
-		
-	// }
 
 	function createWindowElement(tagN, classN, text){
 		let li = document.createElement(tagN)
@@ -95,6 +82,21 @@ function addToWindowBlankInForm(products, idTables, idAddBlank) {
 		li.textContent = text
 
 		return li
+	}
+
+
+	function dleteWindowElement(removedItem,removedProduct, numberProduct){
+		let buttonDelete = removedItem.querySelector('.delenteElement')
+		buttonDelete.addEventListener('click', function(){
+
+			removedItem.remove()
+
+			orderBlank.splice(removedProduct.numberInArrayOrderBlank,1,1) 
+
+			// console.log(arrayParam)
+
+		
+		})
 	}
 
 

@@ -3,8 +3,8 @@
 /*стили главной таблицы*/
 
 main{
-	/*background: #3c4143;*/
-	/*background: #1c1c1c;*/
+	overflow-x: hidden;
+	/*background: #fff;*/
 }
 
 section.one_window{
@@ -12,7 +12,6 @@ section.one_window{
 	align-items: flex-start;
 	padding: 50px 50px;
 	box-sizing: border-box;
-	/*background:rgba(255,255,255, .4);*/
 	overflow: hidden;
 	max-width: 100vw;
 }
@@ -108,6 +107,7 @@ ul.one-row li:first-child{
 .mosquito_net ul li:first-child{
 	background: #4c5154;
 	width: 300px;
+	padding: 0 5px;
 }
 
 .roller_curtains_ready ul:nth-child(2) li, .roller_curtains_ready ul:nth-child(3) li{

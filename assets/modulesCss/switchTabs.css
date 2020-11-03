@@ -17,36 +17,20 @@ main .one_window:first-child{
 	display: flex;
 }
 
-#switch_tabs{
-	/*background: #3c4143;*/
-	/*background: #1c1c1c;*/
-
-}
-
 
 #switch_tabs ul{
 	display: flex;
 	flex-wrap: wrap;
-	/*background:rgba(255,255,255, .4);*/
-
 }
 
 
 #switch_tabs li{
     padding: 10px;
-    /*border: 1px solid black;*/
     margin: 5px;
     cursor: pointer;
-    /*background: #3c4143;*/
-	/*background:rgba(255,255,255, .4);*/
 	background: #4c5154;
-	
-
-    /*background: #04cdb8;*/
     color: rgba(255,255,255, .5);
-	/*color: #fff;*/
 	border-radius: 2px;
-	/*text-transform: uppercase;*/
 }
 
 
