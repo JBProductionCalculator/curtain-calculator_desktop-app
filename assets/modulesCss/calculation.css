@@ -14,9 +14,20 @@
 	margin-left: 0;
 }
 
-.priceСalculation > div:first-child , .priceСalculation > div:nth-child(2), .priceСalculation > div:nth-child(3){
+
+
+.inline{
 	display: inline-block;
 	text-transform: uppercase;
+}
+
+.cashOperations{
+	display: flex;
+	align-items: center;
+}
+
+.cashOperations > div{
+	margin-right: 10px;
 }
 
 .priceСalculation > div  input, .priceСalculation   select{
@@ -31,11 +42,17 @@
     cursor: pointer;
 }
 
- .priceСalculation   select{
- 	margin-right: 10px;
+div.productSelect{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+}
+
+ .productSelect   select{
+ 	margin-right: 20px;
  }
 
- .priceСalculation select:first-child{
+ .productSelect select:first-child{
  	margin-left: 0;
  }
 

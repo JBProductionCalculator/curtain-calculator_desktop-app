@@ -138,7 +138,6 @@ function creatingOrgerBlank(oneRow, arrayParam) {
 
 
 // удаление повторяющихся элементов и возвращает количетво
-
 function deleteRepeatingElement(allProduct){
 	var arr = allProduct
 

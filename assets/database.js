@@ -1,9 +1,10 @@
 let allGoods = {
-  rollerBlinds :  [
+    newRollerBlinds :  [
      {
       "name": "Марсесль АКЦИЯ!!!",
       "openType" : {
-        "copact" :[ 8.3  ,"+1", "Compact и фалш шторы"],
+        "copact" :[ 8.3  ,"+1", "Compact"],
+        "fakeCurtains" :[ 8.3  ,"+1", "фалш шторы"],
         "mini" :[ 9.3 ,"+1" , "MINI"],
         "standard" :[ 11.0 ,"+1" , "STANDART"],
         "maximus" : [17.0,  "" , "MAXIMUS"] 
@@ -16,7 +17,8 @@ let allGoods = {
     {
       "name": "LEN",
       "openType" : {
-        "copact" : [9.3 , "+1", "Compact и фалш шторы" ],
+        "copact" : [9.3 , "+1", "Compact" ],
+        "fakeCurtains" : [9.3 , "+1", "фалш шторы" ],
         "mini" : [10.3 , "+1", "MINI"],
         "standard" :[ 12.0 , "+1" , "STANDART" ],
         "maximus" : [19.0, " ", "MAXIMUS"],
@@ -29,72 +31,8 @@ let allGoods = {
     {
       "name": "MATTE",
       "openType" : {
-        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-        "mini" : [11.5 , "+1", "MINI"],
-        "standard" :[ 13.0 , "+1" , "STANDART" ],
-        "maximus" : [21.0, " ", "MAXIMUS"],
-      },
-      "closedType" : {
-         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
-      }
-    },
-     {
-      "name": "WODA",
-      "openType" : {
-        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-        "mini" : [11.5 , "+1", "MINI"],
-        "standard" :[ 13.0 , "+1" , "STANDART" ],
-        "maximus" : [21.0, " ", "MAXIMUS"],
-      },
-      "closedType" : {
-         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
-      }
-    },
-    {
-      "name": "LAZUR",
-      "openType" : {
-        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-        "mini" : [11.5 , "+1", "MINI"],
-        "standard" :[ 13.0 , "+1" , "STANDART" ],
-        "maximus" : [21.0, " ", "MAXIMUS"],
-      },
-      "closedType" : {
-         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
-      }
-    },
-    {
-      "name": "NATURA",
-      "openType" : {
-        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-        "mini" : [11.5 , "+1", "MINI"],
-        "standard" :[ 13.0 , "+1" , "STANDART" ],
-        "maximus" : [21.0, " ", "MAXIMUS"],
-      },
-      "closedType" : {
-         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
-      }
-    },
-    {
-      "name": "TOPAZ",
-      "openType" : {
-        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-        "mini" : [11.5 , "+1", "MINI"],
-        "standard" :[ 13.0 , "+1" , "STANDART" ],
-        "maximus" : [21.0, " ", "MAXIMUS"],
-      },
-      "closedType" : {
-         "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
-      }
-    },
-    {
-      "name": "AKANT",
-      "openType" : {
-        "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+        "copact" : [10.5, "+1", "Compact" ],
+        "fakeCurtains" : [10.5, "+1", "фалш шторы" ],
         "mini" : [11.5 , "+1", "MINI"],
         "standard" :[ 13.0 , "+1" , "STANDART" ],
         "maximus" : [21.0, " ", "MAXIMUS"],
@@ -105,6 +43,112 @@ let allGoods = {
       }
     },
   ],
+  // rollerBlinds :  [
+  //    {
+  //     "name": "Марсесль АКЦИЯ!!!",
+  //     "openType" : {
+  //       "copact" :[ 8.3  ,"+1", "Compact и фалш шторы"],
+  //       "mini" :[ 9.3 ,"+1" , "MINI"],
+  //       "standard" :[ 11.0 ,"+1" , "STANDART"],
+  //       "maximus" : [17.0,  "" , "MAXIMUS"] 
+  //     },
+  //     "closedType" : {
+  //        "uniFlat" : [17.0 , "+2" , "UNI Плоскю Направл"] ,
+  //        "uniFullTurn" : [23.0 , "+3" , "UNI П-обрю Направл."],
+  //     }
+  //   },
+  //   {
+  //     "name": "LEN",
+  //     "openType" : {
+  //       "copact" : [9.3 , "+1", "Compact и фалш шторы" ],
+  //       "mini" : [10.3 , "+1", "MINI"],
+  //       "standard" :[ 12.0 , "+1" , "STANDART" ],
+  //       "maximus" : [19.0, " ", "MAXIMUS"],
+  //     },
+  //     "closedType" : {
+  //        "uniFlat" :[ 19.0 , "+2", "UNI Плоскю Направл" ],
+  //        "uniFullTurn" : [25.0 , "+3" , "UNI П-обрю Направл."],
+  //     }
+  //   },
+  //   {
+  //     "name": "MATTE",
+  //     "openType" : {
+  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+  //       "mini" : [11.5 , "+1", "MINI"],
+  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
+  //       "maximus" : [21.0, " ", "MAXIMUS"],
+  //     },
+  //     "closedType" : {
+  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //     }
+  //   },
+  //    {
+  //     "name": "WODA",
+  //     "openType" : {
+  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+  //       "mini" : [11.5 , "+1", "MINI"],
+  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
+  //       "maximus" : [21.0, " ", "MAXIMUS"],
+  //     },
+  //     "closedType" : {
+  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //     }
+  //   },
+  //   {
+  //     "name": "LAZUR",
+  //     "openType" : {
+  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+  //       "mini" : [11.5 , "+1", "MINI"],
+  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
+  //       "maximus" : [21.0, " ", "MAXIMUS"],
+  //     },
+  //     "closedType" : {
+  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //     }
+  //   },
+  //   {
+  //     "name": "NATURA",
+  //     "openType" : {
+  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+  //       "mini" : [11.5 , "+1", "MINI"],
+  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
+  //       "maximus" : [21.0, " ", "MAXIMUS"],
+  //     },
+  //     "closedType" : {
+  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //     }
+  //   },
+  //   {
+  //     "name": "TOPAZ",
+  //     "openType" : {
+  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+  //       "mini" : [11.5 , "+1", "MINI"],
+  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
+  //       "maximus" : [21.0, " ", "MAXIMUS"],
+  //     },
+  //     "closedType" : {
+  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //     }
+  //   },
+  //   {
+  //     "name": "AKANT",
+  //     "openType" : {
+  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
+  //       "mini" : [11.5 , "+1", "MINI"],
+  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
+  //       "maximus" : [21.0, " ", "MAXIMUS"],
+  //     },
+  //     "closedType" : {
+  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //     }
+  //   },
+  // ],
 
   rollerBlindsDayNight : [
      {

@@ -159,7 +159,6 @@ function veticalCalculation(data, idCalculate,parentSelect, objectID ) {
        		})
       
 
-       		console.log(productPrice);
 
 
 
