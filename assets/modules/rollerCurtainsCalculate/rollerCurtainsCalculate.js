@@ -22,18 +22,25 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
         // console.log(selectOperations);
 
-
+        // переменные с селектами выбора товара . под них подвязано много функций
+        let selectColor , selectType
 
         callingMainFunctionCalculator()
         function callingMainFunctionCalculator(){
-            selectProductOperations()
+
+            createProductSelectOperations()
+
+            searchPrice(selectColor.value, selectType.value)
+
+            findPriceOnClick(selectColor,selectType)
+
+            calculatorButtonOutputOperation(selectColor,selectType)
 
 
             priceСalculation()
         }
 
 
-        console.log(productPrice)
 
 
         // -------------------------------------------------------------------------
@@ -72,16 +79,13 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         }
  
 
-        //  функция в которой будут происходить все операции над выбраними типами товаров
-        function operationsWithTypesOfGoods(){
+      
+ 
 
-        }
-
-
-        // Создани slect типа и цвета товаров и их вывод на экран
-        function selectProductOperations(){
-            let selectColor = createSelect('color')
-            let selectType = createSelect('type')
+        // Создани slect типа и цвета товаров и их вывод на экран. функция отдает цену на продукт
+        function createProductSelectOperations(){
+            selectColor = createSelect('color')
+            selectType = createSelect('type')
 
             productSelect.append(selectColor)
             productSelect.append(selectType)
@@ -121,14 +125,12 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
             }
 
 
-            searchPrice(selectColor.value, selectType.value)
-            findPriceOnClick(selectColor,selectType)
 
         }
 
 
 
-        // поиск цены товара. функция принимает в параметры значения выбранных option
+        // поиск цены товара. функция принимает в параметры значения выбранных option. функция отдает цену на продукт
         function searchPrice(color,type){
             data.forEach(function(product){
                 if (product.name == color) {
@@ -150,7 +152,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
         }
 
-        // поиск нужной цены при выборе другого цвета или типа 
+        // поиск нужной цены при выборе другого цвета или типа . функция отдает цену на продукт
         function findPriceOnClick(color,type){
             
             color.addEventListener('change', function(){
@@ -195,6 +197,15 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
             }
             
 
+        }
+
+
+
+
+       //  функция в которой будут происходить все операции над выбраними типами товаров
+        function calculatorButtonOutputOperation(color, type){
+            console.log(color);
+            console.log(type);
         }
 
 
