@@ -1,29 +1,46 @@
 function rollerCurtainsCalculate(data, parentSection, productSelectID, commands ){
-
-        let width, height, area, exchangeRates, selectMarkup ,productSelect
-        let productPrice
-
+        //переменные размера
+        let width, height, area,productSelect
         width = document.querySelector( parentSection +" input#width")
         height = document.querySelector(parentSection + " input#height")
         area = document.querySelector( parentSection + " input#area")
+
+        //элементы которые будут влиять на цену и будут применяться ко всем колонкам
+        let exchangeRates, selectMarkup 
         exchangeRates = document.querySelector( parentSection + " input#exchangeRates")
         selectMarkup = document.querySelector(parentSection + ' .selectMarkup')
-        productSelect = document.querySelector(parentSection + " .productSelect")
 
+        // все элементы которые будут участвовать в изменение цены но будут применятся не ко всем колонкам
+        let colorSystem,controlType, fixationSystem,sizeSystem,chainLoad, chainFixing,chainFixingUniversal,boxControlMethod
         // radio элементы
-        let colorSystem, fixationSystem, controlType
-        colorSystem = document.querySelector(parentSection + " input[name='colorSystem']")
-        fixationSystem = document.querySelector(parentSection + " input[name='fixationSystem']")
-        controlType = document.querySelector(parentSection + " input[name='controlType']")
+        colorSystem = document.querySelectorAll(parentSection + " input[name='colorSystem']")
+        controlType = document.querySelectorAll(parentSection + " input[name='controlType']")
+        fixationSystem = document.querySelectorAll(parentSection + " input[name='fixationSystem']")
+        sizeSystem = document.querySelectorAll(parentSection + " input[name='sizeSystem']")
+        chainLoad = document.querySelectorAll(parentSection + " input[name='chainLoad']")
+        chainFixing = document.querySelectorAll(parentSection + " input[name='chainFixing']")
+        chainFixingUniversal = document.querySelectorAll(parentSection + " input[name='chainFixingUniversal']")
+        // select элемент с двойным выбором
+        boxControlMethod = document.querySelector(parentSection + " .boxControlMethod")
 
-        // кнопики подчета и добавления
-        let cout =  document.querySelector(parentSection+" input#count")
-        let addToBlank = document.querySelector(parentSection+ " input#add_to_blank")
-
-        // console.log(selectOperations);
+        productSelect = document.querySelector(parentSection + " .productSelect")
+    
 
         // переменные с селектами выбора товара . под них подвязано много функций
         let selectColor , selectType
+
+
+        //переменные для работы с ценами
+        let productPrice
+        let priceExchangeRates, priceSelectMarkup 
+        let priceColorSystem,priceControlType, priceFixationSystem,priceSizeSystem,priceChainLoad, priceChainFixing,priceChainFixingUniversal,priceBoxControlMethod
+
+
+
+         // кнопики подчета и добавления
+        let cout =  document.querySelector(parentSection+" input#count")
+        let addToBlank = document.querySelector(parentSection+ " input#add_to_blank")
+
 
         callingMainFunctionCalculator()
         function callingMainFunctionCalculator(){
@@ -34,7 +51,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
             findPriceOnClick(selectColor,selectType)
 
-            calculatorButtonOutputOperation(selectColor,selectType)
+            calculatorButtonOutputOperation(selectType.value)
 
 
             priceСalculation()
@@ -179,6 +196,8 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
             function findType(clickType){
                 clickType.addEventListener('change', function(){
+                    calculatorButtonOutputOperation(clickType.value)
+
                     data.forEach(function(product){
                         if(product.name ==  color.value){
 
@@ -186,7 +205,6 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
                                 let newCommand = eval('product.'+command)
                                 if (newCommand[2] == type.value) {
                                     productPrice = newCommand[0]
-                                    console.log( productPrice);
                                 }
 
                             })
@@ -202,18 +220,13 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
 
 
+           
+
+
        //  функция в которой будут происходить все операции над выбраними типами товаров
-        function calculatorButtonOutputOperation(color, type){
-            console.log(color);
-            console.log(type);
+        function calculatorButtonOutputOperation(type){
+           colorSelection(colorSystem)
         }
-
-
-
-
-
-     
-
 
 
 

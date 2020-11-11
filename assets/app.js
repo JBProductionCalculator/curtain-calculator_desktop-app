@@ -11,7 +11,7 @@ function newRollerBlinds(){
     
     let parentSection = '#roller_curtains'
     let productSelectID = ['selectName', 'selectType']
-    let commands = ['name', 'openType.copact','openType.fakeCurtains','openType.mini','openType.standard','openType.maximus','closedType.uniFlat','closedType.uniFullTurn']
+    let commands = ['name', 'copact','fakeCurtains','mini','standard','maximus','uniFlat','uniFullTurn']
    
 
 

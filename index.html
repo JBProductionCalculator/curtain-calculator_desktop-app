@@ -95,7 +95,7 @@
                 </select>
 
               </div> 
-              <div class="inline">
+              <div  class="boxControlMethod inline">
                     Способ управления:
                     <select class="controlMethod">
                       <option >Цепь</option>
@@ -117,6 +117,11 @@
             </div>
 
             <form>
+                <div style="display: flex;">
+                  <p>Цвет:</p>
+                  <p><input type="radio" name="colorSystem" value="Бел." checked>Белый</p>
+                  <p><input type="radio" name="colorSystem" value="Кор.">Коричневый</p>
+                </div>
                 <div style="display:flex;" >
                   <p>Тип управления:</p>
                    <p>Т1<input type="radio" name="controlType" value="Т1" checked></p>
@@ -125,21 +130,17 @@
                    <p>Т4<input type="radio" name="controlType" value="Т4"></p>
                 </div>
                 <div style="display: flex;">
-                  <p>Размер:</p>
-                  <p><input type="radio" name="size" value="СТД" checked>СТД</p>
-                  <p><input type="radio" name="size" value="РГ">РГ</p>
-                </div>
-                <div style="display: flex;">
-                  <p>Цвет:</p>
-                  <p><input type="radio" name="colorSystem" value="Бел." checked>Белый</p>
-                  <p><input type="radio" name="colorSystem" value="Кор.">Коричневый</p>
-                </div>
-                <div style="display: flex;">
                   <p>Система фиксации:</p>
                   <p><input type="radio" name="fixationSystem" value="Без фиксации" checked>Без фиксации</p>
                   <p><input type="radio" name="fixationSystem" value="Магнитная" >Магнитная</p>
                   <p><input type="radio" name="fixationSystem" value="Направляющая струна">Направляющая струна</p>
-                </div>  
+                </div> 
+                <div style="display: flex;">
+                  <p>Размер:</p>
+                  <p><input type="radio" name="sizeSystem" value="СТД" checked>СТД</p>
+                  <p><input type="radio" name="sizeSystem" value="РГ">РГ</p>
+                </div>               
+          
                 <div style="display: flex;">
                   <p>Груз цепи:</p>
                   <p><input type="radio" name="chainLoad" value="Без груза" checked>Без груза</p>
@@ -1038,6 +1039,7 @@
 
 
     <!-- калькулятор для рулонных штор -->
+    <script src="assets/modules/rollerCurtainsCalculate/addPriceFunctions.js"></script>
     <script src="assets/modules/rollerCurtainsCalculate/rollerCurtainsCalculate.js"></script>
 
     <!-- калькурятор для вертикальных таблиц -->
