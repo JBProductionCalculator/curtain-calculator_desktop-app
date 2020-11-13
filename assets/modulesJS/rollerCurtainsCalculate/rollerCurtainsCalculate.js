@@ -1,6 +1,6 @@
 function rollerCurtainsCalculate(data, parentSection, productSelectID, commands ){
         //переменные размера
-        let width, height, area,productSelect
+        let width, height, area,productSelect 
         width = document.querySelector( parentSection +" input#width")
         height = document.querySelector(parentSection + " input#height")
         area = document.querySelector( parentSection + " input#area")
@@ -32,9 +32,8 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
         //переменные для работы с ценами
         let productPrice
-        let priceExchangeRates, priceSelectMarkup 
-        let priceColorSystem,priceControlType, priceFixationSystem,priceSizeSystem,priceChainLoad, priceChainFixing,priceChainFixingUniversal,priceBoxControlMethod
-
+        let allPricesAdditionalConfiguration
+                 // priceColorSystem = 0
 
 
          // кнопики подчета и добавления
@@ -51,7 +50,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
             findPriceOnClick(selectColor,selectType)
 
-            calculatorButtonOutputOperation(selectType.value)
+            calculatorAdditionalConfiguration(selectType.value)
 
 
             priceСalculation()
@@ -68,7 +67,8 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
           cout.addEventListener("click", function (){
                 let productArea = areaCalculation()
             // selectProductOperations(data,productSelectID,commands)
-                let price = productArea * productPrice
+                // console.log(priceColorSystem) 
+                let price = productArea * productPrice + allPricesAdditionalConfiguration
                 document.querySelector(parentSection+" #price").innerHTML = price
 
                 addToBlank.style.visibility = "visible"
@@ -196,7 +196,10 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
             function findType(clickType){
                 clickType.addEventListener('change', function(){
-                    calculatorButtonOutputOperation(clickType.value)
+
+                   calculatorAdditionalConfiguration(clickType.value)
+
+                    // console.log(allPricesAdditionalConfiguration)
 
                     data.forEach(function(product){
                         if(product.name ==  color.value){
@@ -218,15 +221,41 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         }
 
 
+  
+          
+
+       //  функция в которой будут происходить все операции над выбраними типами товаров. внутрение функции находятся в файле addPriceFunctions.js
+        function calculatorAdditionalConfiguration(type){
+
+        let priceExchangeRates, priceSelectMarkup 
+        let priceColorSystem,priceControlType, priceFixationSystem, priceChainFixing,priceChainFixingUniversal,priceBoxControlMethod
+   
+          
+        priceColorSystem  =  selectedColorSystem(type ,colorSystem, parentSection)
+        priceFixationSystem = selectedFixationSystem(type, fixationSystem, parentSection)
+        priceChainFixing = selectedChainFixing(type, chainFixing, parentSection)
+        priceChainFixingUniversal = selectedChainFixingUniversal(type, chainFixingUniversal, parentSection)
+
+        // console.log(priceColorSystem)
+        // console.log(priceFixationSystem)
+        // console.log(priceChainFixing)
+        console.log(priceChainFixingUniversal)
+     
+       
 
 
-           
+        viewSizeSystem(type, sizeSystem)
+
+        viewChainLoad(type, chainLoad) 
+       
+
+        allPricesAdditionalConfiguration = priceColorSystem + priceFixationSystem
+
+        return allPricesAdditionalConfiguration
 
 
-       //  функция в которой будут происходить все операции над выбраними типами товаров
-        function calculatorButtonOutputOperation(type){
-           colorSelection(colorSystem)
         }
+
 
 
 

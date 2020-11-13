@@ -24,7 +24,7 @@ li{
 }
 
 .none{
-	display: none;
+	display: none!important;
 }
 
 

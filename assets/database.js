@@ -11,7 +11,7 @@ let allGoods = {
       // },
       // "closedType" : {
          "uniFlat" : [17.0 , "+2" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [23.0 , "+3" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [23.0 , "+3" , "UNI П-обрю Направл"],
       // }
     },
     {
@@ -25,7 +25,7 @@ let allGoods = {
       // },
       // "closedType" : {
          "uniFlat" :[ 19.0 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [25.0 , "+3" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [25.0 , "+3" , "UNI П-обрю Направл"],
       // }
     },
     {
@@ -39,7 +39,7 @@ let allGoods = {
       // },
       // "closedType" : {
          "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
       // }
     },
   ],
@@ -54,7 +54,7 @@ let allGoods = {
   //     },
   //     "closedType" : {
   //        "uniFlat" : [17.0 , "+2" , "UNI Плоскю Направл"] ,
-  //        "uniFullTurn" : [23.0 , "+3" , "UNI П-обрю Направл."],
+  //        "uniFullTurn" : [23.0 , "+3" , "UNI П-обрю Направл"],
   //     }
   //   },
   //   {
@@ -67,7 +67,7 @@ let allGoods = {
   //     },
   //     "closedType" : {
   //        "uniFlat" :[ 19.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [25.0 , "+3" , "UNI П-обрю Направл."],
+  //        "uniFullTurn" : [25.0 , "+3" , "UNI П-обрю Направл"],
   //     }
   //   },
   //   {
@@ -80,7 +80,7 @@ let allGoods = {
   //     },
   //     "closedType" : {
   //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
   //     }
   //   },
   //    {
@@ -93,7 +93,7 @@ let allGoods = {
   //     },
   //     "closedType" : {
   //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
   //     }
   //   },
   //   {
@@ -106,7 +106,7 @@ let allGoods = {
   //     },
   //     "closedType" : {
   //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
   //     }
   //   },
   //   {
@@ -119,7 +119,7 @@ let allGoods = {
   //     },
   //     "closedType" : {
   //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
   //     }
   //   },
   //   {
@@ -132,7 +132,7 @@ let allGoods = {
   //     },
   //     "closedType" : {
   //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
   //     }
   //   },
   //   {
@@ -145,7 +145,7 @@ let allGoods = {
   //     },
   //     "closedType" : {
   //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл."],
+  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
   //     }
   //   },
   // ],
@@ -161,7 +161,7 @@ let allGoods = {
       },
       "closedType" : {
          "uniFlat" : [32.0 , "+3" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [37.0, "+4" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [37.0, "+4" , "UNI П-обрю Направл"],
       }
     },
     {
@@ -174,7 +174,7 @@ let allGoods = {
       },
       "closedType" : {
          "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл"],
       }
     },    
     {
@@ -187,7 +187,7 @@ let allGoods = {
       },
       "closedType" : {
          "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл"],
       }
     },
      {
@@ -200,7 +200,7 @@ let allGoods = {
       },
       "closedType" : {
          "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл"],
       }
     },
      {
@@ -213,7 +213,7 @@ let allGoods = {
       },
       "closedType" : {
          "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл"],
       }
     },
      {
@@ -226,7 +226,7 @@ let allGoods = {
       },
       "closedType" : {
          "uniFlat" : [42.0 , "+3" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл"],
       }
     },
      {
@@ -239,7 +239,7 @@ let allGoods = {
       },
       "closedType" : {
          "uniFlat" : [42.0 , "+3" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл"],
       }
     },
      {
@@ -252,7 +252,7 @@ let allGoods = {
       },
       "closedType" : {
          "uniFlat" : [42.0 , "+3" , "UNI Плоскю Направл"] ,
-         "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл."],
+         "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл"],
       }
     },
    

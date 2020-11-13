@@ -56,13 +56,13 @@ div.productSelect{
  	margin-left: 0;
  }
 
-form > div{
+form.configurations > div{
 	display: flex;
 	align-items: center;
 	margin-left: 0;
 }
 
-form p{
+form.configurations p{
 	margin-right: 5px;
 	display: flex;
 	align-items: flex-start;
