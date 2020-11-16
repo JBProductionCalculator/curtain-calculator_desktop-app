@@ -52,8 +52,9 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
             calculatorAdditionalConfiguration(selectType.value)
 
-
             priceСalculation()
+
+            currencyConverter(parentSection)
         }
 
 
@@ -63,14 +64,17 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         // -------------------------------------------------------------------------
         //ФУНКЦИЯ ВЫЧИСЛЕНИЯ ЦЕНЫ
         function priceСalculation(){ 
- 
+    
           cout.addEventListener("click", function (){
                 let productArea = areaCalculation()
             // selectProductOperations(data,productSelectID,commands)
                 // console.log(priceColorSystem) 
-                let price = productArea * productPrice + allPricesAdditionalConfiguration
-                document.querySelector(parentSection+" #price").innerHTML = price
+                let price
+                price = productArea * productPrice + allPricesAdditionalConfiguration
+                // наценка
+                price = productMarkup(price, selectMarkup.value)
 
+                document.querySelector(parentSection+" #price").innerHTML = price
                 addToBlank.style.visibility = "visible"
             })
 
@@ -222,34 +226,41 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
 
   
-          
 
        //  функция в которой будут происходить все операции над выбраними типами товаров. внутрение функции находятся в файле addPriceFunctions.js
         function calculatorAdditionalConfiguration(type){
 
         let priceExchangeRates, priceSelectMarkup 
-        let priceColorSystem,priceControlType, priceFixationSystem, priceChainFixing,priceChainFixingUniversal,priceBoxControlMethod
+        let priceColorSystem,priceControlType, priceFixationSystem, priceChainLoad,priceChainFixing,priceChainFixingUniversal,priceControlMethod
    
           
         priceColorSystem  =  selectedColorSystem(type ,colorSystem, parentSection)
         priceFixationSystem = selectedFixationSystem(type, fixationSystem, parentSection)
+        priceChainLoad = selectedChainLoad(type, chainLoad)
         priceChainFixing = selectedChainFixing(type, chainFixing, parentSection)
         priceChainFixingUniversal = selectedChainFixingUniversal(type, chainFixingUniversal, parentSection)
+        // priceControlMethod = slectedControlMethod(type,boxControlMethod)
 
-        // console.log(priceColorSystem)
-        // console.log(priceFixationSystem)
-        // console.log(priceChainFixing)
-        console.log(priceChainFixingUniversal)
+
+        // console.log(priceColorSystem + ' Цвет ')
+        // console.log(priceFixationSystem + ' система фиксации')
+        // console.log(priceChainLoad  + ' груз цепи')
+        // console.log(priceChainFixing  + ' фиксации цепи')
+        // console.log(priceChainFixingUniversal  + ' фиксации цепи универсальная')
+        // console.log(priceControlMethod)
+        // console.log('----------------')
      
        
 
 
         viewSizeSystem(type, sizeSystem)
 
-        viewChainLoad(type, chainLoad) 
        
 
-        allPricesAdditionalConfiguration = priceColorSystem + priceFixationSystem
+        allPricesAdditionalConfiguration = priceColorSystem + priceFixationSystem + priceChainLoad + priceChainFixing + priceChainFixingUniversal
+
+        // console.log(allPricesAdditionalConfiguration)
+
 
         return allPricesAdditionalConfiguration
 

@@ -45,11 +45,10 @@
 div.productSelect{
 	display: flex;
 	align-items: center;
-	margin-top: 20px;
 }
 
  .productSelect   select{
- 	margin-right: 20px;
+ 	margin-right: 10px;
  }
 
  .productSelect select:first-child{
@@ -91,6 +90,17 @@ form.configurations p{
 
 }
 
+
+.boxControlMethod{
+	text-transform: uppercase;
+	margin-left: 15px;
+	
+}
+
+.boxMarkup{
+	margin-left: 10px;
+
+}
 
 @media screen and (max-width: 1200px){
 

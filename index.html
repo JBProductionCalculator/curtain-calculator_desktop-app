@@ -65,49 +65,53 @@
                <div class="inline">Ширинна, мм: <input type='text' id='width' value='1000' placeholder="Введите ширину"></div>
                <div class="inline">Высота, мм: <input type='text' id='height'  value='1000' placeholder="Введите высоту"></div>
                <div class="inline">Площадь, м&#178;: <input type='text'  id='area' readonly></div>
-               <div>
-                  <div  class="inline">
-                     НАЦЕНКА:
-                     <select class="selectMarkup">
-                        <option data-percent="15">15%</option>
-                        <option data-percent="20">20%</option>
-                        <option data-percent="25">25%</option>
-                        <option data-percent="30">30%</option>
-                        <option data-percent="35">35%</option>
-                        <option data-percent="40">40%</option>
-                        <option data-percent="45">45%</option>
-                        <option data-percent="50">50%</option>
-                        <option data-percent="55">55%</option>
-                        <option data-percent="60">60%</option>
-                        <option data-percent="65">65%</option>
-                        <option data-percent="70">70%</option>
-                        <option data-percent="75">75%</option>
-                        <option data-percent="80">80%</option>
-                        <option data-percent="85">85%</option>
-                        <option data-percent="90">90%</option>
-                        <option data-percent="95">95%</option>
-                        <option data-percent="100">100%</option>
-                     </select>
-                  </div>
-                  <div  class="boxControlMethod inline">
+               
+                  
+               <div class="flex">
+                  <div class='productSelect'>
+                    <!-- в этот тег добавляются два тега select -->
+                 </div>
+                 <div class="boxMarkup">
+                    НАЦЕНКА:
+                    <select class="selectMarkup">
+                      <option value="15">15%</option>
+                      <option value="20">20%</option>
+                      <option value="25">25%</option>
+                      <option value="30">30%</option>
+                      <option value="35">35%</option>
+                      <option value="40">40%</option>
+                      <option value="45">45%</option>
+                      <option value="50">50%</option>
+                      <option value="55">55%</option>
+                      <option value="60">60%</option>
+                      <option value="65">65%</option>
+                      <option value="70">70%</option>
+                      <option value="75">75%</option>
+                      <option value="80">80%</option>
+                      <option value="85">85%</option>
+                      <option value="90">90%</option>
+                      <option value="95">95%</option>
+                      <option value="100">100%</option>
+                    </select>
+                 </div>
+                 <div class="boxControlMethod none">
                      Способ управления:
                      <select class="controlMethod">
-                        <option >Цепь</option>
-                        <option >Мотор</option>
+                        <option value="Цепь">Цепь</option>
+                        <option value="Мотор">Мотор</option>
                      </select>
-                     <select class="controlMethodChanel">
-                        <option>1 канал</option>
-                        <option>2 канал</option>
-                        <option>5 канал</option>
+                     <select class="controlMethodChanel none">
+                        <option value="1 канал">1 канал</option>
+                        <option value="2 канала">2 канала</option>
+                        <option value="5 каналов">5 каналов</option>
                      </select>
                      <!--  <p><input type="radio" name="controlMethod" value="Цепь" checked>Цепь</p>
                         <p><input type="radio" name="controlMethod" value="Мотор">Мотор</p> -->
-                  </div>
+                </div>
                </div>
-               <div class='productSelect'>
-                  <!-- в этот тег добавляются два тега select -->
-               </div>
+             
                <form class="configurations">
+
                   <div>
                      <p>Цвет:</p>
                      <p><input type="radio" name="colorSystem" value="Бел." checked>Белый</p>
@@ -154,7 +158,7 @@
                <div>
                </div>
                <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
-               <div class="currencyConverter">Перевести в гривны : <input type="text" id="exchangeRates" placeholder="Введите курс"></div>
+               <div class="currencyConverter">Перевести в гривны : <input type="text" id="exchangeRates" placeholder="Введите курс"> <span class="newConverterPrice"></span></div>
             </div>
             <div id="screen_blanks_roller_curtains" class="screen_blank none" data-viewInBlank="curtains" >
                <ul>
@@ -909,14 +913,20 @@
       <!-- <script src='neutralino.js'></script> -->
       <!-- <script src='assets/database.js'></script> -->
       <script src="assets/database.js"></script>
+
+      <!-- конвертер валют и наценка на товар. функции используются в продсчете калькулятора -->
+      <script src="assets/modulesJS/converterAndMarkup.js"></script>
+
       <!-- подключение модулей -->
       <script src='assets/modulesJS/creatindGoodsTables.js'></script>
       <script src='assets/modulesJS/newCreatindGoodsTables.js'></script>
       <script src='assets/modulesJS/allMainFunctions.js'></script>
       <script src='assets/modulesJS/callingMainFunctions.js'></script>
+
       <!-- калькулятор для рулонных штор -->
       <script src="assets/modulesJS/rollerCurtainsCalculate/additionalConfiguration.js"></script>
       <script src="assets/modulesJS/rollerCurtainsCalculate/rollerCurtainsCalculate.js"></script>
+
       <!-- калькурятор для вертикальных таблиц -->
       <script src="assets/modulesJS/verticalCalculate/verticalCreateTable.js"></script>
       <script src="assets/modulesJS/verticalCalculate/verticalCalculation.js"></script>

@@ -69,6 +69,7 @@ function selectedFixationSystem(type, fixationSystemInputs, parentSection){
 	
 	    fixationSystemInputs.forEach(function(radio){
 	            if(radio.checked){
+	            	// первая таблица
 	                if (parentSection == "#roller_curtains") {        
 
 	                    if (radio.value == 'Магнитная'){
@@ -87,7 +88,7 @@ function selectedFixationSystem(type, fixationSystemInputs, parentSection){
 	                    }
 
 	                }
-
+	            	// вторая таблица день-ночь
 	                if (parentSection == "#roller_curtains_day_night") {        
 
 	                    if (radio.value == 'Магнитная'){
@@ -122,13 +123,16 @@ function selectedFixationSystem(type, fixationSystemInputs, parentSection){
 
 
 // показывает Груз цепи при выборе нужных типов штор
-function viewChainLoad(type, chainLoad){
+function selectedChainLoad(type, chainLoad){
+	let price = 0
 	let chainLoadParentBlock =  chainLoad[0].closest('.chainLoad')
 		if (type == 'фалш шторы' ) {
 			chainLoadParentBlock.classList.add('none')
 		}else{
 			chainLoadParentBlock.classList.remove('none')
+			price = 0.2
 		}
+	return price
 }
 
 
@@ -168,3 +172,77 @@ function selectedChainFixingUniversal(type, chainLoad){
 
 
 
+// два select способа управления .для  STANDARD другие расценки
+// function slectedControlMethod(type, boxControlMethod){
+// 	let controlMethod = document.querySelector(' .controlMethod')
+// 	let controlMethodChanel = document.querySelector(' .controlMethodChanel')
+
+// 	let price = 0
+
+// 	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
+// 		boxControlMethod.classList.remove('none')
+// 		priceControlMethodChanel(24,26,30)
+
+// 	}else if(type == 'STANDART'){
+// 		boxControlMethod.classList.remove('none')
+
+// 	}else{
+// 		boxControlMethod.classList.add('none')
+// 		let proxy  = 0
+// 	}
+
+
+// 	function priceControlMethodChanel(oneChanel, twoChanel, fiveChanel){
+// 		console.log(controlMethod.value)
+// 		// console.log(type)
+
+// 			controlMethod.addEventListener('change', function(){
+
+
+// 			if(controlMethod.value == 'Мотор'){
+// 				controlMethodChanel.classList.remove('none')
+
+// 				price = 85
+// 				zou  = price
+
+// 				console.log(zou)
+
+
+// 				controlMethodChanel.addEventListener('change', function(){
+// 					if (controlMethodChanel.value == '1 канал') {
+// 						price = 85 + oneChanel
+// 						zou  = price
+
+// 						console.log(zou)
+// 					}
+
+// 					if (controlMethodChanel.value == '2 канала') {
+// 						price = 85 +  twoChanel
+// 						zou  = price
+
+// 						console.log(zou)
+// 					}
+
+// 					if (controlMethodChanel.value == '5 каналов') {
+// 						price = 85 + fiveChanel
+// 						zou  = price
+
+// 						console.log(zou)
+// 					}
+
+
+// 				})
+
+// 			}else{
+// 				controlMethodChanel.classList.add('none')
+// 				price = 0
+// 			}
+// 		})
+// 	}	
+
+
+// 	return price
+
+
+	
+// }
