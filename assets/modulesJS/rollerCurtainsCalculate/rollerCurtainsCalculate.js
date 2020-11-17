@@ -67,10 +67,14 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
     
           cout.addEventListener("click", function (){
                 let productArea = areaCalculation()
-            // selectProductOperations(data,productSelectID,commands)
-                // console.log(priceColorSystem) 
+                let controlMethod = priceControlMethod(selectType.value,boxControlMethod)
+
+                console.log(controlMethod)
+
+                // selectProductOperations(data,productSelectID,commands)
                 let price
                 price = productArea * productPrice + allPricesAdditionalConfiguration
+
                 // наценка
                 price = productMarkup(price, selectMarkup.value)
 
@@ -78,7 +82,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
                 addToBlank.style.visibility = "visible"
             })
 
-            addToBlank.addEventListener("click", function(){
+             addToBlank.addEventListener("click", function(){
                 let parentBlock = this.parentNode.parentNode
 
                 addToBlankFun(parentBlock, productSelectID[0], productSelectID[1])
@@ -231,7 +235,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         function calculatorAdditionalConfiguration(type){
 
         let priceExchangeRates, priceSelectMarkup 
-        let priceColorSystem,priceControlType, priceFixationSystem, priceChainLoad,priceChainFixing,priceChainFixingUniversal,priceControlMethod
+        let priceColorSystem,priceControlType, priceFixationSystem, priceChainLoad,priceChainFixing,priceChainFixingUniversal
    
           
         priceColorSystem  =  selectedColorSystem(type ,colorSystem, parentSection)
@@ -239,7 +243,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         priceChainLoad = selectedChainLoad(type, chainLoad)
         priceChainFixing = selectedChainFixing(type, chainFixing, parentSection)
         priceChainFixingUniversal = selectedChainFixingUniversal(type, chainFixingUniversal, parentSection)
-        priceControlMethod = slectedControlMethod(type,boxControlMethod)
+        
 
 
         // console.log(priceColorSystem + ' Цвет ')
@@ -252,7 +256,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
      
        
 
-
+        viewControlMethod(type,boxControlMethod)
         viewSizeSystem(type, sizeSystem)
 
        

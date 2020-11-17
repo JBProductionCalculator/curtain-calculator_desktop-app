@@ -172,77 +172,82 @@ function selectedChainFixingUniversal(type, chainLoad){
 
 
 
-// два select способа управления .для  STANDARD другие расценки
-function slectedControlMethod(type, boxControlMethod){
+// Функция 1 Сособ Управления .для  STANDARD другие расценки
+function viewControlMethod(type, boxControlMethod){
 	let controlMethod = document.querySelector(' .controlMethod')
 	let controlMethodChanel = document.querySelector(' .controlMethodChanel')
 
-	let price = 0
 
 	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
 		boxControlMethod.classList.remove('none')
 		// priceControlMethodChanel(24,26,30)
+		viewChanelControlMethod(controlMethod,controlMethodChanel)
 
 	}else if(type == 'STANDART'){
 		boxControlMethod.classList.remove('none')
+		viewChanelControlMethod(controlMethod,controlMethodChanel)
 
 	}else{
 		boxControlMethod.classList.add('none')
 		let proxy  = 0
 	}
+	
+}
+
+// Функция 2 Сособ Управления
+function viewChanelControlMethod(controlMethod, chanels){
+	controlMethod.addEventListener('change', function(){
+		if(controlMethod.value == 'Мотор'){
+			chanels.classList.remove('none')
+		}else{
+			chanels.classList.add('none')
+		}
+	})
+	
+}
 
 
-	function priceControlMethodChanel(oneChanel, twoChanel, fiveChanel){
-		console.log(controlMethod.value)
-		// console.log(type)
 
-			controlMethod.addEventListener('change', function(){
+//// Функция 3 Сособ Управления .эта функция в отличие от всех из этого файла вызывается прямо в каклькуляторе. она отдат цену
+function priceControlMethod(type,boxControlMethod){
+	let controlMethod = boxControlMethod.querySelector('.controlMethod')
+	let controlMethodChanel = boxControlMethod.querySelector('.controlMethodChanel')
+	console.log(type)
 
+	let price = 0
 
-			if(controlMethod.value == 'Мотор'){
-				controlMethodChanel.classList.remove('none')
-
-				price = 85
-				zou  = price
-
-				console.log(zou)
-
-
-				controlMethodChanel.addEventListener('change', function(){
-					if (controlMethodChanel.value == '1 канал') {
-						price = 85 + oneChanel
-						zou  = price
-
-						console.log(zou)
-					}
-
-					if (controlMethodChanel.value == '2 канала') {
-						price = 85 +  twoChanel
-						zou  = price
-
-						console.log(zou)
-					}
-
-					if (controlMethodChanel.value == '5 каналов') {
-						price = 85 + fiveChanel
-						zou  = price
-
-						console.log(zou)
-					}
+	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
+		price = chanelsPrices(24,26,30)
+	}else if(type == 'STANDART'){
+		price = chanelsPrices(50,60,70)
+	}else{
+		price = 0
+	}
 
 
-				})
+	function chanelsPrices(fistPice, twoPrice, fivePrice){
+		if(controlMethod.value == 'Мотор'){
 
-			}else{
-				controlMethodChanel.classList.add('none')
-				price = 0
+			if (controlMethodChanel.value == '1 канал') {
+				return 85 + fistPice
 			}
-		})
-	}	
+
+			if (controlMethodChanel.value == '2 канала') {
+				return 85 +  twoPrice
+			}
+
+			if (controlMethodChanel.value == '5 каналов') {
+				return 85 + fivePrice
+			}
+
+		}else{
+			controlMethodChanel.classList.add('none')
+			return 0
+		}
+
+
+	}
 
 
 	return price
-
-
-	
-}
+}	
