@@ -14,9 +14,16 @@ function currencyConverter(parentSection){
 	let newPriceContainer =  document.querySelector(parentSection + ' .newConverterPrice')
 	
 	exchangeRates.addEventListener('input',function(){
-		
+		let inputText = this.value
+
 		newPriceContainer.innerHTML = Number(price.textContent) * this.value
 		
+		if (newPriceContainer.innerHTML == "NaN") {
+			newPriceContainer.innerHTML = "Ввеите число"
+		}
+		
 	})
+
+
 
 }

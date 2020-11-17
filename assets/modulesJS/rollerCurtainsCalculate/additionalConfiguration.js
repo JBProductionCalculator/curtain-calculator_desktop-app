@@ -173,76 +173,76 @@ function selectedChainFixingUniversal(type, chainLoad){
 
 
 // два select способа управления .для  STANDARD другие расценки
-// function slectedControlMethod(type, boxControlMethod){
-// 	let controlMethod = document.querySelector(' .controlMethod')
-// 	let controlMethodChanel = document.querySelector(' .controlMethodChanel')
+function slectedControlMethod(type, boxControlMethod){
+	let controlMethod = document.querySelector(' .controlMethod')
+	let controlMethodChanel = document.querySelector(' .controlMethodChanel')
 
-// 	let price = 0
+	let price = 0
 
-// 	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
-// 		boxControlMethod.classList.remove('none')
-// 		priceControlMethodChanel(24,26,30)
+	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
+		boxControlMethod.classList.remove('none')
+		// priceControlMethodChanel(24,26,30)
 
-// 	}else if(type == 'STANDART'){
-// 		boxControlMethod.classList.remove('none')
+	}else if(type == 'STANDART'){
+		boxControlMethod.classList.remove('none')
 
-// 	}else{
-// 		boxControlMethod.classList.add('none')
-// 		let proxy  = 0
-// 	}
-
-
-// 	function priceControlMethodChanel(oneChanel, twoChanel, fiveChanel){
-// 		console.log(controlMethod.value)
-// 		// console.log(type)
-
-// 			controlMethod.addEventListener('change', function(){
+	}else{
+		boxControlMethod.classList.add('none')
+		let proxy  = 0
+	}
 
 
-// 			if(controlMethod.value == 'Мотор'){
-// 				controlMethodChanel.classList.remove('none')
+	function priceControlMethodChanel(oneChanel, twoChanel, fiveChanel){
+		console.log(controlMethod.value)
+		// console.log(type)
 
-// 				price = 85
-// 				zou  = price
-
-// 				console.log(zou)
+			controlMethod.addEventListener('change', function(){
 
 
-// 				controlMethodChanel.addEventListener('change', function(){
-// 					if (controlMethodChanel.value == '1 канал') {
-// 						price = 85 + oneChanel
-// 						zou  = price
+			if(controlMethod.value == 'Мотор'){
+				controlMethodChanel.classList.remove('none')
 
-// 						console.log(zou)
-// 					}
+				price = 85
+				zou  = price
 
-// 					if (controlMethodChanel.value == '2 канала') {
-// 						price = 85 +  twoChanel
-// 						zou  = price
-
-// 						console.log(zou)
-// 					}
-
-// 					if (controlMethodChanel.value == '5 каналов') {
-// 						price = 85 + fiveChanel
-// 						zou  = price
-
-// 						console.log(zou)
-// 					}
+				console.log(zou)
 
 
-// 				})
+				controlMethodChanel.addEventListener('change', function(){
+					if (controlMethodChanel.value == '1 канал') {
+						price = 85 + oneChanel
+						zou  = price
 
-// 			}else{
-// 				controlMethodChanel.classList.add('none')
-// 				price = 0
-// 			}
-// 		})
-// 	}	
+						console.log(zou)
+					}
+
+					if (controlMethodChanel.value == '2 канала') {
+						price = 85 +  twoChanel
+						zou  = price
+
+						console.log(zou)
+					}
+
+					if (controlMethodChanel.value == '5 каналов') {
+						price = 85 + fiveChanel
+						zou  = price
+
+						console.log(zou)
+					}
 
 
-// 	return price
+				})
+
+			}else{
+				controlMethodChanel.classList.add('none')
+				price = 0
+			}
+		})
+	}	
+
+
+	return price
 
 
 	
-// }
+}
