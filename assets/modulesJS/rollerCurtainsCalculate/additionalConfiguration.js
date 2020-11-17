@@ -45,8 +45,8 @@ function selectedColorSystem(type, colorInputs, parentSection) {
 
 
 // появление раздела выбра размера : СТД иди РГ для определенных типов ткани
-function viewSizeSystem(type,sizes){
-	let sizeParentBlock = sizes[0].closest('.sizeSystem')
+function viewSizeSystem(type,sizes, parentSection){
+	let sizeParentBlock = sizes[0].closest(parentSection+' .sizeSystem')
 		if (type == 'UNI Плоскю Направл' || type == 'UNI П-обрю Направл') {
 			sizeParentBlock.classList.add('none')
 		}else{
@@ -173,9 +173,9 @@ function selectedChainFixingUniversal(type, chainLoad){
 
 
 // Функция 1 Сособ Управления .для  STANDARD другие расценки
-function viewControlMethod(type, boxControlMethod){
-	let controlMethod = document.querySelector(' .controlMethod')
-	let controlMethodChanel = document.querySelector(' .controlMethodChanel')
+function viewControlMethod(type, boxControlMethod, parentSection){
+	let controlMethod = document.querySelector(parentSection+' .controlMethod')
+	let controlMethodChanel = document.querySelector(parentSection+' .controlMethodChanel')
 
 
 	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
@@ -208,11 +208,11 @@ function viewChanelControlMethod(controlMethod, chanels){
 
 
 
-//// Функция 3 Сособ Управления .эта функция в отличие от всех из этого файла вызывается прямо в каклькуляторе. она отдат цену
+//// Функция 3 Сособ Управления .эта функция в вызывается прямо в каклькуляторе. она отдат цену
 function priceControlMethod(type,boxControlMethod){
 	let controlMethod = boxControlMethod.querySelector('.controlMethod')
 	let controlMethodChanel = boxControlMethod.querySelector('.controlMethodChanel')
-	console.log(type)
+	let motorPrice = 85
 
 	let price = 0
 
@@ -229,15 +229,15 @@ function priceControlMethod(type,boxControlMethod){
 		if(controlMethod.value == 'Мотор'){
 
 			if (controlMethodChanel.value == '1 канал') {
-				return 85 + fistPice
+				return motorPrice + fistPice
 			}
 
 			if (controlMethodChanel.value == '2 канала') {
-				return 85 +  twoPrice
+				return motorPrice +  twoPrice
 			}
 
 			if (controlMethodChanel.value == '5 каналов') {
-				return 85 + fivePrice
+				return motorPrice + fivePrice
 			}
 
 		}else{
@@ -251,3 +251,55 @@ function priceControlMethod(type,boxControlMethod){
 
 	return price
 }	
+
+
+
+
+// добавление второй ширины для UNI Плоскю Направлю
+function viewEaxtraWidth(type,parentSection){
+	let mainWidthText = document.querySelector(parentSection+' .main_width span')
+	let glassWidth = document.querySelector(parentSection+' .glass_width')
+
+
+	if (type == "UNI Плоскю Направл") {
+		glassWidth.classList.remove('none')
+		mainWidthText.textContent = 'Ширина ребра, мм'
+	}else{
+		glassWidth.classList.add('none')
+		mainWidthText.textContent = 'Ширина, мм'
+	}
+
+}
+
+
+//функуия 1 Доп. скотч . показ дополнительного скотча для типа UNI Плоскю Направл
+function viewAdditionalScotchTape(type, parentSection){
+	let additionalScotchTape = document.querySelector(parentSection + ' .additionalScotchTape')
+
+	if (type == "UNI Плоскю Направл") {
+		additionalScotchTape.classList.remove('none')
+	}else{
+		additionalScotchTape.classList.add('none')
+	}
+
+}
+
+//функуия 2 Доп сктч . эта функция в вызывается прямо в каклькуляторе. она отдат цену
+function priceAdditionalScotchTape(type, inputs, height){
+	
+	let price = 0
+	if (type == "UNI Плоскю Направл") {
+		inputs.forEach(function(radio){
+			if (radio.checked && radio.value == 'Доп. скотч') {
+				let converterToMeters = Number(height.value) / 1000
+				price = Math.ceil(converterToMeters) * 0.8
+			}
+		})
+		
+	}else{
+		price = 0
+	}
+	
+	return price
+}
+	

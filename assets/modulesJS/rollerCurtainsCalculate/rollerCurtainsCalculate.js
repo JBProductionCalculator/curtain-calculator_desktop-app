@@ -11,7 +11,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         selectMarkup = document.querySelector(parentSection + ' .selectMarkup')
 
         // все элементы которые будут участвовать в изменение цены но будут применятся не ко всем колонкам
-        let colorSystem,controlType, fixationSystem,sizeSystem,chainLoad, chainFixing,chainFixingUniversal,boxControlMethod
+        let colorSystem,controlType, fixationSystem,sizeSystem,chainLoad, chainFixing,chainFixingUniversal,boxControlMethod,additionalScotchTapeInputs
         // radio элементы
         colorSystem = document.querySelectorAll(parentSection + " input[name='colorSystem']")
         controlType = document.querySelectorAll(parentSection + " input[name='controlType']")
@@ -20,6 +20,8 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         chainLoad = document.querySelectorAll(parentSection + " input[name='chainLoad']")
         chainFixing = document.querySelectorAll(parentSection + " input[name='chainFixing']")
         chainFixingUniversal = document.querySelectorAll(parentSection + " input[name='chainFixingUniversal']")
+        additionalScotchTapeInputs = document.querySelectorAll(parentSection + " input[name='additionalScotchTape']")
+
         // select элемент с двойным выбором
         boxControlMethod = document.querySelector(parentSection + " .boxControlMethod")
 
@@ -68,12 +70,14 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
           cout.addEventListener("click", function (){
                 let productArea = areaCalculation()
                 let controlMethod = priceControlMethod(selectType.value,boxControlMethod)
+                let additionalScotchTape = priceAdditionalScotchTape(selectType.value, additionalScotchTapeInputs, height)
+                console.log(additionalScotchTape)
 
-                console.log(controlMethod)
+                // console.log(controlMethod)
 
                 // selectProductOperations(data,productSelectID,commands)
                 let price
-                price = productArea * productPrice + allPricesAdditionalConfiguration
+                price = productArea * productPrice + allPricesAdditionalConfiguration + controlMethod
 
                 // наценка
                 price = productMarkup(price, selectMarkup.value)
@@ -243,8 +247,9 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         priceChainLoad = selectedChainLoad(type, chainLoad)
         priceChainFixing = selectedChainFixing(type, chainFixing, parentSection)
         priceChainFixingUniversal = selectedChainFixingUniversal(type, chainFixingUniversal, parentSection)
-        
+         
 
+        
 
         // console.log(priceColorSystem + ' Цвет ')
         // console.log(priceFixationSystem + ' система фиксации')
@@ -253,11 +258,13 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         // console.log(priceChainFixingUniversal  + ' фиксации цепи универсальная')
         // console.log(priceControlMethod)
         // console.log('----------------')
-     
+        
        
+        viewSizeSystem(type, sizeSystem, parentSection)
+        viewControlMethod(type,boxControlMethod, parentSection)
+        viewEaxtraWidth(type,parentSection)
+        viewAdditionalScotchTape(type, parentSection)
 
-        viewControlMethod(type,boxControlMethod)
-        viewSizeSystem(type, sizeSystem)
 
        
 
