@@ -1,4 +1,4 @@
-function rollerCurtainsCalculate(data, parentSection, productSelectID, commands ){
+function rollerCurtainsCalculateReady(data, parentSection, productSelectID, commands ){
         //переменные размера
         let width, height, area,productSelect 
         width = document.querySelector( parentSection +" input#width")
@@ -71,21 +71,16 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
                 calculatorAdditionalConfiguration(selectType.value)
 
                 let productArea = areaCalculation()
-                // способ управления
-                let controlMethod = priceControlMethod(selectType.value,boxControlMethod)
-                //допю скотч
-                let additionalScotchTape = priceAdditionalScotchTape(selectType.value, additionalScotchTapeInputs, height)
-                console.log(additionalScotchTape)
 
-                // selectProductOperations(data,productSelectID,commands)
                 let price
-                price = productArea * productPrice + allPricesAdditionalConfiguration + controlMethod
+                price = productArea * productPrice + allPricesAdditionalConfiguration 
 
                 // наценка
                 price = productMarkup(price, selectMarkup.value)
 
                 document.querySelector(parentSection+" #price").innerHTML = price
                 addToBlank.style.visibility = "visible"
+
             })
 
              addToBlank.addEventListener("click", function(){
@@ -103,14 +98,14 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
                 let x = (width.value / 1000) * (height.value / 1000)
                 let y = Math.round((x) * 100) / 100
 
-                if(y < 0.7){
-                    y = 0.7                    
-                    area.value = y
-                    return y
-                }else{
+                // if(y < 0.7){
+                    // y = 0.7                    
+                    // area.value = y
+                    // return y
+                // }else{
                     area.value = y
                     return y   
-                }
+                // }
 
 
                
@@ -254,39 +249,25 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         function calculatorAdditionalConfiguration(type){
 
             let priceExchangeRates, priceSelectMarkup 
-            let priceColorSystem,priceControlType, priceFixationSystem, priceChainLoad,priceChainFixing,priceChainFixingUniversal
+            let   priceChainLoad,priceChainFixing,priceChainFixingUniversal
        
               
-            priceColorSystem  =  selectedColorSystem(type ,colorSystem, parentSection)
-            priceFixationSystem = selectedFixationSystem(type, fixationSystem, parentSection)
+
             priceChainLoad = selectedChainLoad(type, chainLoad)
             priceChainFixing = selectedChainFixing(type, chainFixing, parentSection)
             priceChainFixingUniversal = selectedChainFixingUniversal(type, chainFixingUniversal, parentSection)
              
 
-            // console.log(priceFixationSystem + ' система фиксации')
-            
-                    // console.log(priceColorSystem + ' Цвет ')
-            //         console.log(priceFixationSystem + ' система фиксации')
-            //         // console.log(priceChainLoad  + ' груз цепи')
-                    // console.log(priceChainFixing  + ' фиксации цепи')
-                    // console.log(priceChainFixingUniversal  + ' фиксации цепи универсальная')
-            //         // console.log(priceControlMethod)
-            //         console.log('----------------')
-          
+   
+            // console.log(priceChainLoad  + ' груз цепи')
+            // console.log(priceChainFixing  + ' фиксации цепи')
+            // console.log(priceChainFixingUniversal  + ' фиксации цепи универсальная')
 
-            
-            viewSizeSystem(type, sizeSystem, parentSection)
-            viewControlMethod(type,boxControlMethod, parentSection)
-            viewEaxtraWidth(type,parentSection)
-            viewAdditionalScotchTape(type, parentSection)
-
-            // console.log(priceColorSystem , priceFixationSystem , priceChainLoad , priceChainFixing , priceChainFixingUniversal)
+    
            
 
-            allPricesAdditionalConfiguration = priceColorSystem + priceFixationSystem + priceChainLoad + priceChainFixing + priceChainFixingUniversal
+            allPricesAdditionalConfiguration =  priceChainLoad + priceChainFixing + priceChainFixingUniversal
 
-            // console.log(allPricesAdditionalConfiguration)
 
 
             return allPricesAdditionalConfiguration

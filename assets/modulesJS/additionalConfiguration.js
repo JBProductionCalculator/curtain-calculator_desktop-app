@@ -336,6 +336,20 @@ function priceAdditionalScotchTape(type, inputs, height){
 
 // Используется в : Горизонтальные жалюзи СТАНДАРТ
 // Пластиковые фикстаторы
-function selectedPlasticRetainer(type, plasticRetainer,parentSection ){
-	console.log(type, plasticRetainer,parentSection )
+function selectedPlasticRetainer(plasticRetainer,parentSection ){
+	let price = 0
+	if(parentSection == "#horizontal_louver_standard" ){
+		plasticRetainer.forEach(function(radio){
+			if (radio.checked && radio.value == 'Пласт. Фиксатор') {
+				price = 0.3
+			}
+		})
+	}
+
+	return price
+}
+
+
+function selectedGuideString(){
+	console.log(122)
 }

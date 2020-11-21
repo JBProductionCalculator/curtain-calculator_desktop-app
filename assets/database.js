@@ -7,10 +7,10 @@ let allGoods = {
         "fakeCurtains" :[ 8.3  ,"+1", "фалш шторы"],
         "mini" :[ 9.3 ,"+1" , "MINI"],
         "standard" :[ 11.0 ,"+1" , "STANDART"],
-        "maximus" : [17.0,  "" , "MAXIMUS"] ,
+        "maximus" : [17.0,  "" , "MAXIMUS"],
       // },
       // "closedType" : {
-         "uniFlat" : [17.0 , "+2" , "UNI Плоскю Направл"] ,
+         "uniFlat" : [17.0 , "+2" , "UNI Плоскю Направл"],
          "uniFullTurn" : [23.0 , "+3" , "UNI П-обрю Направл"],
       // }
     },
@@ -43,225 +43,129 @@ let allGoods = {
       // }
     },
   ],
-  // rollerBlinds :  [
-  //    {
-  //     "name": "Марсесль АКЦИЯ!!!",
-  //     "openType" : {
-  //       "copact" :[ 8.3  ,"+1", "Compact и фалш шторы"],
-  //       "mini" :[ 9.3 ,"+1" , "MINI"],
-  //       "standard" :[ 11.0 ,"+1" , "STANDART"],
-  //       "maximus" : [17.0,  "" , "MAXIMUS"] 
-  //     },
-  //     "closedType" : {
-  //        "uniFlat" : [17.0 , "+2" , "UNI Плоскю Направл"] ,
-  //        "uniFullTurn" : [23.0 , "+3" , "UNI П-обрю Направл"],
-  //     }
-  //   },
-  //   {
-  //     "name": "LEN",
-  //     "openType" : {
-  //       "copact" : [9.3 , "+1", "Compact и фалш шторы" ],
-  //       "mini" : [10.3 , "+1", "MINI"],
-  //       "standard" :[ 12.0 , "+1" , "STANDART" ],
-  //       "maximus" : [19.0, " ", "MAXIMUS"],
-  //     },
-  //     "closedType" : {
-  //        "uniFlat" :[ 19.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [25.0 , "+3" , "UNI П-обрю Направл"],
-  //     }
-  //   },
-  //   {
-  //     "name": "MATTE",
-  //     "openType" : {
-  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-  //       "mini" : [11.5 , "+1", "MINI"],
-  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
-  //       "maximus" : [21.0, " ", "MAXIMUS"],
-  //     },
-  //     "closedType" : {
-  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
-  //     }
-  //   },
-  //    {
-  //     "name": "WODA",
-  //     "openType" : {
-  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-  //       "mini" : [11.5 , "+1", "MINI"],
-  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
-  //       "maximus" : [21.0, " ", "MAXIMUS"],
-  //     },
-  //     "closedType" : {
-  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
-  //     }
-  //   },
-  //   {
-  //     "name": "LAZUR",
-  //     "openType" : {
-  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-  //       "mini" : [11.5 , "+1", "MINI"],
-  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
-  //       "maximus" : [21.0, " ", "MAXIMUS"],
-  //     },
-  //     "closedType" : {
-  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
-  //     }
-  //   },
-  //   {
-  //     "name": "NATURA",
-  //     "openType" : {
-  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-  //       "mini" : [11.5 , "+1", "MINI"],
-  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
-  //       "maximus" : [21.0, " ", "MAXIMUS"],
-  //     },
-  //     "closedType" : {
-  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
-  //     }
-  //   },
-  //   {
-  //     "name": "TOPAZ",
-  //     "openType" : {
-  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-  //       "mini" : [11.5 , "+1", "MINI"],
-  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
-  //       "maximus" : [21.0, " ", "MAXIMUS"],
-  //     },
-  //     "closedType" : {
-  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
-  //     }
-  //   },
-  //   {
-  //     "name": "AKANT",
-  //     "openType" : {
-  //       "copact" : [10.5, "+1", "Compact и фалш шторы" ],
-  //       "mini" : [11.5 , "+1", "MINI"],
-  //       "standard" :[ 13.0 , "+1" , "STANDART" ],
-  //       "maximus" : [21.0, " ", "MAXIMUS"],
-  //     },
-  //     "closedType" : {
-  //        "uniFlat" :[ 22.0 , "+2", "UNI Плоскю Направл" ],
-  //        "uniFullTurn" : [28.0 , "+3" , "UNI П-обрю Направл"],
-  //     }
-  //   },
-  // ],
+  
 
-  rollerBlindsDayNight : [
+  newRollerBlindsDayNight : [
      {
       "name": "SILVIA АКЦИЯ!!!",
-      "openType" : {
-        "copact" :[18.0  ,"+2", "Compact и фалш шторы"],
+      // "openType" : {
+        "copact" :[18.0  ,"+2", "Compact"],
+        "fakeCurtains" :[18.0  ,"+2", "фалш шторы"],
         "mini" :[ 25.0 ,"+2" , "MINI"],
         "standard" :[ 28.0 ,"" , "STANDART"],
-        "maximus" : [ 35.0,  "" , "MAXIMUS"] 
-      },
-      "closedType" : {
-         "uniFlat" : [32.0 , "+3" , "UNI Плоскю Направл"] ,
+        "maximus" : [ 35.0,  "" , "MAXIMUS"],
+      // },
+      // "closedType" : {
+         "uniFlat" : [32.0 , "+3" , "UNI Плоскю Направл"],
          "uniFullTurn" : [37.0, "+4" , "UNI П-обрю Направл"],
-      }
+      // }
     },
     {
       "name": "SECRET",
-      "openType" : {
-        "copact" :[21.0 ,"+2", "Compact и фалш шторы"],
+      // "openType" : {
+        "copact" :[21.0 ,"+2", "Compact"],
+        "fakeCurtains" :[21.0 ,"+2", "фалш шторы"],
         "mini" :[ 28.0 ,"+2" , "MINI"],
         "standard" :[ 31.0 ,"" , "STANDART"],
-        "maximus" : [38.0,  "" , "MAXIMUS"] 
-      },
-      "closedType" : {
-         "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"] ,
+        "maximus" : [38.0,  "" , "MAXIMUS"],
+      // },
+      // "closedType" : {
+         "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"],
          "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл"],
-      }
+      // }
     },    
     {
       "name": "ВН 03-10",
-      "openType" : {
-        "copact" :[21.0 ,"+2", "Compact и фалш шторы"],
+      // "openType" : {
+        "copact" :[21.0 ,"+2", "Compact"],
+        "fakeCurtains" :[21.0 ,"+2", "фалш шторы"],
         "mini" :[ 28.0 ,"+2" , "MINI"],
         "standard" :[ 31.0 ,"" , "STANDART"],
-        "maximus" : [38.0,  "" , "MAXIMUS"] 
-      },
-      "closedType" : {
+        "maximus" : [38.0,  "" , "MAXIMUS"],
+      // },
+      // "closedType" : {
          "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"] ,
          "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл"],
-      }
+      // }
     },
      {
       "name": "TRIO",
-      "openType" : {
-        "copact" :[22.0 ,"+2", "Compact и фалш шторы"],
+      // "openType" : {
+        "copact" :[22.0 ,"+2", "Compact"],
+        "fakeCurtains" :[22.0 ,"+2", "фалш шторы"],
         "mini" :[ 29.0 ,"+2" , "MINI"],
         "standard" :[ 32.0 ,"" , "STANDART"],
-        "maximus" : [38.0,  "" , "MAXIMUS"] 
-      },
-      "closedType" : {
-         "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"] ,
+        "maximus" : [38.0,  "" , "MAXIMUS"],
+      // },
+      // "closedType" : {
+         "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"],
          "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл"],
-      }
+      // }
     },
      {
       "name": "PARA",
-      "openType" : {
-        "copact" :[22.0 ,"+2", "Compact и фалш шторы"],
+      // "openType" : {
+        "copact" :[22.0 ,"+2", "Compact"],
+        "fakeCurtains" :[22.0 ,"+2", "фалш шторы"],
         "mini" :[ 29.0 ,"+2" , "MINI"],
         "standard" :[ 32.0 ,"" , "STANDART"],
-        "maximus" : [38.0,  "" , "MAXIMUS"] 
-      },
-      "closedType" : {
+        "maximus" : [38.0,  "" , "MAXIMUS"],
+      // },
+      // "closedType" : {
          "uniFlat" : [35.0 , "+3" , "UNI Плоскю Направл"] ,
          "uniFullTurn" : [40, "+4" , "UNI П-обрю Направл"],
-      }
+      // }
     },
      {
       "name": "ВН С",
-      "openType" : {
-        "copact" :[27.0 ,"+2", "Compact и фалш шторы"],
+      // "openType" : {
+        "copact" :[27.0 ,"+2", "Compact"],
+        "fakeCurtains" :[27.0 ,"+2", "фалш шторы"],
         "mini" :[ 33.0 ,"+2" , "MINI"],
         "standard" :[ 36.0 ,"" , "STANDART"],
-        "maximus" : [43.0,  "" , "MAXIMUS"] 
-      },
-      "closedType" : {
-         "uniFlat" : [42.0 , "+3" , "UNI Плоскю Направл"] ,
+        "maximus" : [43.0,  "" , "MAXIMUS"],
+      // },
+      // "closedType" : {
+         "uniFlat" : [42.0 , "+3" , "UNI Плоскю Направл"],
          "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл"],
-      }
+      // }
     },
      {
       "name": "ВН 305",
-      "openType" : {
-        "copact" :[27.0 ,"+2", "Compact и фалш шторы"],
+      // "openType" : {
+        "copact" :[27.0 ,"+2", "Compact"],
+        "fakeCurtains" :[27.0 ,"+2", "фалш шторы"],
         "mini" :[ 33.0 ,"+2" , "MINI"],
         "standard" :[ 36.0 ,"" , "STANDART"],
-        "maximus" : [43.0,  "" , "MAXIMUS"] 
-      },
-      "closedType" : {
+        "maximus" : [43.0,  "" , "MAXIMUS"],
+      // },
+      // "closedType" : {
          "uniFlat" : [42.0 , "+3" , "UNI Плоскю Направл"] ,
          "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл"],
-      }
+      // }
     },
      {
       "name": " 308",
-      "openType" : {
-        "copact" :[27.0 ,"+2", "Compact и фалш шторы"],
+      // "openType" : {
+        "copact" :[27.0 ,"+2", "Compact"],
+        "fakeCurtains" :[27.0 ,"+2", "фалш шторы"],
         "mini" :[ 33.0 ,"+2" , "MINI"],
         "standard" :[ 36.0 ,"" , "STANDART"],
-        "maximus" : [43.0,  "" , "MAXIMUS"] 
-      },
-      "closedType" : {
-         "uniFlat" : [42.0 , "+3" , "UNI Плоскю Направл"] ,
+        "maximus" : [43.0,  "" , "MAXIMUS"],
+      // },
+      // "closedType" : {
+         "uniFlat" : [42.0 , "+3" , "UNI Плоскю Направл"],
          "uniFullTurn" : [47, "+4" , "UNI П-обрю Направл"],
-      }
+      // }
     },
    
   ],
 
-  rollerBlindsReady : [
+ 
+    newRollerBlindsReady : [
     {
       "name" : "LEN",
-      "width" : {
+      // "width" : {
         "w35" : [5.03,"", "35"],
         "w40" :[ 5.39,"", "40"],
         "w45" :[ 5.78,"", "45"],
@@ -282,11 +186,11 @@ let allGoods = {
         "w120" : [11.56,"", "120"],
         "w125" :[ 11.95,"", "125"],
         "w130" :[ 12.32,"", "130"],
-      }
+      // }
     },
     {
       "name" : "WODA",
-      "width" : {
+      // "width" : {
         "w35" : [5.61,"", "35"],
         "w40" :[ 6.6,"", "40"],
         "w45" :[ 6.53,"", "45"],
@@ -307,11 +211,11 @@ let allGoods = {
         "w120" : [13.56,"", "120"],
         "w125" :[ 14.01,"", "125"],
         "w130" :[ 14.47,"", "130"],
-      }
+      // }
     },
     {
       "name" : "LAZUR",
-      "width" : {
+      // "width" : {
         "w35" : [5.61,"", "35"],
         "w40" :[ 6.6,"", "40"],
         "w45" :[ 6.53,"", "45"],
@@ -332,11 +236,11 @@ let allGoods = {
         "w120" : [13.56,"", "120"],
         "w125" :[ 14.01,"", "125"],
         "w130" :[ 14.47,"", "130"],
-      }
+      // }
     },
      {
       "name" : "NATURA",
-      "width" : {
+      // "width" : {
         "w35" : [5.61,"", "35"],
         "w40" :[ 6.6,"", "40"],
         "w45" :[ 6.53,"", "45"],
@@ -357,14 +261,16 @@ let allGoods = {
         "w120" : [13.56,"", "120"],
         "w125" :[ 14.01,"", "125"],
         "w130" :[ 14.47,"", "130"],
-      }
+      // }
     },
 
   ],
 
+  
+
   // горизонтальные жалюзи
 
-  horizontalHouverVenus : [
+newHorizontalHouverVenus : [
   {
     "name" : "Белые",
     "standard25mm" : [16.0  ,"", "25мм Стандарт"],
@@ -397,7 +303,40 @@ let allGoods = {
   },
 ],
 
-  horizontalHouverStandard : [
+//   horizontalHouverVenus : [
+//   {
+//     "name" : "Белые",
+//     "standard25mm" : [16.0  ,"", "25мм Стандарт"],
+//     "fullDimmer25mm" : [ 17.0 ,"", "25мм Полн. Затемн."],
+//     "standard16mm" :  [ 19.5,"",  "16мм Стандарт"],
+//   },
+//   {
+//     "name" : "Разноцветные",
+//     "standard25mm" : [17.5 ,"", "25мм Стандарт"],
+//     "fullDimmer25mm" : [18.5 ,"", "25мм Полн. Затемн."],
+//     "standard16mm" :  [21.0 ,"", "16мм Стандарт"],
+//   },
+//   {
+//     "name" : "Двухцветные",
+//     "standard25mm" : [18.5 ,"", "25мм Стандарт"],
+//     "fullDimmer25mm" : [19.5 ,"", "25мм Полн. Затемн."],
+//     "standard16mm" :  [22.0 ,"", "16мм Стандарт"],
+//   },
+//   {
+//     "name" : "Комбинированые",
+//     "standard25mm" : [18.5 ,"", "25мм Стандарт"],
+//     "fullDimmer25mm" : [19.5 ,"", "25мм Полн. Затемн."],
+//     "standard16mm" :  [22.0 ,"", "16мм Стандарт"],
+//   },
+//   {
+//     "name" : "Перфорированные",
+//     "standard25mm" : [22.0 ,"", "25мм Стандарт"],
+//     "fullDimmer25mm" : [23.0 ,"", "25мм Полн. Затемн."],
+//     "standard16mm" :  [ 0 ,"", "16мм Стандарт"],
+//   },
+// ],
+
+ newHorizontalHouverStandard : [
   {
     "name" : "Белые",
     "standard25mm" : [5.0  ,"", "25мм"],
@@ -434,6 +373,44 @@ let allGoods = {
     "standard16mm" :  [0 ,"", "16мм"],
   },
 ],
+
+//   horizontalHouverStandard : [
+//   {
+//     "name" : "Белые",
+//     "standard25mm" : [5.0  ,"", "25мм"],
+//     "standard16mm" :  [ 9.7,"",  "16мм"],
+//   },
+//   {
+//     "name" : "Разноцветные",
+//     "standard25mm" : [7.2 ,"", "25мм"],
+//     "standard16mm" :  [10.5 ,"", "16мм"],
+//   },
+//   {
+//     "name" : "Двухцветные",
+//     "standard25mm" : [7.3 ,"", "25мм"],
+//     "standard16mm" :  [11.0 ,"", "16мм"],
+//   },
+//   {
+//     "name" : "Комбинированые",
+//     "standard25mm" : [7.3 ,"", "25мм"],
+//     "standard16mm" :  [11.0 ,"", "16мм"],
+//   },
+//   {
+//     "name" : "Перфорированные",
+//     "standard25mm" : [12.0 ,"", "25мм"],
+//     "standard16mm" :  [0 ,"", "16мм"],
+//   },
+//    {
+//     "name" : "Перламутровые",
+//     "standard25mm" : [12.0 ,"", "25мм"],
+//     "standard16mm" :  [0 ,"", "16мм"],
+//   },
+//    {
+//     "name" : "Мраморные 4020",
+//     "standard25mm" : [12.0 ,"", "25мм"],
+//     "standard16mm" :  [0 ,"", "16мм"],
+//   },
+// ],
 
 //вертикальные жалюзи
 // verticalHouver89mm : [
