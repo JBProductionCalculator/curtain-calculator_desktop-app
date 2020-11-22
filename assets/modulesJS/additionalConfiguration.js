@@ -350,6 +350,17 @@ function selectedPlasticRetainer(plasticRetainer,parentSection ){
 }
 
 
-function selectedGuideString(){
-	console.log(122)
+// Используется в : Горизонтальные жалюзи СТАНДАРТ
+//функция вызывается в калькуляторе. Добавление направляющей струны
+function selectedGuideString(area,guideString, parentSection){
+	let price = 0
+	if(parentSection == '#horizontal_louver_standard'){
+		guideString.forEach(function(radio){
+			if (radio.checked && radio.value == 'Напр. струна') {
+				price = Math.ceil(area) * 2.5
+			}
+		})
+	}
+
+	return price
 }

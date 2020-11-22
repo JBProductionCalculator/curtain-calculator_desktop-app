@@ -24,7 +24,6 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
         plasticRetainer = document.querySelectorAll(parentSection + " input[name='plasticRetainer']")
         guideString = document.querySelectorAll(parentSection + " input[name='guideString']")
 
-        console.log(guideString)
 
 
 
@@ -78,8 +77,11 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
 
                 let productArea = areaCalculation()
 
+                let priceGuideString = selectedGuideString(productArea,guideString, parentSection)
+
+
                 let price
-                price = productArea * productPrice + allPricesAdditionalConfiguration 
+                price = productArea * productPrice + allPricesAdditionalConfiguration + priceGuideString
 
                 // наценка
                 price = productMarkup(price, selectMarkup.value)
@@ -256,10 +258,10 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
 
             // console.log(parentSection)
         
-            let pricePlasticRetainer, priceGuideString
+            let pricePlasticRetainer
 
-            pricePlasticRetainer = selectedPlasticRetainer( plasticRetainer,parentSection )
-            priceGuideString = selectedGuideString()
+            pricePlasticRetainer = selectedPlasticRetainer(plasticRetainer,parentSection )
+    
 
             allPricesAdditionalConfiguration =  pricePlasticRetainer
 
