@@ -256,7 +256,7 @@ function rollerCurtainsCalculateReady(data, parentSection, productSelectID, comm
             priceChainLoad = selectedChainLoad(type, chainLoad)
             priceChainFixing = selectedChainFixing(type, chainFixing, parentSection)
             priceChainFixingUniversal = selectedChainFixingUniversal(type, chainFixingUniversal, parentSection)
-             
+            
 
    
             // console.log(priceChainLoad  + ' груз цепи')

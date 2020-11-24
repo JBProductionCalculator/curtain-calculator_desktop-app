@@ -1,5 +1,4 @@
-function horizontalCalculate(data, parentSection, productSelectID, commands ){
-
+function mosquitoNetCalculate(data, parentSection, productSelectID, commands ){
         //переменные размера
         let width, height, area,productSelect 
         width = document.querySelector( parentSection +" input#width")
@@ -40,7 +39,7 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
 
         //переменные для работы с ценами
         let productPrice
-        let allPricesAdditionalConfiguration
+        let allPricesAdditionalConfiguration = 0
                  // priceColorSystem = 0
 
 
@@ -79,7 +78,7 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
                 let productArea = areaCalculation()
 
                 let priceGuideString = selectedGuideString(productArea,guideString, parentSection)
-                console.log(priceGuideString)
+
 
                 let price
                 price = productArea * productPrice + allPricesAdditionalConfiguration + priceGuideString
@@ -107,14 +106,14 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
                 let x = (width.value / 1000) * (height.value / 1000)
                 let y = Math.round((x) * 100) / 100
 
-                // if(y < 0.7){
-                    // y = 0.7                    
-                    // area.value = y
-                    // return y
-                // }else{
+                if(y < 1){
+                    y = 1                   
+                    area.value = y
+                    return y
+                }else{
                     area.value = y
                     return y   
-                // }
+                }
 
 
                
@@ -255,14 +254,8 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
   
 
        //  функция в которой будут происходить все операции над выбраними типами товаров. внутрение функции находятся в файле addPriceFunctions.js
-        function calculatorAdditionalConfiguration(type){
-
-        
-            let pricePlasticRetainer
-
-            pricePlasticRetainer = selectedPlasticRetainer(plasticRetainer,parentSection )
-
-            allPricesAdditionalConfiguration =  pricePlasticRetainer
+        function calculatorAdditionalConfiguration(type){       
+    
 
 
             return allPricesAdditionalConfiguration

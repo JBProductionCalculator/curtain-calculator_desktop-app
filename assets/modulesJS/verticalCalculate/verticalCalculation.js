@@ -2,11 +2,23 @@
 function veticalCalculation(data, idCalculate,parentSelect, objectID ) {
 
 
-	    let width, height, area, productSelect, productPrice
+	    let width, height, area, productSelect, productPrice, parentSection
         width = document.querySelector( idCalculate +' input#width')
         height = document.querySelector(idCalculate + ' input#height')
         area = document.querySelector( idCalculate + ' input#area')
         productSelect = document.querySelector(parentSelect)
+        
+
+
+        let fastening
+        fastening = document.querySelectorAll(idCalculate + " .fastening_selected input")
+
+
+
+        let allPricesAdditionalConfiguration
+
+
+        
 
         // -------------------------------------------------------------------------
         // -------------------------------------------------------------------------
@@ -14,12 +26,26 @@ function veticalCalculation(data, idCalculate,parentSelect, objectID ) {
 
         let cout =  document.querySelector(idCalculate+' input#count')
         let addToBlank = document.querySelector(idCalculate+ ' input#add_to_blank')
+
+        callingMainFunctionCalculator()
+        function callingMainFunctionCalculator(){
+            priceСalculation()
+
+            selectCreate(data, objectID)
+
+            calculatorAdditionalConfiguration()
+
+        }
+
+
         function priceСalculation(){ 
  
 
           cout.addEventListener('click', function (){
+                calculatorAdditionalConfiguration()
+
                 let productArea = areaCalculation()
-                let price = productArea * productPrice
+                let price = productArea * productPrice + allPricesAdditionalConfiguration
                 document.querySelector(idCalculate+' #price').innerHTML = price
 
                 addToBlank.style.visibility = 'visible'
@@ -38,7 +64,31 @@ function veticalCalculation(data, idCalculate,parentSelect, objectID ) {
 
             // функция которая вычесляет площадь
             function areaCalculation(){
-                let x = (width.value / 1000) * (height.value / 1000)
+                let x 
+
+                if (width.value < 1000) {
+                    width.value = 1000
+                    x = (width.value / 1000) * (height.value / 1000)
+
+                    if(height.value < 1500){
+                        height.value = 1500
+                        x = (width.value / 1000) * (height.value / 1000)
+
+                    }
+
+                }else if(height.value < 1500){
+                    width.value = 1000
+                    height.value = 1500
+                    x = (width.value / 1000) * (height.value / 1000)
+
+                }else if (width.value < 1000 && height.value < 1500) {
+                    height.value = 1500
+                    x = (width.value / 1000) * (height.value / 1000)
+                }else{
+                    x = (width.value / 1000) * (height.value / 1000)
+                }
+
+
                 let y = Math.round((x) * 100) / 100
 
                 area.value = y
@@ -48,15 +98,8 @@ function veticalCalculation(data, idCalculate,parentSelect, objectID ) {
           
 
         }
-        priceСalculation()
+        
 
-
-		
-
-
-
-
-		selectCreate(data, objectID)
         function selectCreate(data, idSelects){
 
         	let selectName = createSelect(objectID[0])
@@ -157,11 +200,16 @@ function veticalCalculation(data, idCalculate,parentSelect, objectID ) {
        				productPrice = oneProduct.price[0]
        			}
        		})
-      
-
-
-
-
        	}
+
+        
+        //  функция в которой будут происходить все операции над выбраними типами товаров. внутрение функции находятся в файле addPriceFunctions.js
+        function calculatorAdditionalConfiguration(){
+
+            let priceFastening  = selectedFastening(width.value ,fastening,idCalculate)
+            console.log(priceFastening);
+
+            allPricesAdditionalConfiguration = priceFastening
+        }
 }
 

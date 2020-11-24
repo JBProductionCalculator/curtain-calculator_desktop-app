@@ -78,7 +78,6 @@ function newHorizontalHouverStandard(){
     let commands = ['name', 'standard25mm', 'standard16mm']
    
 
-
     newCreatindGoodsTables(data, 3 ,  '.horizontal_louver_standard', commands)
     horizontalCalculate(data, parentSection, productSelectID , commands)
 
@@ -96,9 +95,10 @@ function newVertical89(){
 
     let parentSelect = "#productSelectNewVertical89mm"
     let selectedID = ['productNameNewVertical89mm', 'productTypeNewVertical89mm']
+    let parentSection = '#new_vertical_89mm'
 
 
-    veticalCalculation(data, "#new_vertical_89mm",parentSelect , selectedID )
+    veticalCalculation(data, parentSection, parentSelect , selectedID )
 
 }
 
@@ -111,30 +111,48 @@ function newVertical127(){
 
     let parentSelect = "#productSelectNewVertical127mm"
     let selectedID = ['productNameNewVertical127mm', 'productTypeNewVertical127mm']
+    let parentSection = '#new_vertical_127mm'
 
 
-    veticalCalculation(data, "#new_vertical_127mm",parentSelect , selectedID )
+    veticalCalculation(data, parentSection , parentSelect , selectedID, parentSection )
 
 }
 
 
 
-
-mosquitoNet()
-function mosquitoNet(){
+newMosquitoNet()
+function newMosquitoNet(){
     let data =  allGoods.mosquitoNet
-    let commandsTable ="['oneProduct.name', 'oneProduct.BK37', 'oneProduct.BK41', 'oneProduct.DA37', 'oneProduct.DA41']" 
-    let createSelect = ['data[0].BK37[2]','data[0].BK41[2]','data[0].DA37[2]','data[0].DA41[2]' ]
-    let searchPrice = [  'oneGoods.BK37', 'oneGoods.BK41', 'oneGoods.DA37', 'oneGoods.DA41']
+    
+    let parentSection = '#mosquito_net'
+    let productSelectID = ['selectName', 'selectType']
+    let commands = ['name', 'BK37', 'BK41', 'DA37', 'DA41']
+   
 
 
-    let objectID = ['productNameMosquitoNet', 'productTypeMosquitoNet']
-    let idCalculate = '#priceСalculationMosquitoNet'
-    let parentSelect = '#productSelectMosquitoNet'
+    newCreatindGoodsTables(data, 5 ,  '.mosquito_net', commands)
+    mosquitoNetCalculate(data, parentSection, productSelectID , commands)
 
-
-    callingMainFunctions(data, 5 ,commandsTable , '.mosquito_net', createSelect, searchPrice, objectID, idCalculate, parentSelect)
 }
+
+
+
+
+// mosquitoNet()
+// function mosquitoNet(){
+//     let data =  allGoods.mosquitoNet
+//     let commandsTable ="['oneProduct.name', 'oneProduct.BK37', 'oneProduct.BK41', 'oneProduct.DA37', 'oneProduct.DA41']" 
+//     let createSelect = ['data[0].BK37[2]','data[0].BK41[2]','data[0].DA37[2]','data[0].DA41[2]' ]
+//     let searchPrice = [  'oneGoods.BK37', 'oneGoods.BK41', 'oneGoods.DA37', 'oneGoods.DA41']
+
+
+//     let objectID = ['productNameMosquitoNet', 'productTypeMosquitoNet']
+//     let idCalculate = '#priceСalculationMosquitoNet'
+//     let parentSelect = '#productSelectMosquitoNet'
+
+
+//     callingMainFunctions(data, 5 ,commandsTable , '.mosquito_net', createSelect, searchPrice, objectID, idCalculate, parentSelect)
+// }
 
 
 

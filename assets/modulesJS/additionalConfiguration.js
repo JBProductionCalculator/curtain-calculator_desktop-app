@@ -364,3 +364,48 @@ function selectedGuideString(area,guideString, parentSection){
 
 	return price
 }
+
+
+
+function selectedFastening(width,fastening,idCalculate){
+	let price = 0
+
+	// console.log(fastening[0])
+	
+	fastening.forEach(function(radio){
+		// console.log(radio)
+		if (radio.checked) {
+			if (radio.value=='Потолочные') {
+				price = 0
+			}
+			if (radio.value=='Стеновые') {
+				price = addMount(width, 0.3)
+				
+			}
+
+			if (radio.value == 'Стеновые с удленителем') {
+				price = addMount(width, 0.6)
+				
+			}
+		}
+		
+
+	})
+
+	return price
+
+
+	function addMount(width,oneFastening){
+		let priceFastening = 0
+
+		if (width < 1700 ) {
+			priceFastening = oneFastening * 2
+		}else if(width >= 1700 && width < 2500){
+			priceFastening = oneFastening * 3
+		}else if(width >= 2500){
+			priceFastening = oneFastening * 4
+		}
+
+		return priceFastening
+	}
+}

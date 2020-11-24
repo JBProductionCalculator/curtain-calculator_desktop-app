@@ -548,7 +548,6 @@
 
              <div class="priceСalculation">
                  <div class="main_width inline"><span>Ширинна, мм:</span> <input type='text' id='width' value='1000' placeholder="Введите ширину"></div>
-                 <div class="glass_width inline none"><span>Ширинна стекла, мм:</span> <input type='text' id='glassWidth' value='1000' placeholder="Введите ширину"></div>
                  <div class="inline">Высота, мм: <input type='text' id='height'  value='1000' placeholder="Введите высоту"></div>
                  <div class="inline">Площадь, м&#178;: <input type='text'  id='area' readonly></div>  
                     
@@ -720,7 +719,6 @@
 
             <div class="priceСalculation">
                  <div class="main_width inline"><span>Ширинна, мм:</span> <input type='text' id='width' value='1000' placeholder="Введите ширину"></div>
-                 <div class="glass_width inline none"><span>Ширинна стекла, мм:</span> <input type='text' id='glassWidth' value='1000' placeholder="Введите ширину"></div>
                  <div class="inline">Высота, мм: <input type='text' id='height'  value='1000' placeholder="Введите высоту"></div>
                  <div class="inline">Площадь, м&#178;: <input type='text'  id='area' readonly></div>  
                     
@@ -862,9 +860,9 @@
                   <li>16мм</li>
                </ul>
             </div>
+             
               <div class="priceСalculation">
                  <div class="main_width inline"><span>Ширинна, мм:</span> <input type='text' id='width' value='1000' placeholder="Введите ширину"></div>
-                 <div class="glass_width inline none"><span>Ширинна стекла, мм:</span> <input type='text' id='glassWidth' value='1000' placeholder="Введите ширину"></div>
                  <div class="inline">Высота, мм: <input type='text' id='height'  value='1000' placeholder="Введите высоту"></div>
                  <div class="inline">Площадь, м&#178;: <input type='text'  id='area' readonly></div>  
                     
@@ -940,6 +938,7 @@
                   <li class="fastening"></li>
                </ul>
             </div>
+            
          </section>
 
 
@@ -996,18 +995,28 @@
                </ul>
             </div>
             <div id='calculationNewVertical89mm' class="priceСalculation">
-               <div>Ширинна, мм: <input type='text' id='width' value=''></div>
-               <div>Высота, мм: <input type='text' id='height'  value=''></div>
-               <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+               <div class=" inline">Ширинна, мм: <input type='text' id='width' value=''></div>
+               <div class=" inline">Высота, мм: <input type='text' id='height'  value=''></div>
+               <div class=" inline">Площадь, м&#178;: <input type='text'  id='area' readonly></div>
                <div id='productSelectNewVertical89mm'>
                   <!-- в этот тег добавляются два тега select-->
                </div>
                <div>
-                  <form style="display:flex;" >
-                     <p>Т1<input type="radio" name="controlType" value="Т1" checked></p>
-                     <p>Т2<input type="radio" name="controlType" value="Т2"></p>
-                     <p>Т3<input type="radio" name="controlType" value="Т3"></p>
-                     <p>Т4<input type="radio" name="controlType" value="Т4"></p>
+                  <form class="configurations" >
+                    <div class="controlType">
+                      <p>Тип управления:</p>
+                      <p>Т1<input type="radio" name="controlType" value="Т1" checked></p>
+                      <p>Т2<input type="radio" name="controlType" value="Т2"></p>
+                      <p>Т3<input type="radio" name="controlType" value="Т3"></p>
+                      <p>Т4<input type="radio" name="controlType" value="Т4"></p>
+                    </div>
+                     
+                    <div class="fastening_selected">
+                       <p>Крепление:</p>
+                       <p><input type="radio" name='fastening_selected' value="Потолочные" checked>Потолочные</p>
+                       <p><input type="radio" name='fastening_selected' value="Стеновые">Стеновые</p>
+                       <p><input type="radio" name='fastening_selected' value="Стеновые с удленителем">Стеновые с удленителе</p>
+                    </div>
                   </form>
                </div>
                <div>
@@ -1049,18 +1058,28 @@
                </ul>
             </div>
             <div id='calculationNewVertical127mm' class="priceСalculation">
-               <div>Ширинна, мм: <input type='text' id='width' value=''></div>
-               <div>Высота, мм: <input type='text' id='height'  value=''></div>
-               <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
+               <div class="inline">Ширинна, мм: <input type='text' id='width' value=''></div>
+               <div class="inline">Высота, мм: <input type='text' id='height'  value=''></div>
+               <div class="inline">Площадь, м&#178;: <input type='text'  id='area' readonly></div>
                <div id='productSelectNewVertical127mm'>
                   <!-- в этот тег добавляются два тега select-->
                </div>
                <div>
-                  <form style="display:flex;" >
-                     <p>Т1<input type="radio" name="controlType" value="Т1" checked></p>
-                     <p>Т2<input type="radio" name="controlType" value="Т2"></p>
-                     <p>Т3<input type="radio" name="controlType" value="Т3"></p>
-                     <p>Т4<input type="radio" name="controlType" value="Т4"></p>
+                  <form class="configurations" >
+                    <div class="controlType">
+                      <p>Тип управления:</p>
+                      <p>Т1<input type="radio" name="controlType" value="Т1" checked></p>
+                      <p>Т2<input type="radio" name="controlType" value="Т2"></p>
+                      <p>Т3<input type="radio" name="controlType" value="Т3"></p>
+                      <p>Т4<input type="radio" name="controlType" value="Т4"></p>
+                    </div>
+                     
+                     <div class="fastening_selected">
+                       <p>Крепление:</p>
+                       <p><input type="radio" name='fastening_selected' value="Потолочные" checked>Потолочные</p>
+                       <p><input type="radio" name='fastening_selected' value="Стеновые">Стеновые</p>
+                       <p><input type="radio" name='fastening_selected' value="Стеновые с удленителем">Стеновые с удленителе</p>
+                    </div>
                   </form>
                </div>
                <div>
@@ -1068,6 +1087,7 @@
                   <input type="submit" id="add_to_blank" data-addToWindowBlank="calculationNewVertical127mm" value="Добавить в бланк">
                </div>
                <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
+               <div class="currencyConverter">Перевести в гривны : <input type="text" id="exchangeRates" placeholder="Введите курс"> <span class="newConverterPrice"></span></div>
             </div>
             <div id="secreen_new_vertical_127mm" class="screen_blank none" data-viewInBlank="vertical" >
                <ul>
@@ -1110,19 +1130,63 @@
                   <li>$ 1м.кв.</li>
                </ul>
             </div>
-            <div id='priceСalculationMosquitoNet' class="priceСalculation">
-               <div>Ширинна, мм: <input type='text' id='width' value=''></div>
-               <div>Высота, мм: <input type='text' id='height'  value=''></div>
-               <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
-               <div id='productSelectMosquitoNet'>
-                  <!-- в этот тег добавляются два тега select-->
-               </div>
-               <div>
-                  <input type='submit' id='count' value='Посчитать'>
-                  <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculationMosquitoNet" value="Добавить в бланк">
-               </div>
-               <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
+              <div class="priceСalculation">
+                 <div class="main_width inline"><span>Ширинна, мм:</span> <input type='text' id='width' value='1000' placeholder="Введите ширину"></div>
+                 <div class="inline">Высота, мм: <input type='text' id='height'  value='1000' placeholder="Введите высоту"></div>
+                 <div class="inline">Площадь, м&#178;: <input type='text'  id='area' readonly></div>  
+                    
+                 <div class="flex">
+                    <div class='productSelect'>
+                      <!-- в этот тег добавляются два тега select -->
+                   </div>
+                   <div class="boxMarkup">
+                      НАЦЕНКА:
+                      <select class="selectMarkup">
+                        <option value="15">15%</option>
+                        <option value="20">20%</option>
+                        <option value="25">25%</option>
+                        <option value="30">30%</option>
+                        <option value="35">35%</option>
+                        <option value="40">40%</option>
+                        <option value="45">45%</option>
+                        <option value="50">50%</option>
+                        <option value="55">55%</option>
+                        <option value="60">60%</option>
+                        <option value="65">65%</option>
+                        <option value="70">70%</option>
+                        <option value="75">75%</option>
+                        <option value="80">80%</option>
+                        <option value="85">85%</option>
+                        <option value="90">90%</option>
+                        <option value="95">95%</option>
+                        <option value="100">100%</option>
+                      </select>
+                   </div>
+                 </div>
+                 <!-- <form class="configurations">
+                    <div class="plasticRetainer">
+                       <p>Пласт. Фиксатор:</p>
+                       <p><input type="radio" name="plasticRetainer" value="Без фиксатора" checked>Без фиксатора</p>
+                       <p><input type="radio" name="plasticRetainer" value="Пласт. Фиксатор">Пласт. Фиксатор</p>
+                    </div>
+                    <div class="guideString">
+                       <p>Направляющая струна:</p>
+                       <p><input type="radio" name="guideString" value="Без струны" checked>Без струны</p>
+                       <p><input type="radio" name="guideString" value="Напр. струна">Напр. струна</p>
+                    </div>
+                
+                 </form> -->
+                 <div>
+                    <input type='submit' id='count' value='Посчитать'>
+                    <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculation" value="Добавить в бланк" >
+                 </div>
+                 <div>
+                  
+                 </div>
+                 <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
+                 <div class="currencyConverter">Перевести в гривны : <input type="text" id="exchangeRates" placeholder="Введите курс"> <span class="newConverterPrice"></span></div>
             </div>
+
             <div id="secreen_mosquito_net" class="screen_blank none" data-viewInBlank="mosquito" >
                <ul>
                   <li class="number_of_blanks">_</li>
@@ -1417,6 +1481,12 @@
       <!-- калькурятор для вертикальных таблиц -->
       <script src="assets/modulesJS/verticalCalculate/verticalCreateTable.js"></script>
       <script src="assets/modulesJS/verticalCalculate/verticalCalculation.js"></script>
+
+      <!-- москитные сетки -->
+      <script src="assets/modulesJS/mosquitoNet/mosquitoCalculate.js"></script>
+
+
+
       <!-- 
          <script src="assets/verticalCalculate/verticalCreateTable.js"></script>
          <script src="assets/verticalCalculate/verticalCalculation.js"></script> -->
