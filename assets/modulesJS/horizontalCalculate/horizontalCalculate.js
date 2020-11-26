@@ -92,14 +92,7 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
 
             })
 
-             addToBlank.addEventListener("click", function(){
-                let parentBlock = this.parentNode.parentNode
-
-                addToBlankFun(parentBlock, productSelectID[0], productSelectID[1])
-
-                this.style.visibility = "hidden"
-            })
-
+           
 
 
             // функция которая вычесляет площадь
@@ -121,6 +114,17 @@ function horizontalCalculate(data, parentSection, productSelectID, commands ){
             }
 
         }
+
+
+
+      addToBlank.addEventListener("click", function(){
+            let parentBlock = this.parentNode.parentNode
+            // console.log(parentBlock);
+            addToBlankFun(parentBlock, productSelectID[0], productSelectID[1], selectType.value)
+
+            this.style.visibility = "hidden"
+        })
+
  
 
       

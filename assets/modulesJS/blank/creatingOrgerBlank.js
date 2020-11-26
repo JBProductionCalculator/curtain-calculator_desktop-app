@@ -5,11 +5,11 @@ let orderBlank = []
 
 function creatingOrgerBlank(oneRow, arrayParam) {
 
+	console.log(arrayParam)
 
 
 	orderBlank.push(oneRow)
 
-	// console.log();
 
 	// console.log(orderBlank);
 
@@ -18,6 +18,7 @@ function creatingOrgerBlank(oneRow, arrayParam) {
 	let curtainsBlank = []
 	let newVerticalBlank = []
 
+	// console.log(curtainsBlank	)
 
 	let horizontalVenusBlank = []
 	let horizontalStandardBlank = []
@@ -64,30 +65,30 @@ function creatingOrgerBlank(oneRow, arrayParam) {
 
 // Функция разделяющая вары из разных таблиц по ужным бланкам.
 	function creationOneBlank(data){
-
-
 			data.forEach(function(oneProduct){
-			if(oneProduct.idParent === "priceСalculation" ||
-			 	oneProduct.idParent === "priceСalculationDayNight" || 
-			 	 oneProduct.idParent === "priceСalculationReady" ){
+
+			if(oneProduct.idParent === "roller_curtains" ||
+			 	oneProduct.idParent === "roller_curtains_day_night" || 
+			 	 oneProduct.idParent === "roller_curtains_ready" ){
 					
+
 					curtainsBlank.push(oneProduct)
 
 			}
 
-			if(oneProduct.idParent === "calculationNewVertical89mm" || oneProduct.idParent === "calculationNewVertical127mm" ){
+			if(oneProduct.idParent === "new_vertical_89mm" || oneProduct.idParent === "new_vertical_127mm" ){
 				newVerticalBlank.push(oneProduct)
 			}
 
-			if (oneProduct.idParent === "priceСalculationHorizontalLouverVenus" ) {
+			if (oneProduct.idParent === "horizontal_louver_venus" ) {
 				horizontalVenusBlank.push(oneProduct)
 			}
 
-			if (oneProduct.idParent === "priceСalculationHorizontalLouverStandard" ) {
+			if (oneProduct.idParent === "horizontal_louver_standard" ) {
 				horizontalStandardBlank.push(oneProduct)
 			}
 
-			if (oneProduct.idParent === "priceСalculationMosquitoNet" ) {
+			if (oneProduct.idParent === "mosquito_net" ) {
 				mosquitoNetBlank.push(oneProduct)
 			}
 
@@ -161,7 +162,6 @@ function deleteRepeatingElement(allProduct){
 
 function addToHTMLBlankInform(data,id,idButton){
 
-
 	addButtonAmoutProduct(data, idButton)
 
 	let blank = document.querySelector(id+" #all-product tbody")
@@ -198,9 +198,23 @@ function addToHTMLBlankInform(data,id,idButton){
 			td.style.cssText =  allCells[key][2]
 			tr.append(td)					
 		}
+		
+	console.log(product)
 
+		// let maiConfiguration 			
+
+		if (product.idParent == 'new_vertical_89mm') {
+			tr.querySelector('#system_and_color').textContent =  `${89} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`
+		}
+		else if(product.idParent == "new_vertical_127mm"){ 
+			tr.querySelector('#system_and_color').textContent =  `${127} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`
+		}
+		else {
+			tr.querySelector('#system_and_color').textContent =  `${excludeUndefined(product.productSystem)} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`
+		}
+
+			
 		tr.querySelector('#count_blank').textContent = index+1
-		tr.querySelector('#system_and_color').textContent = product.systemAndColor
 		tr.querySelector('#width').textContent = product.width
 		tr.querySelector('#height').textContent = product.height
 		tr.querySelector('#control_type').textContent = product.controlType
@@ -241,5 +255,20 @@ function exportHTML(id){
    fileDownload.click();
    document.body.removeChild(fileDownload);
 }
+
+
+
+
+//дополнительная функция
+function excludeUndefined(text){
+	if (text != undefined) {
+	// console.log(text)
+
+		return text
+	}else{
+		return ' '
+	}
+}
+
 
 

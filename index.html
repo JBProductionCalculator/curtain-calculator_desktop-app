@@ -27,6 +27,8 @@
          </ul>
       </div>
       <main>
+
+
          <!-- новый руллоный калькулятор -->
          <section id='roller_curtains' class='one_window'>
             <div class='roller_curtains main_table' >
@@ -61,6 +63,7 @@
                   <li>Бел./Кор.</li>
                </ul>
             </div>
+
             <div class="priceСalculation">
                <div class="main_width inline"><span>Ширинна, мм:</span> <input type='text' id='width' value='1000' placeholder="Введите ширину"></div>
                <div class="glass_width inline none"><span>Ширинна стекла, мм:</span> <input type='text' id='glassWidth' value='1000' placeholder="Введите ширину"></div>
@@ -159,13 +162,15 @@
                </form>
                <div>
                   <input type='submit' id='count' value='Посчитать'>
-                  <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculation" value="Добавить в бланк" >
+                  <input type="submit" id="add_to_blank" data-addToWindowBlank="roller_curtains" value="Добавить в бланк" >
                </div>
                <div>
                </div>
                <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
                <div class="currencyConverter">Перевести в гривны : <input type="text" id="exchangeRates" placeholder="Введите курс"> <span class="newConverterPrice"></span></div>
             </div>
+
+
             <div id="screen_blanks_roller_curtains" class="screen_blank none" data-viewInBlank="curtains" >
                <ul>
                   <li class="number_of_blanks">_</li>
@@ -408,7 +413,7 @@
                </form>
                <div>
                   <input type='submit' id='count' value='Посчитать'>
-                  <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculation" value="Добавить в бланк" >
+                  <input type="submit" id="add_to_blank" data-addToWindowBlank="roller_curtains_day_night" value="Добавить в бланк" >
                </div>
                <div>
 
@@ -416,7 +421,7 @@
                <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
                <div class="currencyConverter">Перевести в гривны : <input type="text" id="exchangeRates" placeholder="Введите курс"> <span class="newConverterPrice"></span></div>
             </div>
-            <div id="screen_blanks_roller_curtains" class="screen_blank none" data-viewInBlank="curtains" >
+            <div id="screen_blanks_day_night" class="screen_blank none" data-viewInBlank="curtains" >
                <ul>
                   <li class="number_of_blanks">_</li>
                   <li class="system_and_color">Система и Цвет</li>
@@ -598,7 +603,7 @@
                  </form>
                  <div>
                     <input type='submit' id='count' value='Посчитать'>
-                    <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculation" value="Добавить в бланк" >
+                    <input type="submit" id="add_to_blank" data-addToWindowBlank="roller_curtains_ready" value="Добавить в бланк" >
                  </div>
                  <div>
                   
@@ -632,74 +637,6 @@
          </section>
 
 
-<!-- 
-         <section id="roller_curtains_ready" class="one_window">
-            <div class="roller_curtains_ready_scroll">
-               <div class="roller_curtains_ready main_table"  >
-                  <ul class="one-row">
-                     <li>Ширина, см:</li>
-                     <li>35</li>
-                     <li>40</li>
-                     <li>45</li>
-                     <li>50</li>
-                     <li>55</li>
-                     <li>60</li>
-                     <li>65</li>
-                     <li>70</li>
-                     <li>75</li>
-                     <li>80</li>
-                     <li>85</li>
-                     <li>90</li>
-                     <li>95</li>
-                     <li>100</li>
-                     <li>105</li>
-                     <li>110</li>
-                     <li>115</li>
-                     <li>120</li>
-                     <li>125</li>
-                     <li>130</li>
-                  </ul>
-               </div>
-            </div>
-            <div id='priceСalculationReady' class="priceСalculation">
-               <div>Ширинна, мм: <input type='text' id='width' value=''></div>
-               <div>Высота, мм: <input type='text' id='height'  value=''></div>
-               <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
-               <div id='productSelectReady'>
-             
-               </div>
-               <div>
-                  <input type='submit' id='count' value='Посчитать'>
-                  <input type="submit" id="add_to_blank" data-addToWindowBlank='priceСalculationReady' value="Добавить в бланк">
-               </div>
-               <div>
-               </div>
-               <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
-            </div>
-            <div id="screen_blanks_rolle_ready" class="screen_blank none" data-viewInBlank="curtains">
-               <ul>
-                  <li class="number_of_blanks">_</li>
-                  <li class="system_and_color">Система и Цвет</li>
-                  <li class="width">Ширина см</li>
-                  <li class="height">Высота см</li>
-                  <li class="control">Упр L/R</li>
-                  <li class="quantity">Количество</li>
-                  <li class="fastening">Крепление</li>
-        
-               </ul>
-               <ul>
-                  <li class="number_of_blanks">1</li>
-                  <li class="system_and_color"></li>
-                  <li class="width"></li>
-                  <li class="height"></li>
-                  <li class="control"></li>
-                  <li class="quantity"></li>
-                  <li class="fastening"></li>
-              
-               </ul>
-            </div>
-         </section>
- -->
 
           <section id='horizontal_louver_venus' class='one_window'>
             <div class='horizontal_louver_venus main_table'  >
@@ -750,26 +687,10 @@
                       </select>
                    </div>
                  </div>
-                 <!-- <form class="configurations">
-                    <div class="chainLoad">
-                       <p>Груз цепи:</p>
-                       <p><input type="radio" name="chainLoad" value="Без груза" checked>Без груза</p>
-                       <p><input type="radio" name="chainLoad" value="Груз цепи">Груз цепи</p>
-                    </div>
-                    <div  class="chainFixing">
-                       <p>Фиксатор цепи:</p>
-                       <p><input type="radio" name="chainFixing" value="Без фиксатора" checked>Без фиксатора</p>
-                       <p><input type="radio" name="chainFixing" value="Фикс. цепи">Фикс. цепи</p>
-                    </div>
-                    <div class="chainFixingUniversal">
-                       <p>Фиксатор цепи универсальный:</p>
-                       <p><input type="radio" name="chainFixingUniversal" value="Без фиксатора" checked>Без фиксатора</p>
-                       <p><input type="radio" name="chainFixingUniversal" value="Фикс. цепи универс.">Фикс. цепи универс.</p>
-                    </div>
-                 </form> -->
+          
                  <div>
                     <input type='submit' id='count' value='Посчитать'>
-                    <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculation" value="Добавить в бланк" >
+                    <input type="submit" id="add_to_blank" data-addToWindowBlank="horizontal_louver_venus" value="Добавить в бланк" >
                  </div>
                  <div>
                   
@@ -800,57 +721,6 @@
             </div>
          </section>
 
-
-      <!--    <section id='horizontal_louver_venus' class='one_window'>
-            <div class='horizontal_louver_venus main_table'  >
-               <ul class='one-row'>
-                  <li>Жалюзи горизонтальные "Венус"</li>
-                  <li>25мм</li>
-                  <li>25мм</li>
-                  <li>16мм</li>
-               </ul>
-               <ul class='one-row'>
-                  <li>-----</li>
-                  <li>Стандарт</li>
-                  <li>Полн.Затемн.</li>
-                  <li>Стандарт</li>
-               </ul>
-            </div>
-            <div id='priceСalculationHorizontalLouverVenus' class="priceСalculation">
-               <div>Ширинна, мм: <input type='text' id='width' value=''></div>
-               <div>Высота, мм: <input type='text' id='height'  value=''></div>
-               <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
-               <div id='productSelectHorizontalLouverVenus'>
-
-               </div>
-               <div>
-                  <input type='submit' id='count' value='Посчитать'>
-                  <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculationHorizontalLouverVenus" value="Добавить в бланк">
-               </div>
-               <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
-            </div>
-            <div id="screen_horizontal_louver_venus" class="screen_blank none" data-viewInBlank="horizontal_venus" >
-               <ul>
-                  <li class="number_of_blanks">_</li>
-                  <li class="system_and_color">Система и Цвет</li>
-                  <li class="width">Ширина см</li>
-                  <li class="height">Высота см</li>
-                  <li class="control">Упр L/R</li>
-                  <li class="quantity">Количество</li>
-                  <li class="fastening">Крепление</li>
-               </ul>
-               <ul>
-                  <li class="number_of_blanks">1</li>
-                  <li class="system_and_color"></li>
-                  <li class="width"></li>
-                  <li class="height"></li>
-                  <li class="control"></li>
-                  <li class="quantity"></li>
-                  <li class="fastening"></li>
-               </ul>
-            </div>
-         </section>
- -->
 
           <section id='horizontal_louver_standard' class='one_window'>
             <div class='horizontal_louver_standard main_table' >
@@ -909,7 +779,7 @@
                  </form>
                  <div>
                     <input type='submit' id='count' value='Посчитать'>
-                    <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculation" value="Добавить в бланк" >
+                    <input type="submit" id="add_to_blank" data-addToWindowBlank="horizontal_louver_standard" value="Добавить в бланк" >
                  </div>
                  <div>
                   
@@ -942,50 +812,6 @@
          </section>
 
 
-  
- <!--         <section id='horizontal_louver_standard' class='one_window'>
-            <div class='horizontal_louver_standard main_table' >
-               <ul class='one-row'>
-                  <li>Жалюзи горизонтальные "Стандарт"</li>
-                  <li>25мм</li>
-                  <li>16мм</li>
-               </ul>
-            </div>
-            <div id='priceСalculationHorizontalLouverStandard' class="priceСalculation">
-               <div>Ширинна, мм: <input type='text' id='width' value=''></div>
-               <div>Высота, мм: <input type='text' id='height'  value=''></div>
-               <div>Площадь, м&#178;: <input type='text'  id='area' readonly></div>
-               <div id='productSelectHorizontalLouverStandard'>
-
-               </div>
-               <div>
-                  <input type='submit' id='count' value='Посчитать'>
-                  <input type="submit" id="add_to_blank" data-addToWindowBlank='priceСalculationHorizontalLouverStandard' value="Добавить в бланк">
-               </div>
-               <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
-            </div>
-            <div id="screen_horizontal_louver_standard" class="screen_blank none" data-viewInBlank="horizontal_standard">
-               <ul>
-                  <li class="number_of_blanks">_</li>
-                  <li class="system_and_color">Система и Цвет</li>
-                  <li class="width">Ширина см</li>
-                  <li class="height">Высота см</li>
-                  <li class="control">Упр L/R</li>
-                  <li class="quantity">Количество</li>
-                  <li class="fastening">Крепление</li>
-               </ul>
-               <ul>
-                  <li class="number_of_blanks">1</li>
-                  <li class="system_and_color"></li>
-                  <li class="width"></li>
-                  <li class="height"></li>
-                  <li class="control"></li>
-                  <li class="quantity"></li>
-                  <li class="fastening"></li>
-               </ul>
-            </div>
-         </section>
- -->
          <section id='new_vertical_89mm' class='one_window'>
             <div class='new_vertical_89mm main_table'>
                <ul class='one-row'>
@@ -1021,7 +847,7 @@
                </div>
                <div>
                   <input type='submit' id='count' value='Посчитать'>
-                  <input type="submit" id="add_to_blank" data-addToWindowBlank="calculationNewVertical89mm" value="Добавить в бланк">
+                  <input type="submit" id="add_to_blank" data-addToWindowBlank="new_vertical_89mm" value="Добавить в бланк">
                </div>
                <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
             </div>
@@ -1084,7 +910,7 @@
                </div>
                <div>
                   <input type='submit' id='count' value='Посчитать'>
-                  <input type="submit" id="add_to_blank" data-addToWindowBlank="calculationNewVertical127mm" value="Добавить в бланк">
+                  <input type="submit" id="add_to_blank" data-addToWindowBlank="new_vertical_127mm" value="Добавить в бланк">
                </div>
                <div  class="priceProd" ><span>Цена: </span> <span id='price'></span></div>
                <div class="currencyConverter">Перевести в гривны : <input type="text" id="exchangeRates" placeholder="Введите курс"> <span class="newConverterPrice"></span></div>
@@ -1178,7 +1004,7 @@
                  </form> -->
                  <div>
                     <input type='submit' id='count' value='Посчитать'>
-                    <input type="submit" id="add_to_blank" data-addToWindowBlank="priceСalculation" value="Добавить в бланк" >
+                    <input type="submit" id="add_to_blank" data-addToWindowBlank="mosquito_net" value="Добавить в бланк" >
                  </div>
                  <div>
                   
@@ -1463,10 +1289,10 @@
       <script src="assets/modulesJS/converterAndMarkup.js"></script>
 
       <!-- подключение модулей -->
-      <script src='assets/modulesJS/creatindGoodsTables.js'></script>
       <script src='assets/modulesJS/newCreatindGoodsTables.js'></script>
+ <!-- <script src='assets/modulesJS/creatindGoodsTables.js'></script> 
       <script src='assets/modulesJS/allMainFunctions.js'></script>
-      <script src='assets/modulesJS/callingMainFunctions.js'></script>
+      <script src='assets/modulesJS/callingMainFunctions.js'></script> -->
 
       <!-- Все дополнительные конфигурации калькулятора -->
       <script src="assets/modulesJS/additionalConfiguration.js"></script>

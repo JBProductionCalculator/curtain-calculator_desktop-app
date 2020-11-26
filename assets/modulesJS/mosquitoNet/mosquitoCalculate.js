@@ -94,7 +94,7 @@ function mosquitoNetCalculate(data, parentSection, productSelectID, commands ){
              addToBlank.addEventListener("click", function(){
                 let parentBlock = this.parentNode.parentNode
 
-                addToBlankFun(parentBlock, productSelectID[0], productSelectID[1])
+                addToBlankFun(parentBlock, productSelectID[0], productSelectID[1], selectType.value)
 
                 this.style.visibility = "hidden"
             })

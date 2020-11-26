@@ -1,9 +1,14 @@
 function rollerCurtainsCalculate(data, parentSection, productSelectID, commands ){
+
         //переменные размера
         let width, height, area,productSelect 
         width = document.querySelector( parentSection +" input#width")
         height = document.querySelector(parentSection + " input#height")
         area = document.querySelector( parentSection + " input#area")
+
+
+        // блок калькулятора
+        let priceСalculationBox = document.querySelector(parentSection + ' .priceСalculation')
 
         //элементы которые будут влиять на цену и будут применяться ко всем колонкам
         let exchangeRates, selectMarkup 
@@ -57,6 +62,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
             priceСalculation()
 
             currencyConverter(parentSection)
+
         }
 
 
@@ -75,7 +81,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
                 let controlMethod = priceControlMethod(selectType.value,boxControlMethod)
                 //допю скотч
                 let additionalScotchTape = priceAdditionalScotchTape(selectType.value, additionalScotchTapeInputs, height)
-                console.log(additionalScotchTape)
+                // console.log(additionalScotchTape)
 
                 // selectProductOperations(data,productSelectID,commands)
                 let price
@@ -86,14 +92,6 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
                 document.querySelector(parentSection+" #price").innerHTML = price
                 addToBlank.style.visibility = "visible"
-            })
-
-             addToBlank.addEventListener("click", function(){
-                let parentBlock = this.parentNode.parentNode
-
-                addToBlankFun(parentBlock, productSelectID[0], productSelectID[1])
-
-                this.style.visibility = "hidden"
             })
 
 
@@ -117,8 +115,20 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
             }
 
         }
- 
 
+
+          addToBlank.addEventListener("click", function(){
+                this.style.visibility = "hidden"
+
+                let parentBlock = this.parentNode.parentNode
+                console.log(parentBlock)
+                addToBlankFun(parentBlock, productSelectID[0], productSelectID[1], selectType.value)
+
+            })
+        
+
+
+ 
       
 // ---------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------

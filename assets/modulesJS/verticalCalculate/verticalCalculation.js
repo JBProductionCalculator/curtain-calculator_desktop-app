@@ -54,7 +54,7 @@ function veticalCalculation(data, idCalculate,parentSelect, objectID ) {
             addToBlank.addEventListener('click', function(){
                 let parentBlock = this.parentNode.parentNode
 
-                addToBlankFun(parentBlock, objectID[0], objectID[1])
+                addToBlankFun(parentBlock, objectID[0], objectID[1], selectType.value)
 
 
                 this.style.visibility = 'hidden'
@@ -207,7 +207,6 @@ function veticalCalculation(data, idCalculate,parentSelect, objectID ) {
         function calculatorAdditionalConfiguration(){
 
             let priceFastening  = selectedFastening(width.value ,fastening,idCalculate)
-            console.log(priceFastening);
 
             allPricesAdditionalConfiguration = priceFastening
         }
