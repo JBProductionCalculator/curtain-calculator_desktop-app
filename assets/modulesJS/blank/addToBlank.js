@@ -26,11 +26,11 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
  	let chainFixing = parentBlock.querySelectorAll("input[name='chainFixing']")
  	let chainFixingUniversal = parentBlock.querySelectorAll("input[name='chainFixingUniversal']")
  	let additionalScotchTape = parentBlock.querySelectorAll("input[name='additionalScotchTape']")
- 	// let controlMethod = parentBlock.querySelector('.controlMethod')
  	let glassWidth = parentBlock.querySelector(".glass_width input")
+ 	let controlMethod = parentBlock.querySelector('.controlMethod')
+ 	let controlMethodChanel = parentBlock.querySelector('.controlMethodChanel')
 
- 	// console.log(controlMethod)
- 	// console.log(additionalScotchTape)
+ 
 
  	// горизонтальные жалюзи стандарт
  	let plasticRetainer = parentBlock.querySelectorAll("input[name='plasticRetainer']")
@@ -93,6 +93,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		'chainLoad' : addToBlankForEach(chainLoad,'Без груза'),
 	 		'chainFixing' : addToBlankForEach(chainFixing,'Без фиксатора'),
 	 		// 'controlMethod' : addToBlankForEach(controlMethod,'Цепь'),
+	 		'controlMethod' : choiceControlMethod(controlMethod.value, controlMethodChanel.value),
 	 		"numberInArrayOrderBlank" : countArrayElementOrderBlank++ ,
 
 	 	}
@@ -112,6 +113,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		'sizeSystem' : addToBlankForEach(sizeSystem, 'СТД'),
 	 		'chainLoad' : addToBlankForEach(chainLoad,'Без груза'),
 	 		'chainFixingUniversal' : addToBlankForEach(chainFixingUniversal,'Без фиксатора'),
+	 		'controlMethod' : choiceControlMethod(controlMethod.value, controlMethodChanel.value),
 	 		"numberInArrayOrderBlank" : countArrayElementOrderBlank++ ,
 
 	 		
@@ -149,6 +151,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		'chainLoad' : addToBlankForEach(chainLoad,'Без груза'),
 	 		'chainFixing' : addToBlankForEach(chainFixing,'Без фиксатора'),
 	 		'additionalScotchTape' : addToBlankForEach(additionalScotchTape,'Без скотча'),
+	 		'controlMethod' : choiceControlMethod(controlMethod.value, controlMethodChanel.value),
 	 		"numberInArrayOrderBlank" : countArrayElementOrderBlank++ ,
 	 	}
 
@@ -165,6 +168,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		'chainLoad' : addToBlankForEach(chainLoad,'Без груза'),
 	 		'chainFixing' : addToBlankForEach(chainFixing,'Без фиксатора'),
+	 		'controlMethod' : choiceControlMethod(controlMethod.value, controlMethodChanel.value),
 	 		"numberInArrayOrderBlank" : countArrayElementOrderBlank++ ,
 	 	}
 
@@ -232,6 +236,13 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 			return text
 
  		}
+	}
+
+
+	function choiceControlMethod(method, channel){
+		if (method != 'Цепь') {
+			return `${method} ${channel}`
+		}
 	}
 
 

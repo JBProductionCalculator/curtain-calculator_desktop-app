@@ -205,6 +205,9 @@ function viewControlMethod(type, boxControlMethod, parentSection){
 	let controlMethodChanel = document.querySelector(parentSection+' .controlMethodChanel')
 
 
+	// console.log(controlMethod[0])
+	controlMethod[0].setAttribute('selected', 'selected')
+
 	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
 		boxControlMethod.classList.remove('none')
 		// priceControlMethodChanel(24,26,30)
@@ -225,7 +228,7 @@ function viewControlMethod(type, boxControlMethod, parentSection){
 // Функция 2 Сособ Управления
 function viewChanelControlMethod(controlMethod, chanels){
 	controlMethod.addEventListener('change', function(){
-		if(controlMethod.value == 'Мотор'){
+		if(controlMethod.value == 'Мот.'){
 			chanels.classList.remove('none')
 		}else{
 			chanels.classList.add('none')
@@ -245,9 +248,11 @@ function priceControlMethod(type,boxControlMethod){
 	let price = 0
 
 	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
-		price = chanelsPrices(24,26,30)
+		// price = chanelsPrices(24,26,30)
+		price = chanelsPrices(0,0,0)
 	}else if(type == 'STANDART'){
-		price = chanelsPrices(50,60,70)
+		// price = chanelsPrices(50,60,70)
+		price = chanelsPrices(0,0,0)
 	}else{
 		price = 0
 	}

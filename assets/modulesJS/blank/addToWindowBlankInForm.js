@@ -28,12 +28,10 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 
 
 	products.forEach(function(prod,index){
-		// console.log(prod.idParent)
-		// console.log(buttonAddToBlank.dataset.addtowindowblank)
+
 
 		if(prod.idParent == buttonAddToBlank.dataset.addtowindowblank){
 
-			// console.log(screnBlank)
 
 			screnBlank.classList.remove('none')
 			
@@ -41,35 +39,13 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 			
 			screnBlank.append(newProduct)
 
-			// for(let key in resultRepeatElement){
-			// 	if (prod.arrayElementClass  ==  key) {
-			// 		numberRepeatingProduct = resultRepeatElement[key]
-			// 	}else{
 
-			// 	}
-			// }
-
-
-			// console.log(prod.arrayElementClass)
 
 			
 		}
 	})
 
 
-	// "productSystem" : productSystem,	 		
-	// "productColor" : productColor,	 		
-	// "colorSystem" : colorSystem,	 		
-	// "width" : widht,
-	// "height" : height,
-	// "controlType" :  addToBlankForEach(controlType),
-	// "fixationSystem" : addToBlankForEach(fixationSystem),
-	// 'sizeSystem' : addToBlankForEach(sizeSystem),
-	// 'chainLoad' : addToBlankForEach(chainLoad),
-	// 'chainFixing' : addToBlankForEach(chainFixing),
-	// 'chainFixingUniversal' : addToBlankForEach(chainFixingUniversal),
-	// 'plasticRetainer' : addToBlankForEach(plasticRetainer),
-	// 'guideString' : addToBlankForEach(guideString),
 
 	function createWindowBlank(product, countProduct, repeatObject){
 		
@@ -77,25 +53,18 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 
 	
 		let maiConfiguration 			
+			if (idTables == '#new_vertical_89mm') {
 
-		if (idTables == '#new_vertical_89mm') {
-			// console.log(idTables)
+				maiConfiguration = createWindowElement('li', 'maiConfiguration', `${89} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
 
-			maiConfiguration = createWindowElement('li', 'maiConfiguration', `${89} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
+			}else if(idTables == "#new_vertical_127mm"){ 
 
-		}else if(idTables == "#new_vertical_127mm"){ 
-			// console.log(idTables)
+				maiConfiguration = createWindowElement('li', 'maiConfiguration', `${127} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
 
-			maiConfiguration = createWindowElement('li', 'maiConfiguration', `${127} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
-
-		}else {
-			maiConfiguration  = createWindowElement('li', 'maiConfiguration', `${excludeUndefined(product.productSystem)} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
-
-		}
-
+			}else {
+				maiConfiguration  = createWindowElement('li', 'maiConfiguration', `${excludeUndefined(product.productSystem)} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)} ${excludeUndefined(product.controlMethod)}`)	
 		
-		// let maiConfiguration  = createWindowElement('li', 'maiConfiguration', `${additionalText(idTables)} ${excludeUndefined(product.productSystem)} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
-
+			}
 
 		let num = createWindowElement('li','number_of_blanks', countProduct+1)
 		let width =	createWindowElement('li', 'width',  product.width)	
@@ -116,7 +85,7 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 		ul.append(buttonDelete)	
 
 		dleteWindowElement(ul,product, countProduct)
-
+		console.log(ul)
 		return ul	
 
 	}
@@ -140,12 +109,11 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 			removedItem.remove()
 
 			orderBlank.splice(removedProduct.numberInArrayOrderBlank,1,1) 
-
-			// console.log(arrayParam)
-
 		
 		})
 	}
+
+
 
 
 // функция которая создает обьект повторяющихся элементов и отдает обьекты с их названиями и количеством

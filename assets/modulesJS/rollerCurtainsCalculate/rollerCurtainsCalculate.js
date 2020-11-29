@@ -121,7 +121,6 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
                 this.style.visibility = "hidden"
 
                 let parentBlock = this.parentNode.parentNode
-                console.log(parentBlock)
                 addToBlankFun(parentBlock, productSelectID[0], productSelectID[1], selectType.value)
 
             })

@@ -5,7 +5,6 @@ let orderBlank = []
 
 function creatingOrgerBlank(oneRow, arrayParam) {
 
-	console.log(arrayParam)
 
 
 	orderBlank.push(oneRow)
@@ -199,7 +198,6 @@ function addToHTMLBlankInform(data,id,idButton){
 			tr.append(td)					
 		}
 		
-	console.log(product)
 
 		// let maiConfiguration 			
 
@@ -210,7 +208,7 @@ function addToHTMLBlankInform(data,id,idButton){
 			tr.querySelector('#system_and_color').textContent =  `${127} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`
 		}
 		else {
-			tr.querySelector('#system_and_color').textContent =  `${excludeUndefined(product.productSystem)} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`
+			tr.querySelector('#system_and_color').textContent =  `${excludeUndefined(product.productSystem)} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)} ${excludeUndefined(product.controlMethod)}`
 		}
 
 			
@@ -223,6 +221,7 @@ function addToHTMLBlankInform(data,id,idButton){
 		tr.querySelector('#notes').innerHTML = '&#160;'
 
 		
+		console.log(tr)	
 
 		blank.append(tr)
 	})
