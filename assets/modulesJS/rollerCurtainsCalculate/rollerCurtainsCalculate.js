@@ -74,7 +74,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
         function priceСalculation(){ 
     
             cout.addEventListener("click", function (){
-                calculatorAdditionalConfiguration(selectType.value)
+                calculatorAdditionalConfiguration(selectType.value, this)
 
                 let productArea = areaCalculation()
                 // способ управления
@@ -260,7 +260,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
   
 
        //  функция в которой будут происходить все операции над выбраними типами товаров. внутрение функции находятся в файле addPriceFunctions.js
-        function calculatorAdditionalConfiguration(type){
+        function calculatorAdditionalConfiguration(type, thisIsSparta){
 
             let priceExchangeRates, priceSelectMarkup 
             let priceColorSystem,priceControlType, priceFixationSystem, priceChainLoad,priceChainFixing,priceChainFixingUniversal
@@ -286,7 +286,7 @@ function rollerCurtainsCalculate(data, parentSection, productSelectID, commands 
 
             
             viewSizeSystem(type, sizeSystem, parentSection)
-            viewControlMethod(type,boxControlMethod, parentSection)
+            viewControlMethod(type,boxControlMethod, parentSection, thisIsSparta)
             viewEaxtraWidth(type,parentSection)
             viewAdditionalScotchTape(type, parentSection)
 

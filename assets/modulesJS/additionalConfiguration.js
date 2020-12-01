@@ -204,24 +204,26 @@ function selectedChainFixingUniversal(type, chainLoad){
 
 // Используется в : Рулонные шторы, Руллоные шторы день-ночь
 // Функция 1 Сособ Управления .для  STANDARD другие расценки
-function viewControlMethod(type, boxControlMethod, parentSection){
+function viewControlMethod(type, boxControlMethod, parentSection, thisIsSparta){
+
 	let controlMethod = document.querySelector(parentSection+' .controlMethod')
 	let controlMethodChanel = document.querySelector(parentSection+' .controlMethodChanel')
 
 
 	// console.log(controlMethod[0])
-	controlMethod[0].setAttribute('selected', 'selected')
+	// controlMethod[0].setAttribute('selected', 'selected')
 
 	if (type == 'MINI' || type == 'UNI Плоскю Направл'|| type == 'UNI П-обрю Направл') {
 		boxControlMethod.classList.remove('none')
 		// priceControlMethodChanel(24,26,30)
-		viewChanelControlMethod(controlMethod,controlMethodChanel)
+		viewChanelControlMethod(controlMethod,controlMethodChanel, parentSection, thisIsSparta)
 
 	}else if(type == 'STANDART'){
 		boxControlMethod.classList.remove('none')
-		viewChanelControlMethod(controlMethod,controlMethodChanel)
+		viewChanelControlMethod(controlMethod,controlMethodChanel, parentSection, thisIsSparta)
 
 	}else{
+		console.log(1)
 		boxControlMethod.classList.add('none')
 		let proxy  = 0
 	}
@@ -230,12 +232,21 @@ function viewControlMethod(type, boxControlMethod, parentSection){
 
 // Используется в : Рулонные шторы, Руллоные шторы день-ночь
 // Функция 2 Сособ Управления
-function viewChanelControlMethod(controlMethod, chanels){
+function viewChanelControlMethod(controlMethod, chanels, parent,thisIsSparta){
+	if (thisIsSparta == undefined) {
+		console.log(12)
+		$(parent +' .controlMethod option:eq(0)').prop('selected',true)
+		$(parent +' .controlMethodChanel option:eq(0)').prop('selected',true)
+		chanels.classList.add('none')
+	}
+	
+
 	controlMethod.addEventListener('change', function(){
 		if(controlMethod.value == 'Мот.'){
 			chanels.classList.remove('none')
 		}else{
 			chanels.classList.add('none')
+
 		}
 	})
 	
@@ -278,7 +289,7 @@ function priceControlMethod(type,boxControlMethod){
 			}
 
 		}else{
-			controlMethodChanel.classList.add('none')
+
 			return 0
 		}
 
