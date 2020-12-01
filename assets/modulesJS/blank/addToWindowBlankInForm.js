@@ -1,7 +1,7 @@
 //функция вызывается в файле creatingOrderBlank.js/ в ней прописан функционал для добавления новых товаров в бланк под каждой таблицей
-function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
+function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam,idButton) {
 
-	// console.log(products)
+	addButtonAmoutProduct(products, idButton)
 
 	let buttonAddToBlank = document.querySelector(idTables+" #add_to_blank")
 	let screnBlank = document.querySelector(idAddBlank)
@@ -38,9 +38,6 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 			let newProduct = createWindowBlank(prod, index, resultRepeatElement)
 			
 			screnBlank.append(newProduct)
-
-
-
 			
 		}
 	})
@@ -84,8 +81,12 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 		ul.append(fixationSystem)
 		ul.append(buttonDelete)	
 
-		dleteWindowElement(ul,product, countProduct)
-		console.log(ul)
+
+
+
+		deleteWindowElement(ul,product, countProduct)
+		
+
 		return ul	
 
 	}
@@ -102,21 +103,32 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 	}
 
 
-	function dleteWindowElement(removedItem,removedProduct, numberProduct){
+	function deleteWindowElement(removedItem,removedProduct, numberProduct){
+
+
+
 		let buttonDelete = removedItem.querySelector('.delenteElement')
 		buttonDelete.addEventListener('click', function(){
 
+
 			removedItem.remove()
+
 
 			orderBlank.splice(removedProduct.numberInArrayOrderBlank,1,1) 
 		
+			// deleteButtonAmoutProduct(products, idButton, orderBlank,idAddBlank)
+			deleteButtonAmoutProduct( idButton)
+
+			// // console.log(orderBlank)
+			// // console.log(removedProduct)
+			// deleteDocElement(numberProduct,idTables)
+
 		})
 	}
 
 
 
-
-// функция которая создает обьект повторяющихся элементов и отдает обьекты с их названиями и количеством
+	// функция которая создает обьект повторяющихся элементов и отдает обьекты с их названиями и количеством
 	function deleteRepeatingElement(allProduct){
 
 		let arr = allProduct
@@ -148,22 +160,63 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 	}
 
 
-	// function ddd (idTables, product){
-	// 	let maiConfiguration
-	// 		if (idTables == '#new_vertical_89mm') {
-	// 			maiConfiguration = createWindowElement('li', 'maiConfiguration', `${89} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
 
-	// 		}else if(idTables = "#new_vertical_127mm"){ 
-	// 			maiConfiguration = createWindowElement('li', 'maiConfiguration', `${127} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.productSystem)}  ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
 
-	// 		}else{
-	// 			let maiConfiguration  = createWindowElement('li', 'maiConfiguration', `${excludeUndefined(product.productSystem)} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.fasteningSelected)}`)	
+	//Добавление количества товаров в кнопку
+	function addButtonAmoutProduct(data,idButton){
+		let downloadCount = document.querySelector(idButton+' .amount_goods')
 
-	// 		}
+		data.forEach(function(one,index){
+			downloadCount.textContent = index+1
+		})
+	}
 
-	// 	return maiConfiguration
+	
+	//удаление количесва товаров из кнопи
+	function deleteButtonAmoutProduct(idButton){
+		let downloadButton = document.querySelector(idButton)
+		let countDownloadButton = downloadButton.querySelector('.amount_goods')
+		let screenBlanks =  document.querySelectorAll('.screen_blank ')
+	
 
-	// }
+		let allProductCount = []
+		screenBlanks.forEach(function(blank){
+			
+			if (blank.dataset.viewinblank ==  downloadButton.dataset.view ) {
+
+			
+
+				let products = blank.querySelectorAll('ul')
+
+				products.forEach(function(product,index){
+					if (index !=0 ) {
+						allProductCount.push(product)
+
+					}
+				})
+
+			
+			}
+
+			// downloadButton.textContent = allProductCount.length
+
+
+		})
+
+		if(allProductCount.length != 0){
+			countDownloadButton.textContent = allProductCount.length
+		}else{
+			countDownloadButton.textContent = ' '
+		}
+
+
+
+
+	
+
+	}
+
+
 
 	// //дополнительная функция
 	// function additionalText(idTables){
@@ -180,7 +233,3 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam) {
 
 
 }
-
-
-
-

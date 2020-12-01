@@ -6,7 +6,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	let arrayParameters = [parentBlock, selectOne, selectTwo ]
 
 
-	
+	// allAddedProduct++
 
 
 	// let price = parentBlock.querySelector("#price").textContent
@@ -61,6 +61,8 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		'sizeSystem' : addToBlankForEach(sizeSystem, 'СТД'),
 	 		'chainLoad' : addToBlankForEach(chainLoad,'Без груза'),
 	 		'chainFixing' : addToBlankForEach(chainFixing,'Без фиксатора'),
+	 		"numberInArrayOrderBlank" : countArrayElementOrderBlank++ ,
+	 		
 	 	}
 
  	}else if(productSystem == 'фалш шторы'){

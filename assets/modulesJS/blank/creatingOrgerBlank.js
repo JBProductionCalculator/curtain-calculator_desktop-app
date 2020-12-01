@@ -5,6 +5,7 @@ let orderBlank = []
 
 function creatingOrgerBlank(oneRow, arrayParam) {
 
+	// console.log(orderBlank)
 
 
 	orderBlank.push(oneRow)
@@ -31,34 +32,40 @@ function creatingOrgerBlank(oneRow, arrayParam) {
 	deleteRepeatingElement(curtainsBlank)
 
 
+	// addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
+	// addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
+	// addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
+	// addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank", "#horizontalStandardBlank_download")
+	// addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank", "#horizontalStandardBlank_download")
+
+
 	//функци добавления информации в doc бланки и бланки которые на экране
-	addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
-	addToWindowBlankInForm(curtainsBlank,"#roller_curtains", "#screen_blanks_roller_curtains", arrayParam )
-	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_day_night", "#screen_blanks_day_night" ,arrayParam)
-	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_ready", "#screen_blanks_rolle_ready", arrayParam )
+	// addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
+	addToWindowBlankInForm(curtainsBlank,"#roller_curtains", "#screen_blanks_roller_curtains", arrayParam ,"#curtainsBlank_download")
+	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_day_night", "#screen_blanks_day_night" ,arrayParam ,"#curtainsBlank_download" )
+	addToWindowBlankInForm(curtainsBlank,"#roller_curtains_ready", "#screen_blanks_rolle_ready", arrayParam  ,"#curtainsBlank_download")
 
 
 
 	// новые вертекальные бланки
-	addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
-	addToWindowBlankInForm(newVerticalBlank, "#new_vertical_89mm", "#secreen_new_vertical_89mm")
-	addToWindowBlankInForm(newVerticalBlank, "#new_vertical_127mm", "#secreen_new_vertical_127mm")
+	// addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
+	addToWindowBlankInForm(newVerticalBlank, "#new_vertical_89mm", "#secreen_new_vertical_89mm", arrayParam ,"#newVerticalBlank_download")
+	addToWindowBlankInForm(newVerticalBlank, "#new_vertical_127mm", "#secreen_new_vertical_127mm",arrayParam , "#newVerticalBlank_download")
 
 
 
 
-	addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
-	addToWindowBlankInForm(horizontalVenusBlank,"#horizontal_louver_venus", "#screen_horizontal_louver_venus")
+	// addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
+	addToWindowBlankInForm(horizontalVenusBlank,"#horizontal_louver_venus", "#screen_horizontal_louver_venus",arrayParam , "#horizontalVenusBlank_download")
 
-	addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank", "#horizontalStandardBlank_download")
-	addToWindowBlankInForm(horizontalStandardBlank, "#horizontal_louver_standard", "#screen_horizontal_louver_standard")
-
-
-	addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank", "#mosquitoNetBlank_download")
-	addToWindowBlankInForm(mosquitoNetBlank, "#mosquito_net", "#secreen_mosquito_net")
+	// addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank", "#horizontalStandardBlank_download")
+	addToWindowBlankInForm(horizontalStandardBlank, "#horizontal_louver_standard", "#screen_horizontal_louver_standard",arrayParam , "#horizontalStandardBlank_download")
 
 
-	// addToHTMLBlankInform(verticalBlank, "#blank-vertical")
+	// addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank", "#mosquitoNetBlank_download")
+	addToWindowBlankInForm(mosquitoNetBlank, "#mosquito_net", "#secreen_mosquito_net", arrayParam , "#mosquitoNetBlank_download")
+
+
 
 
 
@@ -161,7 +168,7 @@ function deleteRepeatingElement(allProduct){
 
 function addToHTMLBlankInform(data,id,idButton){
 
-	addButtonAmoutProduct(data, idButton)
+	// addButtonAmoutProduct(data, idButton)
 
 	let blank = document.querySelector(id+" #all-product tbody")
 	let allCells = {
@@ -184,6 +191,10 @@ function addToHTMLBlankInform(data,id,idButton){
 			tr.remove()
 		}
 	})
+
+
+	// let dd = document.querySelector('#roller_curtains')
+	// console.log(dd)
     
 
 
@@ -221,7 +232,8 @@ function addToHTMLBlankInform(data,id,idButton){
 		tr.querySelector('#notes').innerHTML = '&#160;'
 
 		
-		console.log(tr)	
+		// tr.dataset.productNumber = allAddedProduct
+		// console.log(tr)
 
 		blank.append(tr)
 	})
@@ -229,15 +241,72 @@ function addToHTMLBlankInform(data,id,idButton){
 
 
 
-function addButtonAmoutProduct(data,idButton){
-	data.forEach(function(one,index){
-		document.querySelector(idButton+' .amount_goods').textContent = index+1
-	})
+
+
+
+function newDownloadDocBlank(data){
+	let curtainsBlank = []
+	let newVerticalBlank = []
+	
+
+	let horizontalVenusBlank = []
+	let horizontalStandardBlank = []
+	let mosquitoNetBlank = []
+
+
+
+	creationOneBlank(orderBlank)
+
+
+
+
+	addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
+	addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
+	addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
+	addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank", "#horizontalStandardBlank_download")
+	addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank", "#mosquitoNetBlank_download")
+
+
+
+	// Функция разделяющая вары из разных таблиц по ужным бланкам.
+	function creationOneBlank(data){
+			data.forEach(function(oneProduct){
+
+			if(oneProduct.idParent === "roller_curtains" ||
+			 	oneProduct.idParent === "roller_curtains_day_night" || 
+			 	 oneProduct.idParent === "roller_curtains_ready" ){
+					
+
+					curtainsBlank.push(oneProduct)
+
+			}
+
+			if(oneProduct.idParent === "new_vertical_89mm" || oneProduct.idParent === "new_vertical_127mm" ){
+				newVerticalBlank.push(oneProduct)
+			}
+
+			if (oneProduct.idParent === "horizontal_louver_venus" ) {
+				horizontalVenusBlank.push(oneProduct)
+			}
+
+			if (oneProduct.idParent === "horizontal_louver_standard" ) {
+				horizontalStandardBlank.push(oneProduct)
+			}
+
+			if (oneProduct.idParent === "mosquito_net" ) {
+				mosquitoNetBlank.push(oneProduct)
+			}
+
+		}) 
+	}
+
 }
 
 // экспорт html в doc
 function exportHTML(id){
 	// addToBlankFun(arrayParam[0],arrayParam[1],arrayParam[2])
+
+	newDownloadDocBlank(orderBlank)
 
    const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
         "xmlns:w='urn:schemas-microsoft-com:office:word' "+
@@ -261,8 +330,6 @@ function exportHTML(id){
 //дополнительная функция
 function excludeUndefined(text){
 	if (text != undefined) {
-	// console.log(text)
-
 		return text
 	}else{
 		return ' '
