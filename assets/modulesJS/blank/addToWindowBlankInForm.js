@@ -66,7 +66,7 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam,idBut
 		let num = createWindowElement('li','number_of_blanks', countProduct+1)
 		let width =	createWindowElement('li', 'width',  product.width)	
 		let height = createWindowElement('li', 'height',product.height )
-		let quantity = createWindowElement('li', 'quantity')
+		let quantity = createWindowElement('li', 'quantity', product.numberRepetitons)
 		let control = createWindowElement('li', 'control' ,product.controlType )
 		let fixationSystem = createWindowElement('li', 'fastening', product.fixationSystem)
 		let buttonDelete =  createWindowElement('div', 'delenteElement')

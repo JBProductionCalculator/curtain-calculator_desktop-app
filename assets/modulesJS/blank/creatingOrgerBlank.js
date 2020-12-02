@@ -5,13 +5,11 @@ let orderBlank = []
 
 function creatingOrgerBlank(oneRow, arrayParam) {
 
-	// console.log(orderBlank)
 
 
 	orderBlank.push(oneRow)
 
 
-	// console.log(orderBlank);
 
 
 
@@ -27,16 +25,37 @@ function creatingOrgerBlank(oneRow, arrayParam) {
 
 	creationOneBlank(orderBlank)
 
-	recurringProducts(curtainsBlank)
 
-	deleteRepeatingElement(curtainsBlank)
+	addClassIdenticalElements(curtainsBlank)
+	addCountRepeatingElement(curtainsBlank)	
+	curtainsBlank = deleteRepeatingElement(curtainsBlank)
 
 
-	// addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
-	// addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
-	// addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
-	// addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank", "#horizontalStandardBlank_download")
-	// addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank", "#horizontalStandardBlank_download")
+
+	addClassIdenticalElements(newVerticalBlank)
+	addCountRepeatingElement(newVerticalBlank)
+	newVerticalBlank = deleteRepeatingElement(newVerticalBlank)
+
+
+	addClassIdenticalElements(horizontalVenusBlank)
+	addCountRepeatingElement(horizontalVenusBlank)
+	horizontalVenusBlank = deleteRepeatingElement(horizontalVenusBlank)
+
+
+	addClassIdenticalElements(horizontalStandardBlank)
+	addCountRepeatingElement(horizontalStandardBlank)
+	horizontalStandardBlank = deleteRepeatingElement(horizontalStandardBlank)
+
+
+	addClassIdenticalElements(mosquitoNetBlank)
+	addCountRepeatingElement(mosquitoNetBlank)
+	mosquitoNetBlank = deleteRepeatingElement(mosquitoNetBlank)
+
+
+
+
+
+ 
 
 
 	//функци добавления информации в doc бланки и бланки которые на экране
@@ -102,66 +121,85 @@ function creatingOrgerBlank(oneRow, arrayParam) {
 	}
 
 
+}		
 
 
-	
-//Функция которая дает одинаковые классы повторяющимся элементам
-	function recurringProducts(data) {
-		// console.log(data)
-		addClassIdenticalElements()
+	//Функция которая дает одинаковые классы повторяющимся элементам
+	function addClassIdenticalElements(data){
 
-		// removeIdenticalElements()
+		for(let i = 0; i < data.length;i++){
 
-		function addClassIdenticalElements(){
+			for(let x = 0; x < data.length;x++ ){
+				if (i == x) {
 
-			for(let i = 0; i < data.length;i++){
+				}else{
+					if(data[i].idParent == data[x].idParent &&
+						data[i].systemAndColor == data[x].systemAndColor && 
+						 data[i].width == data[x].width && 
+						  data[i].height == data[x].height &&
+						   data[i].controlType == data[x].controlType &&
+						    data[i].fixationSystem == data[x].fixationSystem ){
 
-				for(let x = 0; x < data.length;x++ ){
-					if (i == x) {
+							let repeatingElementClass =  `${data[i].systemAndColor} ${data[i].idParent} ${data[i].width} ${data[i].height} ${data[i].controlType} ${data[i].fixationSystem}`
+							data[i].arrayElementClass = repeatingElementClass
 
-					}else{
-						if(data[i].idParent == data[x].idParent &&
-							data[i].systemAndColor == data[x].systemAndColor && 
-							 data[i].width == data[x].width && 
-							  data[i].height == data[x].height &&
-							   data[i].controlType == data[x].controlType &&
-							    data[i].fixationSystem == data[x].fixationSystem ){
-
-								let repeatingElementClass =  `${data[i].systemAndColor} ${data[i].idParent} ${data[i].width} ${data[i].height} ${data[i].controlType} ${data[i].fixationSystem}`
-								data[i].arrayElementClass = repeatingElementClass
-
-								// deleteRepeatingElement(data, data[i], repeatingElementClass)
+							
+							
+							// data.splice(x, x)
 								
-								
-								// data.splice(x, x)
-									
-						}
 					}
 				}
 			}
-		}		
-	}		
-}
+		}
+	}	
 
 
-// удаление повторяющихся элементов и возвращает количетво
-function deleteRepeatingElement(allProduct){
-	var arr = allProduct
 
-	var result = {};
-	for (var i = 0; i < allProduct.length; ++i)
-	{
-	    var a = arr[i].arrayElementClass;
-	    // console.log(a)
-	    if (result[a] != undefined)
-	        ++result[a];
-	    else
-	        result[a] = 1;
+	// добавление количества к повторяющимся элементам
+	function addCountRepeatingElement(allProduct){
+		var arr = allProduct
+
+		var result = {};
+		for (var i = 0; i < allProduct.length; ++i)
+		{
+		    var a = arr[i].arrayElementClass;
+		    // console.log(a)
+		    if (result[a] != undefined)
+		        ++result[a];
+		    else
+		        result[a] = 1;
+		}
+
+		// вторая часть уравнения
+		arr.forEach(function(product){
+			for(repetProduct in result){
+				if (product.arrayElementClass == repetProduct ) {
+					product.numberRepetitons = result[repetProduct]
+				}
+			}
+		})
 	}
 
-	// console.log(result)
+	// удаление повторяющихся элементов
+	function deleteRepeatingElement(allProducts){
+		
+	
+		allProducts = allProducts.filter((thing, index, self) =>
+		  index === self.findIndex((t) => (
+		    t.arrayElementClass === thing.arrayElementClass 
+		  ))
+		)
 
-}
+		console.log(allProducts)
+
+
+		return allProducts 
+			
+
+	}	
+
+
+
 
 
 

@@ -55,7 +55,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"colorSystem" : addToBlankForEach(colorSystem),		
 	 		"width" : widht,
 	 		"height" : height,
-
+	 		"numberRepetitons" : 1,
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		"fixationSystem" : addToBlankForEach(fixationSystem,'Без фиксации'),
 	 		'sizeSystem' : addToBlankForEach(sizeSystem, 'СТД'),
@@ -74,6 +74,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"colorSystem" : addToBlankForEach(colorSystem),		
 	 		"width" : widht,
 	 		"height" : height,
+	 		"numberRepetitons" : 1,
 
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		'sizeSystem' : addToBlankForEach(sizeSystem, 'СТД'),
@@ -88,6 +89,8 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"colorSystem" : addToBlankForEach(colorSystem),		
 	 		"width" : widht,
 	 		"height" : height,
+	 		"numberRepetitons" : 1,
+
 
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		"fixationSystem" : addToBlankForEach(fixationSystem,'Без фиксации'),
@@ -109,6 +112,8 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"colorSystem" : addToBlankForEach(colorSystem),		
 	 		"width" : widht,
 	 		"height" : height,
+	 		"numberRepetitons" : 1,
+
 
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		"fixationSystem" : addToBlankForEach(fixationSystem,'Без фиксации'),
@@ -130,6 +135,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"colorSystem" : 'Бел.',		
 	 		"width" : widht,
 	 		"height" : height,
+	 		"numberRepetitons" : 1,
 
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		"fixationSystem" : addToBlankForEach(fixationSystem,'Без фиксации'),
@@ -148,6 +154,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"colorSystem" : addToBlankForEach(colorSystem),		
 	 		"width" : `${widht} / ${glassWidth.value}`,
 	 		"height" : height,
+	 		"numberRepetitons" : 1,
 
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		'chainLoad' : addToBlankForEach(chainLoad,'Без груза'),
@@ -166,6 +173,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"colorSystem" : addToBlankForEach(colorSystem),		
 	 		"width" : widht,
 	 		"height" : height,
+	 		"numberRepetitons" : 1,
 
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		'chainLoad' : addToBlankForEach(chainLoad,'Без груза'),
@@ -183,6 +191,7 @@ function addToBlankFun(parentBlock, selectOne, selectTwo ,selectType) {
 	 		"colorSystem" : addToBlankForEach(colorSystem),	 		
 	 		"width" : widht,
 	 		"height" : height,
+	 		"numberRepetitons" : 1,
 
 	 		"controlType" :  addToBlankForEach(controlType),
 	 		"fixationSystem" : addToBlankForEach(fixationSystem,'Без фиксации'),

@@ -223,7 +223,6 @@ function viewControlMethod(type, boxControlMethod, parentSection, thisIsSparta){
 		viewChanelControlMethod(controlMethod,controlMethodChanel, parentSection, thisIsSparta)
 
 	}else{
-		console.log(1)
 		boxControlMethod.classList.add('none')
 		let proxy  = 0
 	}
@@ -234,7 +233,6 @@ function viewControlMethod(type, boxControlMethod, parentSection, thisIsSparta){
 // Функция 2 Сособ Управления
 function viewChanelControlMethod(controlMethod, chanels, parent,thisIsSparta){
 	if (thisIsSparta == undefined) {
-		console.log(12)
 		$(parent +' .controlMethod option:eq(0)').prop('selected',true)
 		$(parent +' .controlMethodChanel option:eq(0)').prop('selected',true)
 		chanels.classList.add('none')
