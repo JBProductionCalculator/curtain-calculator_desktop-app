@@ -482,6 +482,12 @@ newVertical127 : [
     "colorСode" : [1100],
   },
   {
+    "name" : "LINE",
+    "colorCodesName" :[ "8001, 8002, 8003, 8004, 8006","",""],
+    "price" : [6.2, "", ""],
+    "colorСode" : [8001, 8002, 8003, 8004, 8006],
+  },
+  {
     "name" : "America New",
     "colorCodesName" :[ "0301, 0302, 0303","",""],
     "price" : [7.1, "", ""],

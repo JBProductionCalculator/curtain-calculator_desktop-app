@@ -340,6 +340,7 @@ function priceAdditionalScotchTape(type, inputs, height){
 			if (radio.checked && radio.value == 'Доп. скотч') {
 				let converterToMeters = Number(height.value) / 1000
 				price = Math.ceil(converterToMeters) * 0.8
+				
 			}
 		})
 		

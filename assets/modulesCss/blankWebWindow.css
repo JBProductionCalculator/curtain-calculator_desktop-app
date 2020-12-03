@@ -63,7 +63,7 @@
 	display: flex;
 	justify-content: center;
 }
-.screen_blank li.system_and_color{
+.screen_blank li.system_and_color, .screen_blank li.maiConfiguration{
 	width: 300px;
 }
 
