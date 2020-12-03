@@ -1,5 +1,6 @@
 
 function allOperationsRepeatingElements(arrayProducts){
+
 	addClassIdenticalElements(arrayProducts)
 	addCountRepeatingElement(arrayProducts)	
 
@@ -11,34 +12,43 @@ function allOperationsRepeatingElements(arrayProducts){
 
 
 //Функция которая дает одинаковые классы повторяющимся элементам
-function addClassIdenticalElements(data){
+// function addClassIdenticalElements(data){
 
-	for(let i = 0; i < data.length;i++){
+// 	for(let i = 0; i < data.length;i++){
+// 		console.log(data[i])
+// 		for(let x = 0; x < data.length;x++ ){
+// 			if (i == x) {
 
-		for(let x = 0; x < data.length;x++ ){
-			if (i == x) {
+// 			}else{
+// 				if(data[i].idParent == data[x].idParent &&
+// 					data[i].systemAndColor == data[x].systemAndColor && 
+// 					 data[i].width == data[x].width && 
+// 					  data[i].height == data[x].height &&
+// 					   data[i].controlType == data[x].controlType &&
+// 					    data[i].fixationSystem == data[x].fixationSystem ){
 
-			}else{
-				if(data[i].idParent == data[x].idParent &&
-					data[i].systemAndColor == data[x].systemAndColor && 
-					 data[i].width == data[x].width && 
-					  data[i].height == data[x].height &&
-					   data[i].controlType == data[x].controlType &&
-					    data[i].fixationSystem == data[x].fixationSystem ){
-
-						let repeatingElementClass =  `${data[i].systemAndColor} ${data[i].idParent} ${data[i].width} ${data[i].height} ${data[i].controlType} ${data[i].fixationSystem}`
-						data[i].arrayElementClass = repeatingElementClass
+// 						let repeatingElementClass =  `${data[i].systemAndColor} ${data[i].idParent} ${data[i].width} ${data[i].height} ${data[i].controlType} ${data[i].fixationSystem}`
+// 						data[i].arrayElementClass = repeatingElementClass
 
 						
 						
-						// data.splice(x, x)
+// 						// data.splice(x, x)
 							
-				}
-			}
-		}
-	}
-}	
+// 				}
+// 			}
+// 		}
+// 	}
+// }	
 
+
+//Функция которая дает одинаковые классы повторяющимся элементам
+function addClassIdenticalElements(data){
+	data.forEach(function(product){
+	   		let repeatingElementClass = `${excludeUndefined(product.idParent)} ${excludeUndefined(product.productSystem)} ${excludeUndefined(product.productColor)} ${excludeUndefined(product.colorSystem)} ${excludeUndefined(product.width)} ${excludeUndefined(product.height)} ${excludeUndefined(product.controlType)} ${excludeUndefined(product.fixationSystem)} ${excludeUndefined(product.sizeSystem)} ${excludeUndefined(product.chainLoad)} ${excludeUndefined(product.chainFixing)} ${excludeUndefined(product.chainFixingUniversal)} ${excludeUndefined(product.controlMethod)} ${excludeUndefined(product.plasticRetainer)} ${excludeUndefined(product.guideString)} ${excludeUndefined(product.additionalScotchTape)} ${excludeUndefined(product.fasteningSelected)}`
+	   		// console.log(repeatingElementClass)
+			product.arrayElementClass = repeatingElementClass
+	})		
+}	
 
 
 // добавление количества к повторяющимся элементам
@@ -87,3 +97,13 @@ function deleteRepeatingElement(allProducts){
 }	
 
 
+// дополнительная функция
+function excludeUndefined(text){
+	if (text != undefined) {
+	// console.log(text)
+
+		return text
+	}else{
+		return ' '
+	}
+}

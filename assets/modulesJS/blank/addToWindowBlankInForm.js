@@ -135,26 +135,6 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam,idBut
 
 
 
-	// функция которая создает обьект повторяющихся элементов и отдает обьекты с их названиями и количеством
-	// function deleteRepeatingElement(allProduct){
-
-	// 	let arr = allProduct
-
-	// 	for (let i = 0; i < allProduct.length; ++i)
-	// 	{
-	// 	    let a = arr[i].arrayElementClass;
-	// 	    // console.log(a)
-	// 	    if (resultRepeatElement[a] != undefined)
-	// 	        ++resultRepeatElement[a];
-	// 	    else
-	// 	        resultRepeatElement[a] = 1;
-	// 	}
-
-	// 	// console.log(resultRepeatElement)
-
-	// }
-
-
 	//дополнительная функция
 	function excludeUndefined(text){
 		if (text != undefined) {

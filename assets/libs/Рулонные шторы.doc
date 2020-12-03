@@ -1,0 +1,42 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>
+            <table style=" padding: 5px 10px;box-sizing:border-box;font-size: 11px;width: 100%; border-collapse: collapse;border-spacing: 0px;">
+               <tbody><tr>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0; ">*</td>
+                  <td width="190" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Клиент:</td>
+                  <td width="400" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">&nbsp; </td>
+               </tr>
+               <tr>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">*</td>
+                  <td width="190" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Моб. получателя:</td>
+                  <td width="400" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">&nbsp;</td>
+               </tr>
+               <tr>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">*</td>
+                  <td width="190" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">ФИО получателя:</td>
+                  <td width="400" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">&nbsp;</td>
+               </tr>
+               <tr>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">*</td>
+                  <td width="200" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Город:</td>
+                  <td width="400" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black;width: 6%;margin: 0;font-weight: 900;">&nbsp;</td>
+               </tr>
+               <tr>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">*</td>
+                  <td width="200" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Отделение Новой Почты:</td>
+                  <td width="400" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">&nbsp;</td>
+               </tr>
+            </tbody></table>
+            <div style="height: 30px;">&nbsp;</div>
+            <table id="all-product" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;width: 188%; border-collapse: collapse;border-spacing: 0px;">
+               <tbody><tr>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;"></td>
+                  <td width="188" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Система и Цвет</td>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Ширина см</td>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Высота см</td>
+                  <td width="50" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Упр. L / R</td>
+                  <td width="50" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Кол-во</td>
+                  <td width="30" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Крепление</td>
+                  <td width="100" style="  padding: 5px 10px;box-sizing:border-box;font-size: 11px;border:1px solid black; margin: 0;font-weight: 900;">Примечание</td>
+               </tr>
+            <tr><td id="count_blank" width="20" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">1</td><td id="system_and_color" width="188" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">Compact Марсесль АКЦИЯ!!! Бел.                  </td><td id="width" width="60" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">1000</td><td id="height" width="60" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">1000</td><td id="control_type" width="50" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">Т1</td><td id="amount" width="50" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">2</td><td id="fixation_system" width="60" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;"> </td><td id="notes" width="100" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">&nbsp;</td></tr><tr><td id="count_blank" width="20" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">2</td><td id="system_and_color" width="188" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">Compact Марсесль АКЦИЯ!!! Кор.     Фикс. цепи            </td><td id="width" width="60" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">1000</td><td id="height" width="60" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">1000</td><td id="control_type" width="50" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">Т4</td><td id="amount" width="50" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">3</td><td id="fixation_system" width="60" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">Направляющая струна</td><td id="notes" width="100" style="padding: 5px 10px; font-size: 11px; border: 1px solid black; margin: 0px; font-weight: 900;">&nbsp;</td></tr></tbody></table>
+         </body></html>

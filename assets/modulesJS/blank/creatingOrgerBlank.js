@@ -111,6 +111,96 @@ function creatingOrgerBlank(oneRow, arrayParam) {
 
 
 
+// экспорт html в doc
+function exportHTML(id, nameDocument){
+	// addToBlankFun(arrayParam[0],arrayParam[1],arrayParam[2])
+
+	console.log(orderBlank)
+	newDownloadDocBlank(orderBlank)
+
+   const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+        "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+        "xmlns='http://www.w3.org/TR/REC-html40'>"+
+        "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+   const footer = "</body></html>";
+   const sourceHTML = header+document.getElementById(id).innerHTML+footer;
+   
+   const source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+   const fileDownload = document.createElement("a");
+   document.body.appendChild(fileDownload);
+   fileDownload.href = source;
+   fileDownload.download = nameDocument+'.doc';
+   fileDownload.click();
+   document.body.removeChild(fileDownload);
+}
+
+
+function newDownloadDocBlank(data){
+	let curtainsBlank = []
+	let newVerticalBlank = []
+	
+
+	let horizontalVenusBlank = []
+	let horizontalStandardBlank = []
+	let mosquitoNetBlank = []
+
+
+
+	creationOneBlank(orderBlank)
+
+
+	// операции с повторяющимися элементами. добавление количиства, удаление . весь код находиться в файле allOperationsRepeatingElements.js
+	curtainsBlank = allOperationsRepeatingElements(curtainsBlank)
+	newVerticalBlank = allOperationsRepeatingElements(newVerticalBlank)
+	horizontalVenusBlank = allOperationsRepeatingElements(horizontalVenusBlank)
+	horizontalStandardBlank = allOperationsRepeatingElements(horizontalStandardBlank)
+	mosquitoNetBlank = allOperationsRepeatingElements(mosquitoNetBlank)
+
+
+
+	addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
+	addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
+	addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
+	addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank", "#horizontalStandardBlank_download")
+	addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank", "#mosquitoNetBlank_download")
+
+
+
+	// Функция разделяющая вары из разных таблиц по ужным бланкам.
+	function creationOneBlank(data){
+			data.forEach(function(oneProduct){
+
+			if(oneProduct.idParent === "roller_curtains" ||
+			 	oneProduct.idParent === "roller_curtains_day_night" || 
+			 	 oneProduct.idParent === "roller_curtains_ready" ){
+					
+
+					curtainsBlank.push(oneProduct)
+
+			}
+
+			if(oneProduct.idParent === "new_vertical_89mm" || oneProduct.idParent === "new_vertical_127mm" ){
+				newVerticalBlank.push(oneProduct)
+			}
+
+			if (oneProduct.idParent === "horizontal_louver_venus" ) {
+				horizontalVenusBlank.push(oneProduct)
+			}
+
+			if (oneProduct.idParent === "horizontal_louver_standard" ) {
+				horizontalStandardBlank.push(oneProduct)
+			}
+
+			if (oneProduct.idParent === "mosquito_net" ) {
+				mosquitoNetBlank.push(oneProduct)
+			}
+
+		}) 
+	}
+
+}
+
+
 
 function addToHTMLBlankInform(data,id,idButton){
 
@@ -171,7 +261,7 @@ function addToHTMLBlankInform(data,id,idButton){
 		tr.querySelector('#width').textContent = product.width
 		tr.querySelector('#height').textContent = product.height
 		tr.querySelector('#control_type').textContent = product.controlType
-		// tr.querySelector('#amount').textContent = index
+		tr.querySelector('#amount').textContent = product.numberRepetitons
 		tr.querySelector('#fixation_system').textContent = product.fixationSystem
 		tr.querySelector('#notes').innerHTML = '&#160;'
 
@@ -182,92 +272,6 @@ function addToHTMLBlankInform(data,id,idButton){
 		blank.append(tr)
 	})
 }
-
-
-
-
-
-
-function newDownloadDocBlank(data){
-	let curtainsBlank = []
-	let newVerticalBlank = []
-	
-
-	let horizontalVenusBlank = []
-	let horizontalStandardBlank = []
-	let mosquitoNetBlank = []
-
-
-
-	creationOneBlank(orderBlank)
-
-
-
-
-	addToHTMLBlankInform(curtainsBlank, "#curtainsBlank", "#curtainsBlank_download")
-	addToHTMLBlankInform(newVerticalBlank, "#nweVerticalBlank", "#newVerticalBlank_download")
-	addToHTMLBlankInform(horizontalVenusBlank, "#horizontalVenusBlank", "#horizontalVenusBlank_download")
-	addToHTMLBlankInform(horizontalStandardBlank, "#horizontalStandardBlank", "#horizontalStandardBlank_download")
-	addToHTMLBlankInform(mosquitoNetBlank, "#mosquitoNetBlank", "#mosquitoNetBlank_download")
-
-
-
-	// Функция разделяющая вары из разных таблиц по ужным бланкам.
-	function creationOneBlank(data){
-			data.forEach(function(oneProduct){
-
-			if(oneProduct.idParent === "roller_curtains" ||
-			 	oneProduct.idParent === "roller_curtains_day_night" || 
-			 	 oneProduct.idParent === "roller_curtains_ready" ){
-					
-
-					curtainsBlank.push(oneProduct)
-
-			}
-
-			if(oneProduct.idParent === "new_vertical_89mm" || oneProduct.idParent === "new_vertical_127mm" ){
-				newVerticalBlank.push(oneProduct)
-			}
-
-			if (oneProduct.idParent === "horizontal_louver_venus" ) {
-				horizontalVenusBlank.push(oneProduct)
-			}
-
-			if (oneProduct.idParent === "horizontal_louver_standard" ) {
-				horizontalStandardBlank.push(oneProduct)
-			}
-
-			if (oneProduct.idParent === "mosquito_net" ) {
-				mosquitoNetBlank.push(oneProduct)
-			}
-
-		}) 
-	}
-
-}
-
-// экспорт html в doc
-function exportHTML(id){
-	// addToBlankFun(arrayParam[0],arrayParam[1],arrayParam[2])
-
-	newDownloadDocBlank(orderBlank)
-
-   const header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
-        "xmlns:w='urn:schemas-microsoft-com:office:word' "+
-        "xmlns='http://www.w3.org/TR/REC-html40'>"+
-        "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
-   const footer = "</body></html>";
-   const sourceHTML = header+document.getElementById(id).innerHTML+footer;
-   
-   const source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
-   const fileDownload = document.createElement("a");
-   document.body.appendChild(fileDownload);
-   fileDownload.href = source;
-   fileDownload.download = 'document.doc';
-   fileDownload.click();
-   document.body.removeChild(fileDownload);
-}
-
 
 
 
