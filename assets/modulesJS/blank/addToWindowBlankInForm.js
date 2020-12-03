@@ -45,7 +45,9 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam,idBut
 
 
 	function createWindowBlank(product, countProduct, repeatObject){
-		
+			
+		// console.log(product)
+
 		let ul = document.createElement('ul')
 
 	
@@ -110,18 +112,23 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam,idBut
 		let buttonDelete = removedItem.querySelector('.delenteElement')
 		buttonDelete.addEventListener('click', function(){
 
-
 			removedItem.remove()
 
 
+
 			orderBlank.splice(removedProduct.numberInArrayOrderBlank,1,1) 
+
+			orderBlank.forEach(function(product){
+				if (product.arrayElementClass === removedProduct.arrayElementClass) {
+					orderBlank.splice(product.numberInArrayOrderBlank,1,1) 
+				}
+			})
+
+
 		
-			// deleteButtonAmoutProduct(products, idButton, orderBlank,idAddBlank)
 			deleteButtonAmoutProduct( idButton)
 
-			// // console.log(orderBlank)
-			// // console.log(removedProduct)
-			// deleteDocElement(numberProduct,idTables)
+ 
 
 		})
 	}
@@ -129,23 +136,23 @@ function addToWindowBlankInForm(products, idTables, idAddBlank ,arrayParam,idBut
 
 
 	// функция которая создает обьект повторяющихся элементов и отдает обьекты с их названиями и количеством
-	function deleteRepeatingElement(allProduct){
+	// function deleteRepeatingElement(allProduct){
 
-		let arr = allProduct
+	// 	let arr = allProduct
 
-		for (let i = 0; i < allProduct.length; ++i)
-		{
-		    let a = arr[i].arrayElementClass;
-		    // console.log(a)
-		    if (resultRepeatElement[a] != undefined)
-		        ++resultRepeatElement[a];
-		    else
-		        resultRepeatElement[a] = 1;
-		}
+	// 	for (let i = 0; i < allProduct.length; ++i)
+	// 	{
+	// 	    let a = arr[i].arrayElementClass;
+	// 	    // console.log(a)
+	// 	    if (resultRepeatElement[a] != undefined)
+	// 	        ++resultRepeatElement[a];
+	// 	    else
+	// 	        resultRepeatElement[a] = 1;
+	// 	}
 
-		// console.log(resultRepeatElement)
+	// 	// console.log(resultRepeatElement)
 
-	}
+	// }
 
 
 	//дополнительная функция
